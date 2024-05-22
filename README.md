@@ -29,6 +29,21 @@ A hosted version ~~is~~ will at some point be available
 - Override or add any highlight group
 - Vim is supported as a secondary target
 
+## Examples
+
+| Normal | Inverse |
+|---|---|
+| ![A screenshot of Neovim using the "highlow" light color scheme](./media/highlow-light.png) | ![A screenshot of Neovim using the "highlow" dark color scheme](./media/highlow-dark.png) |
+
+[_highlow_](./colorschemes/highlow.toml): a color scheme with high contrast between background and foreground,
+low color saturation, and low contrast between foreground elements.
+
+| Normal | Inverse |
+|---|---|
+| ![A screenshot of Neovim using the "twocolor" dark color scheme](./media/twocolor-dark.png) | ![A screenshot of Neovim using the "twocolor" light color scheme](./media/twocolor-light.png) |
+
+[_twocolor_](./colorschemes/twocolor.toml): a color scheme using (mostly) just two hues.
+
 ## Getting started
 
 To run the CLI version, run
