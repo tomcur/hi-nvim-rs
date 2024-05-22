@@ -223,6 +223,8 @@ Ignore = { fg = "ui.nontext" }
 "@parameter" = { fg = "syn.parameter" }
 "@constructor" = { fg = "syn.constructor", bold = true }
 
+"@variable" = { link = "variable" }
+
 "@tag" = { fg = "syn.special" }
 "@tag.attribute" = { fg = "syn.parameter" }
 "@tag.delimiter" = { link = "Delimiter" }
