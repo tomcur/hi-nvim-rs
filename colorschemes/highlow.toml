@@ -1,0 +1,176 @@
+# This is a hi.nvim.rs theme specification. All colors are specified in the
+# Oklch color space. All color transformations performed by the theme compiler
+# are performed in either the Oklch or Oklab color spaces.
+
+# The name of the color scheme. The color scheme will be loadable (Neo)vim
+# through `:colorscheme {name}`.
+name = "highlow"
+
+# The kind of the color scheme specified here (either light or dark). The
+# inverse will be generated for free (with optional postprocessing specified in
+# `inverse`).
+kind = "light"
+
+[hues]
+# Hues to use in the theme. A set of foreground and background colors will be
+# generated from these hues, using the lightness and chroma specified in `fg`
+# and `bg`. These can be referenced in the `theme` section as `fg.<name>` and
+# `bg.<name>`.
+red = 15.0
+orange = 62.0
+yellow = 98.0
+green = 135.0
+cyan = 223.0
+blue = 262.0
+purple = 314.0
+pink = 346.0
+
+[fg]
+# Specify the lightness and chromacity for foreground colors defined in [hues].
+lightness = 0.42
+chroma = 0.075
+
+[bg]
+# Specify the lightness and chromacity for background colors defined in [hues].
+lightness = 0.85
+chroma = 0.075
+
+[colors]
+# Specify colors (with lightness and chromacity) to use in the theme. The names
+# can be referenced in the `theme` section without a prefix.
+bg =   [ 0.95, 0.016,  77 ]
+fg =   [ 0.42, 0.035, 272 ]
+grey = [ 0.42, 0.0,    77 ]
+
+# [themes]
+# In the themes sections the specific color elements that will be used by the
+# (Neo)vim highlights are specified. The elements refer to the colors defined
+# above with optional transformations. The available transformations are:
+#
+# `mix`
+# Mix the color with another color. Specify the color name and a mixing factor
+# between 0 (keep the original color) and 1 (completely take the other color).
+# The colors are mixed in the Oklab color space.
+#
+# `saturate`
+# How much to saturate colors (increase chromacity). Specify a negative value
+# to desaturate. Bright colors against a dark background tend to need less
+# saturation to be distinctive from each other than dark colors against a
+# bright background.
+#
+# `gamma`
+# Perform gamma correction for the inverse colorscheme. Values between 0 and 1
+# increase overall brightness and increase contrast between dark colors. Values
+# over 1 decrease overall brightness and increase contrast between light
+# colors.
+#
+# Calculates `new_lightness = lightness^factor`.
+#
+# - `lighten`
+# How much to lighten colors for the inverse colorscheme. Specify a negative
+# value to darken. This lightens and darkens relative to the maximal lightness
+# and darkness. For example, specifying 0.1 moves a color's lightness 10%
+# towards the maximal lightness.
+#
+# Calculates
+# ```
+# if factor > 0: new_lightness = lightness + factor * (1 - lightness)
+# otherwise:     new_lightness = (1 + factor) * lightness
+# ```
+#
+# - `lighten_multiplier`
+# How much to lighten colors for the inverse colorscheme by a multiplier.
+# Specify a value above 1 to lighten and below 1 to darken. This has the effect
+# of increasing lightness contrast (light colors are made lighter).
+#
+# Calculates `new_lightness = factor * lightness`.
+#
+# - `lighten_absolute`
+# How much to lighten colors for the inverse colorscheme. Specify a negative
+# value to darken. This lightens the colors absolutely, meaning all colors are
+# lightened (or darkened) by the perceptual same amount. However, using this,
+# lightness can fall below pure black and rise above pure white.
+#
+# Calculates `new_lightness = lightness + factor`.
+
+[themes.ui]
+# Normal foreground text
+fg = "fg"
+fg_dim = { color = "fg", mix = ["bg", 0.1] }
+fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
+
+# Background and background highlights
+bg = "bg"
+bg_visual = { color = "bg", lighten = -0.15, saturate = 0.04 }
+bg_highlight = { color = "bg", lighten = -0.15, saturate = 0.03 }
+bg_highlight_dim = { color = "bg", lighten = -0.07, saturate = 0.02 }
+bg_border = { color = "fg" }
+bg_gutter = { color = "bg", lighten = -0.04, saturate = 0.015 }
+bg_dim = { color = "bg", lighten = -0.05, saturate = -0.005 }
+bg_selected = { color = "bg", lighten = -0.1 }
+
+# Floating windows
+float_bg = { color = "bg", lighten = -0.05, saturate = 0.02 }
+float_fg = { color = "fg", lighten = -0.05 }
+float_border = { color = "fg", lighten = 0.1 }
+
+# Popup menu (e.g., tab completion)
+pmenu_bg = { color = "bg", lighten = -0.1, saturate = 0.03 }
+pmenu_fg = { color = "fg", lighten = -0.1 }
+pmenu_fg_selected = { color = "fg", lighten = -0.1, saturate = 0.03 }
+pmenu_bg_selected = { color = "bg", lighten = -0.25, saturate = 0.08 }
+pmenu_scrollbar = { color = "bg", lighten = -0.2 }
+pmenu_thumb = { color = "fg" }
+
+special = { color = "fg.purple", lighten = -0.05, saturate = 0.02 }
+nontext = { color = "grey", mix = ["bg", 0.15] }
+
+[themes.syn]
+string = "fg.blue"
+number = "fg.orange"
+constant = "fg.blue"
+regex = "fg.yellow"
+preproc = "fg.yellow"
+type = "fg.pink"
+variable = { color = "fg", lighten = -0.1, saturate = 0.01 }
+identifier = { color = "fg", lighten = -0.1, saturate = 0.01 }
+parameter = { color = "fg.blue", saturate = 0.01 }
+function = "fg.blue"
+constructor = "fg.orange"
+statement = "fg.purple"
+keyword = { color = "fg.purple", saturate = 0.01 }
+operator = "fg"
+deprecated = "grey"
+comment = { color = "grey", lighten = 0.05 }
+special = "fg.yellow"
+punctuation = "grey"
+
+[themes.diagnostics]
+error = { color = "fg.red", saturate = 0.03 }
+warning = { color = "fg.orange", saturate = 0.03 }
+info = { color = "fg.blue", saturate = 0.03 }
+hint =  "grey"
+ok = { color = "fg.green", saturate = 0.03 }
+
+[themes.vcs]
+removed = "fg.red"
+added = "fg.green"
+changed = "fg.yellow"
+
+[themes.diff]
+removed = "bg.red"
+added = "bg.green"
+changed = "bg.yellow"
+text = "bg"
+
+[inverse]
+# Color post-processing for the inverse color theme. This is performed after
+# inverting the lightness of all colors. The transformations are the same as
+# documented in the themes section.
+saturate = -0.005
+gamma = 0.85
+lighten_absolute = 0.10
+
+[highlights]
+# Specify (Neo)vim highlight groups. The default groups are available at
+# https://github.com/tomcur/hi.nvim.rs

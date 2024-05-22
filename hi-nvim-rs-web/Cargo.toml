@@ -1,0 +1,29 @@
+[package]
+name = "hi-nvim-rs-web"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+publish = false 
+
+[dependencies]
+anyhow = "1.0"
+axum = { version = "0.6.19", features = ["form", "headers", "query"] }
+hi-nvim-rs-web-styler = { path = "../hi-nvim-rs-web-styler" }
+markup = { version = "0.13.1" }
+mime = "0.3"
+pin-project = "1.1.2"
+tokio = { version = "1.0", features = ["rt", "rt-multi-thread", "macros"] }
+tower = "0.4"
+tower-http = { version = "0.4", features = ["compression-full", "timeout"] }
+serde = { version = "1.0", features = ["derive"] }
+
+[build-dependencies]
+hi-nvim-rs = { path = "../" }
+hi-nvim-rs-web-styler = { path = "../hi-nvim-rs-web-styler" }
+itertools = "0.11"
+tree-sitter-highlight = "0.20"
+
+tree-sitter-c = "0.20"
+tree-sitter-rust = "0.20"
+tree-sitter-javascript = "0.20"
+tree-sitter-typescript = "0.20"

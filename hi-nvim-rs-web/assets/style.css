@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --ring-box-shadow: 0px 0px 0px 1px rgba(15, 25, 35, 0.05),
+    0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  --fg: var(--Normal--fg);
+  --bg: var(--Normal--bg);
+  --bg-light: var(--Normal--bg);
+  --border: var(--WinSeparator--fg);
+  --textarea-fg: var(--NormalFloat--fg);
+  --textarea-bg: var(--NormalFloat--bg);
+  --link-fg: var(--DiagnosticInfo--fg);
+  --link-bg: var(--DiagnosticInfo--bg);
+  --link-hover-fg: var(--Visual--fg);
+  --link-hover-bg: var(--Visual--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+html {
+  font: 16px/28px sans;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+body > header > p {
+  font-weight: 600;
+}
+
+body > footer {
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+svg.icon {
+  fill: currentColor;
+  height: 1em;
+  width: auto;
+  margin-bottom: -0.125em;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  font-family: monospace;
+  font-size: inherit;
+  color: var(--textarea-fg);
+  background-color: var(--textarea-bg);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  color: inherit;
+  width: 100%;
+}
+
+input {
+  font-size: inherit;
+}
+
+a {
+  color: var(--link-fg);
+  background-color: var(--link-bg);
+}
+
+a:hover {
+  color: var(--link-hover-fg);
+  background-color: var(--link-hover-bg);
+}
+
+#preview-container {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+  gap: 2rem;
+  padding-inline: 1rem;
+}
+
+.preview {
+  width: 42rem;
+}
+
+.preview > div {
+  border: 1px solid var(--FloatBorder--fg);
+  box-shadow: var(--ring-box-shadow);
+  color: var(--Normal--fg);
+  background-color: var(--Normal--bg);
+  font-family: monospace;
+}
+
+.preview > h3 {
+  margin: 0;
+}
+
+.buffer {
+  display: flex;
+}
+
+.linenr {
+  margin: 0;
+  padding-inline: 0.5em;
+  text-align: right;
+  color: var(--LineNr--fg);
+  background-color: var(--LineNr--bg);
+}
+
+.buffer article {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.buffer code pre {
+  margin: 0;
+}
+
+.statusline {
+  display: flex;
+  color: var(--StatusLine--fg);
+  background-color: var(--StatusLine--bg);
+}
+
+.statusline > span:first-child {
+  flex: 1;
+}
+
+.msgarea {
+  color: var(--MsgArea--fg);
+  background-color: var(--MsgArea--bg);
+}
+
+.preview.inverse > div {
+  color: var(--Normal--inverse-fg);
+  background-color: var(--Normal--inverse-bg);
+}
+
+.preview.inverse .linenr {
+  color: var(--LineNr--inverse-fg);
+  background-color: var(--LineNr--inverse-bg);
+}
+
+.preview.inverse .statusline {
+  color: var(--StatusLine--inverse-fg);
+  background-color: var(--StatusLine--inverse-bg);
+}
+
+.preview.inverse .msgarea {
+  color: var(--MsgArea--inverse-fg);
+  background-color: var(--MsgArea--inverse-bg);
+}
+
+#error p {
+  color: var(--DiagnosticError--fg);
+  background-color: var(--DiagnosticError--bg);
+}

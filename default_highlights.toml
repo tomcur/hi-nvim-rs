@@ -1,0 +1,247 @@
+# These defaults require some more work.
+
+# Used for the columns set with 'colorcolumn'.
+ColorColumn = { bg = "ui.bg_selected" }
+
+# Placeholder characters substituted for concealed text (see 'conceallevel').
+Conceal = { fg = "ui.special", bold = true }
+
+# Used for highlighting a search pattern under the cursor (see 'hlsearch').
+# CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
+CurSearch = { fg = "ui.fg", bg = "ui.bg_highlight", bold = true }
+
+# Character under the cursor.
+Cursor = { fg = "ui.bg", bg = "ui.fg" }
+
+# Character under the cursor when |language-mapping| is used (see 'guicursor').
+lCursor = { link = "Cursor" }
+
+# Like Cursor, but used when in IME mode.
+CursorIM = { link = "Cursor" }
+
+# Screen-column at the cursor, when 'cursorcolumn' is set.
+CursorColumn = { link = "CursorLine" }
+# Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+CursorLine = { bg = "ui.bg_highlight" }
+
+# Directory names (and other special names in listings).
+Directory = { fg = "syn.type" }
+
+# Diff mode: Added line. |diff.txt|
+DiffAdd = { bg = "diff.added" }
+# Diff mode: Changed line. |diff.txt|
+DiffChange = { bg = "diff.changed" }
+# Diff mode: Deleted line. |diff.txt|
+DiffDelete = { bg = "diff.removed" }
+# Diff mode: Changed text within a changed line. |diff.txt|
+DiffText = { bg = "diff.text" }
+
+# Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
+EndOfBuffer = { Link = "Normal" }
+
+# -- TermCursor	Cursor in a focused terminal.
+# -- TermCursorNC	Cursor in an unfocused terminal.
+
+# Error messages on the command line.
+ErrorMsg = { fg = "diagnostics.error" }
+
+# Separators between window splits.
+WinSeparator = { fg = "ui.bg_border", bg = "ui.bg_border" }
+VertSplit = { link = "WinSeparator" }
+
+# Line used for closed folds.
+Folded = { fg = "ui.special", bg = "ui.bg_dim" }
+
+# 'foldcolumn'
+FoldColumn = { fg = "ui.nontext", bg = "ui.bg_gutter" }
+
+# Column where |signs| are displayed.
+SignColumn = { fg = "ui.special", bg = "ui.bg_gutter"}
+
+# -- IncSearch	'incsearch' highlighting; also used for the text replaced with ":s///c".
+IncSearch = { fg = "ui.bg", bg = "ui.fg" }
+
+# |:stitute| replacement text highlighting.
+Substitute = { fg = "ui.fg", bg = "diff.removed" }
+
+# Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+LineNr = { fg = "ui.nontext", bg = "ui.bg_gutter" }
+
+# -- LineNrAbove	Line number for when the 'relativenumber' option is set, above the cursor line.
+# -- LineNrBelow	Line number for when the 'relativenumber' option is set, below the cursor line.
+
+# Like LineNr when 'cursorline' is set and 'cursorlineopt' contains "number" or is "both", for the cursor line.
+CursorLineNr = { fg = "ui.nontext", bg = "ui.bg_gutter", bold = true }
+# -- CursorLineFold	Like FoldColumn when 'cursorline' is set for the cursor line.
+# -- CursorLineSign	Like SignColumn when 'cursorline' is set for the cursor line.
+
+# Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+MatchParen = { bg = "ui.bg_highlight", bold = true }
+
+# 'showmode' message (e.g., "-- INSERT --").
+ModeMsg = { fg = "diagnostics.warning", bold = true }
+# -- Area for messages and cmdline.
+MsgArea = { fg = "ui.fg_dim" }
+# -- Separator for scrolled messages |msgsep|.
+MsgSeparator = { bg = "ui.bg_border" }
+# -- |more-prompt|
+MoreMsg = { fg = "diagnostics.info" }
+# '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+NonText = { fg = "ui.nontext" }
+# Normal text.
+Normal = { fg = "ui.fg", bg = "ui.bg" }
+
+# Normal text in floating windows.
+NormalFloat = { fg = "ui.float_fg", bg = "ui.float_bg" }
+# Border of floating windows.
+FloatBorder = { fg = "ui.float_border", bg = "ui.float_bg" }
+# Title of floating windows.
+FloatTitle = { fg = "ui.special", bg = "ui.float_bg", bold = true }
+# -- NormalNC	Normal text in non-current windows.
+# NormalNC = config.dimInactive and { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim } or { link = "Normal" },
+
+# Popup menu: Normal item.
+Pmenu = { fg = "ui.pmenu_fg", bg = "ui.pmenu_bg" }
+# Popup menu: Selected item.
+PmenuSel = { fg = "ui.pmenu_fg_selected", bg = "ui.pmenu_bg_selected" }
+# Popup menu: Scrollbar.
+PmenuSbar = { bg = "ui.pmenu_scrollbar" }
+# Popup menu: Thumb of the scrollbar.
+PmenuThumb = { bg = "ui.pmenu_thumb" }
+# |hit-enter| prompt and yes/no questions.
+Question = { link = "MoreMsg" }
+# Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+QuickFixLine = { bg = "ui.bg_selected" }
+# Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+Search = { fg = "ui.fg", bg = "ui.bg_highlight_dim" }
+# -- SpecialKey	Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
+SpecialKey = { fg = "ui.special" }
+# -- SpellBad	Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+# SpellBad = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.error },
+# -- SpellCap	Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+# SpellCap = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
+# -- SpellLocal	Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+# SpellLocal = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
+# -- SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
+# SpellRare = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
+# Status line of current window.
+StatusLine = { fg = "ui.bg", bg = "ui.fg" }
+# Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
+StatusLineNC = { fg = "ui.bg", bg = "ui.fg_very_dim" }
+# -- TabLine		Tab pages line, not active tab page label.
+# TabLine = { bg = theme.ui.bg_m3, fg = theme.ui.special },
+# -- TabLineFill	Tab pages line, where there are no labels.
+# TabLineFill = { bg = theme.ui.bg },
+# -- TabLineSel	Tab pages line, active tab page label.
+# TabLineSel = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
+# -- Title		Titles for output from ":set all", ":autocmd" etc.
+Title = { fg = "syn.function", bold = true }
+# -- Visual		Visual mode selection.
+Visual = { bg = "ui.bg_visual" }
+# -- VisualNOS	Visual mode selection when vim is "Not Owning the Selection".
+VisualNOS = { link = "Visual" }
+# -- WarningMsg	Warning messages.
+# WarningMsg = { fg = theme.diag.warning },
+# -- Whitespace	"nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'.
+Whitespace = { fg = "ui.nontext" }
+# -- WildMenu	Current match in 'wildmenu' completion.
+# WildMenu = { link = "Pmenu" },
+# -- WinBar		Window bar of current window.
+# Winbar = { fg = theme.ui.fg_dim, bg = "NONE" },
+# -- WinBarNC	Window bar of not-current windows.
+# WinbarNC = { fg = theme.ui.fg_dim, bg = config.dimInactive and theme.ui.bg_dim or "NONE" },
+# 
+# -- SignColumnSB = { link = "SignColumn" },
+# -- NormalSB = { link = "Normal" },
+# 
+# debugPC = { bg = theme.diff.delete },
+# debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
+# 
+# LspReferenceText = { bg = theme.diff.text },
+# LspReferenceRead = { link = "LspReferenceText" },
+# LspReferenceWrite = { bg = theme.diff.text, underline = true },
+# -- LspInlayHint = { link = "NonText"},
+# 
+DiagnosticError = { fg = "diagnostics.error" }
+DiagnosticWarn = { fg = "diagnostics.warning" }
+DiagnosticInfo = { fg = "diagnostics.info" }
+DiagnosticHint = { fg = "diagnostics.hint" }
+DiagnosticOk = { fg = "diagnostics.ok" }
+
+DiagnosticSignError = { fg = "diagnostics.error", bg = "ui.bg_gutter" }
+DiagnosticSignWarn = { fg = "diagnostics.warning", bg = "ui.bg_gutter" }
+DiagnosticSignInfo = { fg = "diagnostics.info", bg = "ui.bg_gutter" }
+DiagnosticSignHint = { fg = "diagnostics.hint", bg = "ui.bg_gutter" }
+
+DiagnosticVirtualTextError = { link = "DiagnosticError" }
+DiagnosticVirtualTextWarn = { link = "DiagnosticWarn" }
+DiagnosticVirtualTextInfo = { link = "DiagnosticInfo" }
+DiagnosticVirtualTextHint = { link = "DiagnosticHint" }
+ 
+DiagnosticUnderlineError = { undercurl = true, sp = "diagnostics.error" }
+DiagnosticUnderlineWarn = { underline = true, sp = "diagnostics.warning" }
+DiagnosticUnderlineInfo = { underline = true, sp = "diagnostics.info" }
+DiagnosticUnderlineHint = { underline = true, sp = "diagnostics.hint" }
+
+# LspSignatureActiveParameter = { fg = theme.diag.warning },
+# LspCodeLens = { fg = theme.syn.comment },
+# 
+# -- vcs
+diffAdded = { fg = "vcs.added" }
+diffRemoved = { fg = "vcs.removed" }
+diffDeleted = { fg = "vcs.removed" }
+diffChanged = { fg = "vcs.changed" }
+diffOldFile = { fg = "vcs.removed" }
+diffNewFile = { fg = "vcs.added" }
+# -- diffFile = { fg = c.steelGray }
+# -- diffLine = { fg = c.steelGray }
+# -- diffIndexLine = { link = 'Identifier' }
+
+
+# Normal = { fg = "ui_fg", bg = "ui_bg" }
+Comment = { fg = "syn.comment", italic = true }
+Identifier = { fg = "syn.identifier" }
+Function = { fg = "syn.function" }
+Type = { fg = "syn.type", bold = true }
+Define = { link = "Type" }
+Include = { fg = "syn.special" }
+Statement = { fg = "syn.statement", bold = true }
+Operator = { fg = "syn.operator" }
+Keyword = { fg = "syn.keyword" }
+PreProc = { fg = "syn.preproc" }
+Special = { fg = "syn.special" }
+Delimiter = { fg = "syn.punctuation" }
+Underlined = { fg = "syn.special", underline = true }
+Number = { fg = "syn.number" }
+Float = { link = "Number" }
+Constant = { fg = "syn.constant" }
+Boolean = { link = "Constant" }
+Ignore = { fg = "ui.nontext" }
+
+"@string" = { fg = "syn.string" }
+
+"@parameter" = { fg = "syn.parameter" }
+"@constructor" = { fg = "syn.constructor", bold = true }
+
+"@tag" = { fg = "syn.special" }
+"@tag.attribute" = { fg = "syn.parameter" }
+"@tag.delimiter" = { link = "Delimiter" }
+
+"@lsp.type.string" = { link = "@string" }
+"@lsp.type.comment" = { link = "Comment" }
+
+# Plugins
+
+## GitSigns
+GitSignsAdd = { fg = "vcs.added", bg = "ui.bg_gutter" }
+GitSignsDelete = { fg = "vcs.removed",  bg = "ui.bg_gutter" }
+GitSignsChange = { fg = "vcs.changed", bg = "ui.bg_gutter" }
+
+## Indent Blankline
+### Version 2
+IndentBlanklineChar = { fg = "ui.bg_selected" }
+### Version 3
+IblScope = { fg = "ui.bg_selected", bg = "ui.bg_gutter" }
+IblIndent = { fg = "ui.bg_selected" }
+
+gitcommitOverflow = { fg = "diagnostics.error", italic = true }

@@ -1,0 +1,25 @@
+[package]
+name = "hi-nvim-rs"
+version = "0.1.0"
+edition = "2021"
+description = "(Neo)vim perceptual color scheme compiler"
+keywords = ["neovim", "vim", "colorscheme", "theme", "compiler"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/tomcur/hi.nvim.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4.3", features = ["derive"] }
+palette = { git = "https://github.com/Ogeon/palette.git", branch = "master" }
+palette-gamut-mapping = { path = "./palette-gamut-mapping" }
+serde = { version = "1", features = ["derive"] }
+thiserror = "1"
+toml = "0.5"
+
+[workspace]
+members = [
+    "palette-gamut-mapping",
+    "hi-nvim-rs-web",
+    "hi-nvim-rs-web-styler",
+]
