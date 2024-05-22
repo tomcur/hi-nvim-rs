@@ -1,4 +1,15 @@
+<div align="center">
+
 # hi.nvim.rs
+
+**(Neo)vim perceptual color scheme compiler**
+
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
+[![Apache 2.0](https://img.shields.io/badge/license-Apache-blue.svg)](#license)
+[![Crates.io](https://img.shields.io/crates/v/hi-nvim-rs.svg)](https://crates.io/crates/hi-nvim-rs)
+[![Docs](https://docs.rs/hi-nvim-rs/badge.svg)](https://docs.rs/hi-nvim-rs)
+
+</div>
 
 A tool to create (Neo)vim color schemes by defining colors and their
 transformations. It uses the Oklab color space to make the perceptual effects
