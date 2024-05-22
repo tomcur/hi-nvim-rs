@@ -22,6 +22,7 @@ A hosted version ~~is~~ will at some point be available
 
 - Color schemes are compiled to (Neo)vim configurations with no startup overhead
 - Specify colors using lightness, chromacity and hue in the Oklch color space
+- If you're creating a dark theme, you get the inverse light theme for free, and vice versa
 - A curated set of opinionated default Neovim highlight groups is provided,
   requiring only a few theme definitions to get a consistent color scheme
 - Theme colors definitions refer to colors with optional transformations (such
