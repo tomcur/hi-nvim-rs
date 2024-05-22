@@ -7,4 +7,4 @@ license = "MIT OR Apache-2.0"
 edition = "2021"
 
 [dependencies]
-palette = { git = "https://github.com/Ogeon/palette.git", branch = "master" }
+palette = "0.7"
