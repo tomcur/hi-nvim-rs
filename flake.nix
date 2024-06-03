@@ -12,7 +12,16 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
-      {
+      rec {
+        packages.hi-nvim-rs = pkgs.rustPlatform.buildRustPackage {
+          pname = "hi-nvim-rs";
+          version = "0.1.0";
+          src = ./.;
+          cargoLock = {
+            lockFile = ./Cargo.lock;
+          };
+        };
+        packages.default = packages.hi-nvim-rs;
         devShells.default = pkgs.mkShell
           {
             buildInputs = with pkgs; [
