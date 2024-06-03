@@ -11,6 +11,7 @@ use axum::{
     routing::{get, post},
     Form, Router,
 };
+use clap::{arg, command, Parser};
 use serde::Deserialize;
 use tower_http::{compression::CompressionLayer, timeout::TimeoutLayer};
 
@@ -458,11 +459,26 @@ async fn index(Query(query): Query<IndexQuery>, headers: HeaderMap) -> impl Into
     }
 }
 
+/// Start the hi-nvim-rs web server.
+#[derive(Parser, Debug)]
+#[command(version)]
+struct Cli {
+    /// The web server listen address.
+    #[arg(short, long, value_name = "target", default_value = "127.0.0.1")]
+    address: std::net::IpAddr,
+
+    /// The web server listen port.
+    #[arg(short, long, value_name = "target", default_value = "3000")]
+    port: u16,
+}
+
 #[tokio::main]
 async fn main() {
     ASSET_LAST_MODIFIED
         .set(headers::LastModified::from(SystemTime::now()))
         .unwrap();
+
+    let cli = Cli::parse();
 
     let static_assets = Router::new()
         .route("/", get(index))
@@ -481,7 +497,7 @@ async fn main() {
         .layer(TimeoutLayer::new(Duration::from_secs(30)))
         .layer(CompressionLayer::new());
 
-    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
+    axum::Server::bind(&std::net::SocketAddr::new(cli.address, cli.port))
         .serve(app.into_make_service())
         .await
         .unwrap();

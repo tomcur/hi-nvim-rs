@@ -532,6 +532,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "axum",
+ "clap",
  "hi-nvim-rs",
  "hi-nvim-rs-web-styler",
  "itertools",
