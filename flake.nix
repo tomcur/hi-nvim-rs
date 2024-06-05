@@ -15,7 +15,7 @@
       rec {
         packages.hi-nvim-rs = pkgs.rustPlatform.buildRustPackage {
           pname = "hi-nvim-rs";
-          version = "0.1.0";
+          version = (pkgs.lib.trivial.importTOML ./Cargo.toml).package.version;
           src = ./.;
           cargoLock = {
             lockFile = ./Cargo.lock;
