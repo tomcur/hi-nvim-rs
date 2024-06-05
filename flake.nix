@@ -21,6 +21,15 @@
             lockFile = ./Cargo.lock;
           };
         };
+        packages.hi-nvim-rs-web = pkgs.rustPlatform.buildRustPackage {
+          pname = "hi-nvim-rs-web";
+          version = (pkgs.lib.trivial.importTOML ./hi-nvim-rs-web/Cargo.toml).package.version;
+          src = ./.;
+          buildAndTestSubdir = "hi-nvim-rs-web";
+          cargoLock = {
+            lockFile = ./Cargo.lock;
+          };
+        };
         packages.default = packages.hi-nvim-rs;
         devShells.default = pkgs.mkShell
           {
