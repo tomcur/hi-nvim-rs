@@ -780,7 +780,9 @@ dependencies = [
 
 [[package]]
 name = "palette-gamut-mapping"
-version = "0.1.0"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2b679bc8be29d616276023bffbb6f9d8116b183b7f9bae4dc4fab062f0fcf83d"
 dependencies = [
  "palette",
 ]

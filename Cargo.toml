@@ -12,14 +12,13 @@ repository = "https://github.com/tomcur/hi.nvim.rs"
 anyhow = "1"
 clap = { version = "4.3", features = ["derive"] }
 palette = "0.7.6"
-palette-gamut-mapping = { path = "./palette-gamut-mapping", version = "0.1.0" }
+palette-gamut-mapping = "0.1.0"
 serde = { version = "1", features = ["derive"] }
 thiserror = "1"
 toml = "0.5"
 
 [workspace]
 members = [
-    "palette-gamut-mapping",
     "hi-nvim-rs-web",
     "hi-nvim-rs-web-styler",
 ]
