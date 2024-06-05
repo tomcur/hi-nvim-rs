@@ -6,7 +6,7 @@ description = "(Neo)vim perceptual color scheme compiler"
 keywords = ["neovim", "vim", "colorscheme", "theme", "compiler"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/tomcur/hi.nvim.rs"
+repository = "https://github.com/tomcur/hi-nvim-rs"
 
 [dependencies]
 anyhow = "1"
