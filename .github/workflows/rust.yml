@@ -1,0 +1,28 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build hi-nvim-rs
+      run: cargo build --verbose
+    - name: Run hi-nvim-rs tests
+      run: cargo test --verbose
+
+    - name: Build hi-nvim-rs-web
+      run: cargo build --package hi-nvim-rs-web --verbose
+    - name: Run hi-nvim-rs-web tests
+      run: cargo test --package hi-nvim-rs-web --verbose
