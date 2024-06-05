@@ -32,3 +32,7 @@ commit_parsers = [
   { message = "^ci", group = "<!-- 6 -->Build System and CI" },
   { message = ".*", group = "<!-- 7 -->Other" }
 ]
+
+# TODO: once git-only mode is supported, bump hi-nvim-rs-web and
+# hi-nvim-rs-web-styler versions using that.
+# see: https://github.com/MarcoIeni/release-plz/pull/1497
