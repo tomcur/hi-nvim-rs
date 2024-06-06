@@ -11,9 +11,9 @@
 
 </div>
 
-A tool to create (Neo)vim color schemes by defining colors and their
-transformations. It uses the Oklab color space to make the perceptual effects
-of transformations predictable.
+Create (Neo)vim color schemes by defining colors and their transformations.
+This uses the Oklab color space to make the perceptual effects of
+transformations predictable.
 
 A hosted version ~~is~~ will at some point be available
 [here](https://hi-nvim-rs.uint.one).
