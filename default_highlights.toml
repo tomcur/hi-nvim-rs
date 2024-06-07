@@ -37,7 +37,7 @@ DiffDelete = { bg = "diff.removed" }
 DiffText = { bg = "diff.text" }
 
 # Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
-EndOfBuffer = { Link = "Normal" }
+EndOfBuffer = { link = "Normal" }
 
 # -- TermCursor	Cursor in a focused terminal.
 # -- TermCursorNC	Cursor in an unfocused terminal.
