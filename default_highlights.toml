@@ -146,10 +146,10 @@ VisualNOS = { link = "Visual" }
 Whitespace = { fg = "ui.nontext" }
 # -- WildMenu	Current match in 'wildmenu' completion.
 # WildMenu = { link = "Pmenu" },
-# -- WinBar		Window bar of current window.
-# Winbar = { fg = theme.ui.fg_dim, bg = "NONE" },
-# -- WinBarNC	Window bar of not-current windows.
-# WinbarNC = { fg = theme.ui.fg_dim, bg = config.dimInactive and theme.ui.bg_dim or "NONE" },
+# Window bar of current window.
+WinBar = { fg = "ui.fg_dim", bg = "ui.bg_dim" }
+# Window bar of not-current windows.
+WinBarNC = { fg = "ui.fg_very_dim", bg = "ui.bg_dim" }
 # 
 # -- SignColumnSB = { link = "SignColumn" },
 # -- NormalSB = { link = "Normal" },
