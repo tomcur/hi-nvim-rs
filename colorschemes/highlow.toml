@@ -9,6 +9,9 @@ name = "highlow"
 # The kind of the color scheme specified here (either light or dark). The
 # inverse will be generated for free (with optional postprocessing specified in
 # `inverse`).
+#
+# This allows the correct scheme to be loaded based on whether (Neo)vim's
+# `background` setting is `light` or `dark`.
 kind = "light"
 
 [hues]
@@ -36,8 +39,10 @@ lightness = 0.85
 chroma = 0.075
 
 [colors]
-# Specify colors (with lightness and chromacity) to use in the theme. The names
-# can be referenced in the `theme` section without a prefix.
+# Specify colors (with lightness, chromacity, and hue) to use in the theme. The
+# color names can be referenced in the `theme` section without a prefix. This
+# is useful for naming specific colors that may differ in lightness and
+# chromacity from the colors in the `fg` and `bg` sections.
 bg =   [ 0.95, 0.016,  77 ]
 fg =   [ 0.42, 0.035, 272 ]
 grey = [ 0.42, 0.0,    77 ]
@@ -59,18 +64,17 @@ grey = [ 0.42, 0.0,    77 ]
 # bright background.
 #
 # `gamma`
-# Perform gamma correction for the inverse colorscheme. Values between 0 and 1
-# increase overall brightness and increase contrast between dark colors. Values
-# over 1 decrease overall brightness and increase contrast between light
-# colors.
+# Perform gamma correction: values between 0 and 1 increase overall brightness
+# and increase contrast between lightness levels of dark colors. Values over 1
+# decrease overall brightness and increase contrast between lightness levels of
+# light colors.
 #
 # Calculates `new_lightness = lightness^factor`.
 #
 # - `lighten`
-# How much to lighten colors for the inverse colorscheme. Specify a negative
-# value to darken. This lightens and darkens relative to the maximal lightness
-# and darkness. For example, specifying 0.1 moves a color's lightness 10%
-# towards the maximal lightness.
+# Lighten or darken a color. Specify a negative value to darken. This lightens
+# and darkens relative to the maximal lightness and darkness. For example,
+# specifying 0.1 moves a color's lightness 10% towards maximal lightness.
 #
 # Calculates
 # ```
@@ -79,17 +83,24 @@ grey = [ 0.42, 0.0,    77 ]
 # ```
 #
 # - `lighten_multiplier`
-# How much to lighten colors for the inverse colorscheme by a multiplier.
-# Specify a value above 1 to lighten and below 1 to darken. This has the effect
-# of increasing lightness contrast (light colors are made lighter).
+# Lighten or darken a color by a multiplier. Specify a value above 1 to lighten
+# and below 1 to darken. If multiple colors are modified by the same
+# `lighten_multiplier` value, the lighter colors undergo a perceptually bigger
+# change.
+#
+# Using this, lightness can rise or fall below minimal or maximal lightness,
+# leading to clamping.
 #
 # Calculates `new_lightness = factor * lightness`.
 #
 # - `lighten_absolute`
-# How much to lighten colors for the inverse colorscheme. Specify a negative
-# value to darken. This lightens the colors absolutely, meaning all colors are
-# lightened (or darkened) by the perceptual same amount. However, using this,
-# lightness can fall below pure black and rise above pure white.
+# Lighten or darken a color independently from its current lightness. Specify a
+# negative value to darken. If multiple colors are modified by the same
+# `lighten_absolute` value, they change in lightness by the same perceptual
+# amount.
+#
+# Using this, lightness can rise or fall below minimal or maximal lightness,
+# leading to clamping.
 #
 # Calculates `new_lightness = lightness + factor`.
 
