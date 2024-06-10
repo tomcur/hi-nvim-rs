@@ -451,7 +451,7 @@ async fn index(Query(query): Query<IndexQuery>, headers: HeaderMap) -> impl Into
         let template = Index {
             style,
             configuration: colorscheme.config,
-            name: "hl",
+            name: "highlow",
             compiled_colorscheme: colorscheme.neovim_config,
             data,
         };
