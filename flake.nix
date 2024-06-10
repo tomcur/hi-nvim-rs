@@ -31,6 +31,31 @@
           };
         };
         packages.default = packages.hi-nvim-rs;
+
+        # Compiles a colorscheme. Use like
+        #
+        # ```nix
+        # buildColorscheme {
+        #   name = "highlow";
+        #   colorschemeFile = ./highlow.toml;
+        #   target = "neovim";
+        # }
+        # ```
+        buildColorscheme = { name, colorschemeFile, target }:
+          assert target == "neovim" || target == "vim";
+          pkgs.stdenv.mkDerivation {
+            name = name;
+
+            dontUnpack = true;
+
+            buildPhase = ''
+              ${packages.hi-nvim-rs}/bin/hi-nvim-rs --target ${target} "${colorschemeFile}" > "${name}.vim"
+            '';
+
+            installPhase = ''
+              cp "${name}.vim" $out
+            '';
+          };
         devShells.default = pkgs.mkShell
           {
             buildInputs = with pkgs; [
