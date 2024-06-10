@@ -60,7 +60,7 @@ markup::define! {
                         }
                         p {
                             "A CLI tool for local compilation is available: see the "
-                            a [href="https://github.com/tomcur/hi.nvim.rs"] {
+                            a [href="https://github.com/tomcur/hi-nvim-rs"] {
                                 "repository"
                             }
                             ". Vim is supported as a secondary target."

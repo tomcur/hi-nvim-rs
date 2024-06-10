@@ -184,4 +184,4 @@ lighten_absolute = 0.10
 
 [highlights]
 # Specify (Neo)vim highlight groups. The default groups are available at
-# https://github.com/tomcur/hi.nvim.rs
+# https://github.com/tomcur/hi-nvim-rs
