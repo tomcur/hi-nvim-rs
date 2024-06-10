@@ -2,7 +2,7 @@
 # Oklch color space. All color transformations performed by the theme compiler
 # are performed in either the Oklch or Oklab color spaces.
 
-# The name of the color scheme. The color scheme will be loadable (Neo)vim
+# The name of the color scheme. The color scheme will be loadable in (Neo)vim
 # through `:colorscheme {name}`.
 name = "highlow"
 
