@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.2] - 2024-06-12
+
+### Bug Fixes
+
+- *(web)* Clear error on success
+- *(web)* Improve color scheme preview on small screens
+- *(web)* Don't scale down to fit overflow on screen
+
+### Other
+
+- Bump input flakes
+
 ## [0.1.1] - 2024-06-10
 
 ### Features
