@@ -103,7 +103,7 @@ a:hover {
 }
 
 .preview {
-  width: 42rem;
+  max-width: calc(min(100%, 42rem))
 }
 
 .preview > div {
@@ -138,6 +138,7 @@ a:hover {
 
 .buffer code pre {
   margin: 0;
+  overflow-x: auto;
 }
 
 .statusline {
