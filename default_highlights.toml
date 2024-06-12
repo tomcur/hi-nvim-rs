@@ -212,13 +212,12 @@ PreProc = { fg = "syn.preproc" }
 Special = { fg = "syn.special" }
 Delimiter = { fg = "syn.punctuation" }
 Underlined = { fg = "syn.special", underline = true }
+String = { fg = "syn.string" }
 Number = { fg = "syn.number" }
 Float = { link = "Number" }
 Constant = { fg = "syn.constant" }
 Boolean = { link = "Constant" }
 Ignore = { fg = "ui.nontext" }
-
-"@string" = { fg = "syn.string" }
 
 "@parameter" = { fg = "syn.parameter" }
 "@constructor" = { fg = "syn.constructor", bold = true }
