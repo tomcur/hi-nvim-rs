@@ -342,7 +342,7 @@ async fn colorscheme(Form(payload): Form<ColorschemePayload>) -> impl IntoRespon
 
             let template = markup::new! {
                 @PreviewContainer { data }
-                section #error {}
+                section #error ["hx-swap-oob"="true"] {}
                 @Install {
                     compilation_target: compilation_target,
                     name,
