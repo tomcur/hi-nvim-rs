@@ -64,6 +64,12 @@
               rust-analyzer
               rustc
               rustfmt
+
+              # Automated screenshots
+              (python3.withPackages (python-pkgs: [
+                python-pkgs.numpy
+                python-pkgs.pyte
+              ]))
             ];
           };
       }
