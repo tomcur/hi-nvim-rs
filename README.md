@@ -31,16 +31,16 @@ A hosted version is available [here](https://hi-nvim-rs.uint.one).
 
 ## Examples
 
-| Normal | Inverse |
+| Light | Dark |
 |---|---|
-| ![A screenshot of Neovim using the "highlow" light color scheme](./media/highlow-light.png) | ![A screenshot of Neovim using the "highlow" dark color scheme](./media/highlow-dark.png) |
+| ![A screenshot of Neovim using the "highlow" light color scheme](./media/highlow-light.svg) | ![A screenshot of Neovim using the "highlow" dark color scheme](./media/highlow-dark.svg) |
 
 [_highlow_](./colorschemes/highlow.toml): a color scheme with high contrast between background and foreground,
 low color saturation, and low contrast between foreground elements.
 
-| Normal | Inverse |
+| Light | Dark |
 |---|---|
-| ![A screenshot of Neovim using the "twocolor" dark color scheme](./media/twocolor-dark.png) | ![A screenshot of Neovim using the "twocolor" light color scheme](./media/twocolor-light.png) |
+| ![A screenshot of Neovim using the "twocolor" light color scheme](./media/twocolor-light.svg) | ![A screenshot of Neovim using the "twocolor" dark color scheme](./media/twocolor-dark.svg) |
 
 [_twocolor_](./colorschemes/twocolor.toml): a color scheme using (mostly) just two hues.
 

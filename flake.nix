@@ -6,8 +6,12 @@
       url = "github:edolstra/flake-compat";
       flake = false;
     };
+    termsnap = {
+      url = "github:tomcur/termsnap";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { nixpkgs, flake-utils, ... }:
+  outputs = { nixpkgs, flake-utils, termsnap, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -58,18 +62,15 @@
           };
         devShells.default = pkgs.mkShell
           {
-            buildInputs = with pkgs; [
+            buildInputs = (with pkgs; [
               cargo
               clippy
               rust-analyzer
               rustc
               rustfmt
-
+            ]) ++ [
               # Automated screenshots
-              (python3.withPackages (python-pkgs: [
-                python-pkgs.numpy
-                python-pkgs.pyte
-              ]))
+              termsnap.packages.${system}.default
             ];
           };
       }
