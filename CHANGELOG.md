@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.3] - 2024-07-01
+
+### Bug Fixes
+
+- *(highlights)* Add String group (@string links to it)
+
+### Documentation
+
+- *(README)* Set example images' widths to ensure github doesn't squash them
+- Use Termsnap for color scheme screenshots
+- Add automated screenshots tool
+
 ## [0.1.2] - 2024-06-12
 
 ### Bug Fixes
