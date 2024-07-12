@@ -1,6 +1,6 @@
 [package]
 name = "hi-nvim-rs"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 description = "(Neo)vim perceptual color scheme compiler"
 keywords = ["neovim", "vim", "colorscheme", "theme", "compiler"]
