@@ -1,0 +1,92 @@
+name = "monochrome"
+kind = "dark"
+
+[hues]
+# We cheat and add some colors for vcs/diff
+red = 15.0
+yellow = 98.0
+green = 135.0
+
+[fg]
+lightness = 0.72
+chroma = 0.05
+
+[bg]
+lightness = 0.16
+chroma = 0.05
+
+[colors]
+fg = [ 0.72, 0.00, 86 ]
+bg = [ 0.10, 0.00, 86 ]
+
+[themes.ui]
+fg = "fg"
+fg_dim = { color = "fg", mix = ["bg", 0.1] }
+fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
+
+bg = "bg"
+bg_visual =        { color = "bg", lighten_absolute = 0.1 }
+bg_highlight =     { color = "bg", lighten_absolute = 0.15 }
+bg_highlight_dim = { color = "bg", lighten_absolute = 0.08 }
+bg_border =        { color = "fg" }
+bg_gutter =        { color = "bg", lighten_absolute = 0.05 }
+bg_dim =           { color = "bg", lighten_absolute = -0.05 }
+bg_selected =      { color = "bg", lighten_absolute = 0.1 }
+
+float_bg =     { color = "bg", lighten_absolute = 0.05 }
+float_fg =     { color = "fg", lighten_absolute = 0.05 }
+float_border = { color = "fg", lighten_absolute = 0.1 }
+
+pmenu_bg =          { color = "bg", lighten_absolute = 0.1 }
+pmenu_fg =          { color = "fg", lighten_absolute = 0.1 }
+pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1 }
+pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25 }
+pmenu_scrollbar =   { color = "bg", lighten_absolute = 0.2 }
+pmenu_thumb = "fg"
+
+special = "fg"
+nontext = { color = "fg", mix = ["bg", 0.3] }
+
+[themes.syn]
+string =   { color = "fg", lighten_absolute = 0.16 }
+number =   { color = "fg", lighten_absolute = 0.16 }
+constant = { color = "fg", lighten_absolute = 0.08 }
+regex =    { color = "fg", lighten_absolute = 0.16 }
+preproc =  { color = "fg", lighten_absolute = 0.16 }
+type =        "fg"
+variable =    "fg"
+identifier =  "fg"
+parameter =   "fg"
+function =    "fg"
+constructor = "fg"
+statement =   "fg"
+keyword =     { color = "fg", lighten_absolute = -0.12 }
+operator =    { color = "fg", lighten_absolute = -0.12 }
+deprecated =  { color = "fg", lighten_absolute = -0.16 }
+comment =     { color = "fg", lighten_absolute = -0.12 }
+special =     { color = "fg", lighten_absolute = 0.08 }
+punctuation = { color = "fg", lighten_absolute = -0.16 }
+
+[themes.diagnostics]
+error =   { color = "fg", lighten_absolute = 0.2 }
+warning = { color = "fg", lighten_absolute = 0.2 }
+info =    { color = "fg", lighten_absolute = 0.2 }
+hint =    { color = "fg", lighten_absolute = 0.2 }
+ok =      { color = "fg", lighten_absolute = 0.2 }
+
+[themes.vcs]
+removed = "fg.red"
+added = "fg.green"
+changed = "fg.yellow"
+
+[themes.diff]
+removed = "bg.red"
+added = "bg.green"
+changed = "bg.yellow"
+text = "bg"
+
+[inverse]
+gamma = 1.1
+lighten_absolute = 0.02
+
+[highlights]

@@ -32,6 +32,7 @@ static KNOWN_NEOVIM_HIGHLIGHT_GROUPS: &[&str] = &["LineNr", "MsgArea", "StatusLi
 static COLOR_SCHEMES: &[(&'static str, &'static str)] = &[
     ("highlow", include_str!("../colorschemes/highlow.toml")),
     ("twocolor", include_str!("../colorschemes/twocolor.toml")),
+    ("grayscale", include_str!("../colorschemes/grayscale.toml")),
 ];
 
 fn highlight_html_into_write(

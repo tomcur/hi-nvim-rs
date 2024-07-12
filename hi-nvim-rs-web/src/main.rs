@@ -96,6 +96,9 @@ markup::define! {
                 li {
                     a [href="/?colorscheme=Twocolor"] { "Twocolor" }
                 }
+                li {
+                    a [href="/?colorscheme=Grayscale"] { "Grayscale" }
+                }
             }
         }
         // form [ method="get" ]

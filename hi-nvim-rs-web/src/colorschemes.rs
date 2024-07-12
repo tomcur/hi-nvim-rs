@@ -35,19 +35,33 @@ pub static TWOCOLOR: &'static PrebuiltColorscheme = &PrebuiltColorscheme {
     )),
 };
 
+pub static GRAYSCALE: &'static PrebuiltColorscheme = &PrebuiltColorscheme {
+    name: "grayscale",
+    css_variables: include_str!(concat!(
+        env!("OUT_DIR"),
+        "/colorschemes/grayscale/color_scheme.txt"
+    )),
+    config: include_str!("../../colorschemes/grayscale.toml"),
+    neovim_config: include_str!(concat!(
+        env!("OUT_DIR"),
+        "/colorschemes/grayscale/neovim_config.vim"
+    )),
+};
+
 #[derive(Clone, Copy, Default, Deserialize)]
 pub enum Colorscheme {
     #[default]
     Highlow,
     Twocolor,
+    Grayscale,
 }
 
 impl Display for Colorscheme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        use Colorscheme::*;
         let s = match self {
-            Highlow => "Highlow",
-            Twocolor => "Twocolor",
+            Colorscheme::Highlow => "Highlow",
+            Colorscheme::Twocolor => "Twocolor",
+            Colorscheme::Grayscale => "Grayscale",
         };
         f.write_str(s)
     }
@@ -61,10 +75,10 @@ impl markup::Render for Colorscheme {
 
 impl Colorscheme {
     pub fn colorscheme(self) -> &'static PrebuiltColorscheme {
-        use Colorscheme::*;
         match self {
-            Highlow => HIGHLOW,
-            Twocolor => TWOCOLOR,
+            Colorscheme::Highlow => HIGHLOW,
+            Colorscheme::Twocolor => TWOCOLOR,
+            Colorscheme::Grayscale => GRAYSCALE,
         }
     }
 }
