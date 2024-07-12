@@ -1,0 +1,35 @@
+name: continuous-deployment
+
+permissions:
+  # TODO: once `releases: write` is supported, use it instead.
+  contents: write
+
+on:
+  release:
+    types: [published]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  upload-assets:
+    name: upload-assets
+    if: github.repository_owner == 'tomcur'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile highlow
+        run: cargo run -- ./colorschemes/highlow.toml > highlow.vim
+      - name: Compile twocolor
+        run: cargo run -- ./colorschemes/twocolor.toml > twocolor.vim
+      - name: Compile grayscale
+        run: cargo run -- ./colorschemes/grayscale.toml > grayscale.vim
+      - name: Upload to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: "*.vim"
+          tag: ${{ github.ref }}
+          overwrite: false
+          file_glob: true
