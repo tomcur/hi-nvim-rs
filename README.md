@@ -44,6 +44,15 @@ low color saturation, and low contrast between foreground elements.
 
 [_twocolor_](./colorschemes/twocolor.toml): a color scheme using (mostly) just two hues.
 
+| Light | Dark |
+|---|---|
+| <img width="2000" alt="A screenshot of Neovim using the 'grayscale' light color scheme" src="./media/grayscale-light.svg" /> | <img width="2000" alt="A screenshot of Neovim using the 'grayscale' dark color scheme" src="./media/grayscale-dark.svg" /> |
+
+[_grayscale_](./colorschemes/grayscale.toml): a color scheme, sans color.
+
+These screenshots were generated using
+[Termsnap](https://github.com/tomcur/termsnap).
+
 ## Getting started
 
 To run the CLI version, run

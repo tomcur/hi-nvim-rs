@@ -1,0 +1,101 @@
+<svg viewBox="0 0 34.800003 20" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .screen {
+    font-family: "ui-monospace", "Consolas", "Liberation Mono", "Source Code Pro", monospace;
+    font-size: 1px;
+  }
+</style>
+<g class="screen">
+<rect x="0" y="0" width="34.800003" height="20" style="fill: #030303;" />
+<rect x="0" y="0" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="1" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="2" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="3" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="4" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="5" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="6" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="7" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="8" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="9" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="10" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="11" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="12" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="13" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="14" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="15" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="16" width="2.4" height="1" style="fill: #0b0b0b;" />
+<rect x="0" y="18" width="34.800003" height="1" style="fill: #a4a4a4;" />
+<text x="1.2" y="0.75" textLength="0.6" style="fill: #6d6d6d;">1</text>
+<text x="2.4" y="0.75" textLength="10.8" style="fill: #bebebe;">//! Calculate A+B.</text>
+<text x="1.2" y="1.75" textLength="0.6" style="fill: #6d6d6d;">2</text>
+<text x="2.4" y="1.75" textLength="1.8000001" style="fill: #bebebe;">//!</text>
+<text x="1.2" y="2.75" textLength="0.6" style="fill: #6d6d6d;">3</text>
+<text x="2.4" y="2.75" textLength="25.2" style="fill: #bebebe;">//! From: https://rosettacode.org/wiki/A+B</text>
+<text x="1.2" y="3.75" textLength="0.6" style="fill: #6d6d6d;">4</text>
+<text x="2.4" y="3.75" textLength="1.8000001" style="fill: #808080;">use</text>
+<text x="4.8" y="3.75" textLength="1.8000001" style="fill: #bebebe;">std</text>
+<text x="6.6000004" y="3.75" textLength="1.2" style="fill: #747474;">::</text>
+<text x="7.8" y="3.75" textLength="1.8000001" style="fill: #a4a4a4;">io;</text>
+<text x="1.2" y="4.75" textLength="0.6" style="fill: #6d6d6d;">5</text>
+<text x="1.2" y="5.75" textLength="0.6" style="fill: #6d6d6d;">6</text>
+<text x="2.4" y="5.75" textLength="1.2" style="fill: #808080;">fn</text>
+<text x="4.2000003" y="5.75" textLength="4.8" style="fill: #a4a4a4;">main() {</text>
+<text x="1.2" y="6.75" textLength="0.6" style="fill: #6d6d6d;">7</text>
+<text x="4.8" y="6.75" textLength="1.8000001" style="fill: #808080;">let</text>
+<text x="7.2000003" y="6.75" textLength="1.8000001" style="fill: #a4a4a4; font-weight: 600;">mut</text>
+<text x="9.6" y="6.75" textLength="2.4" style="fill: #a4a4a4;">line</text>
+<text x="12.6" y="6.75" textLength="0.6" style="fill: #808080;">=</text>
+<text x="13.8" y="6.75" textLength="3.6000001" style="fill: #a4a4a4; font-weight: 600;">String</text>
+<text x="17.400002" y="6.75" textLength="1.2" style="fill: #747474;">::</text>
+<text x="18.6" y="6.75" textLength="3.6000001" style="fill: #a4a4a4;">new();</text>
+<text x="1.2" y="7.75" textLength="0.6" style="fill: #6d6d6d;">8</text>
+<text x="4.8" y="7.75" textLength="1.2" style="fill: #bebebe;">io</text>
+<text x="6" y="7.75" textLength="1.2" style="fill: #747474;">::</text>
+<text x="7.2000003" y="7.75" textLength="10.8" style="fill: #a4a4a4;">stdin().read_line(</text>
+<text x="18" y="7.75" textLength="2.4" style="fill: #a4a4a4; font-weight: 600;">&amp;mut</text>
+<text x="21" y="7.75" textLength="7.8" style="fill: #a4a4a4;">line).expect(</text>
+<text x="28.800001" y="7.75" textLength="4.2000003" style="fill: #d7d7d7;">"stdin"</text>
+<text x="33" y="7.75" textLength="1.2" style="fill: #a4a4a4;">);</text>
+<text x="1.2" y="8.75" textLength="0.6" style="fill: #6d6d6d;">9</text>
+<text x="0.6" y="9.75" textLength="1.2" style="fill: #6d6d6d;">10</text>
+<text x="4.8" y="9.75" textLength="1.8000001" style="fill: #808080;">let</text>
+<text x="7.2000003" y="9.75" textLength="1.8000001" style="fill: #a4a4a4; font-weight: 600;">mut</text>
+<text x="9.6" y="9.75" textLength="1.2" style="fill: #a4a4a4;">i:</text>
+<text x="11.400001" y="9.75" textLength="1.8000001" style="fill: #a4a4a4; font-weight: 600;">i64</text>
+<text x="13.8" y="9.75" textLength="0.6" style="fill: #808080;">=</text>
+<text x="15.000001" y="9.75" textLength="0.6" style="fill: #d7d7d7;">0</text>
+<text x="15.6" y="9.75" textLength="0.6" style="fill: #a4a4a4;">;</text>
+<text x="0.6" y="10.75" textLength="1.2" style="fill: #6d6d6d;">11</text>
+<text x="4.8" y="10.75" textLength="1.8000001" style="fill: #a4a4a4; font-weight: 600;">for</text>
+<text x="7.2000003" y="10.75" textLength="2.4" style="fill: #a4a4a4;">word</text>
+<text x="10.200001" y="10.75" textLength="1.2" style="fill: #a4a4a4; font-weight: 600;">in</text>
+<text x="12" y="10.75" textLength="15.000001" style="fill: #a4a4a4;">line.split_whitespace() {</text>
+<text x="0.6" y="11.75" textLength="1.2" style="fill: #6d6d6d;">12</text>
+<text x="7.2000003" y="11.75" textLength="0.6" style="fill: #a4a4a4;">i</text>
+<text x="8.400001" y="11.75" textLength="1.2" style="fill: #808080;">+=</text>
+<text x="10.200001" y="11.75" textLength="2.4" style="fill: #a4a4a4;">word</text>
+<text x="0.6" y="12.75" textLength="1.2" style="fill: #6d6d6d;">13</text>
+<text x="9.6" y="12.75" textLength="3.6000001" style="fill: #a4a4a4;">.parse</text>
+<text x="13.200001" y="12.75" textLength="1.2" style="fill: #747474;">::</text>
+<text x="14.400001" y="12.75" textLength="0.6" style="fill: #808080;">&lt;</text>
+<text x="15.000001" y="12.75" textLength="1.8000001" style="fill: #a4a4a4; font-weight: 600;">i64</text>
+<text x="16.800001" y="12.75" textLength="0.6" style="fill: #808080;">></text>
+<text x="17.400002" y="12.75" textLength="1.2" style="fill: #a4a4a4;">()</text>
+<text x="0.6" y="13.75" textLength="1.2" style="fill: #6d6d6d;">14</text>
+<text x="9.6" y="13.75" textLength="4.8" style="fill: #a4a4a4;">.expect(</text>
+<text x="14.400001" y="13.75" textLength="16.800001" style="fill: #d7d7d7;">"interpret input as numbers"</text>
+<text x="31.2" y="13.75" textLength="1.2" style="fill: #a4a4a4;">);</text>
+<text x="0.6" y="14.75" textLength="1.2" style="fill: #6d6d6d;">15</text>
+<text x="4.8" y="14.75" textLength="0.6" style="fill: #a4a4a4;">}</text>
+<text x="0.6" y="15.75" textLength="1.2" style="fill: #6d6d6d;">16</text>
+<text x="4.8" y="15.75" textLength="4.8" style="fill: #d7d7d7;">println!</text>
+<text x="9.6" y="15.75" textLength="0.6" style="fill: #a4a4a4;">(</text>
+<text x="10.200001" y="15.75" textLength="2.4" style="fill: #d7d7d7;">"{}"</text>
+<text x="12.6" y="15.75" textLength="3" style="fill: #a4a4a4;">, i);</text>
+<text x="0.6" y="16.75" textLength="1.2" style="fill: #6d6d6d;">17</text>
+<text x="2.4" y="16.75" textLength="0.6" style="fill: #a4a4a4;">}</text>
+<text x="0" y="17.75" textLength="0.6" style="fill: #a4a4a4;">~</text>
+<text x="0" y="18.75" textLength="34.800003" style="fill: #030303;">./hi-nvim-rs-web/code-examples/rust.rs &#160;1,1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
+
+</g>
+</svg>
