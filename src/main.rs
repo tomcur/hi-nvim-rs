@@ -30,6 +30,8 @@ struct Cli {
     target: Target,
 
     /// Color scheme input file. Reads from standard input if not set.
+    // TODO: perhaps accept multiple files, merging the configurations (allowing for base
+    // configurations overridden by more specific configurations)
     file: Option<PathBuf>,
 }
 
