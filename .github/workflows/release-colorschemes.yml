@@ -1,0 +1,29 @@
+name: Release-colorschemes
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Build and publish color schemes
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build highlow
+      run: cargo run -- ./colorschemes/highlow.toml > highlow.vim
+    - name: Build twocolor
+      run: cargo run -- ./colorschemes/twocolor.toml > twocolor.vim
+    - name: Build grayscale
+      run: cargo run -- ./colorschemes/grayscale.toml > grayscale.vim
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: target/release/mything
+        asset_name: "*.vim"
+        tag: ${{ github.ref }}
+        overwrite: false
+        file_glob: true
