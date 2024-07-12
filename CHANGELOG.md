@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.1.3] - 2024-07-12
+
+### Features
+
+- Add Grayscale color scheme
+
+### Bug Fixes
+
+- *(highlights)* Add String group (@string links to it)
+
+### Documentation
+
+- *(README)* Add configuration explanation
+- *(README)* Add Grayscale to color scheme gallery
+- *(README)* Set example images' widths to ensure github doesn't squash them
+- Use Termsnap for color scheme screenshots
+
+### Refactor
+
+- Make two lines in Rust example code shorter
+
+### Build System and CI
+
+- Add compiled color schemes to release
+
 ## [0.1.2] - 2024-06-12
 
 ### Bug Fixes
