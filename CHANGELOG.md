@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.4] - 2024-07-12
+
+### Build System and CI
+
+- (hopeful) fix uploading of compiled color schemes to release
+
 ## [0.1.3] - 2024-07-12
 
 ### Features
