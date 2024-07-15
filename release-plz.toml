@@ -1,3 +1,6 @@
+[workspace]
+publish = false
+
 [changelog]
 header = """
 # Changelog\n
