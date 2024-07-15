@@ -8,16 +8,16 @@ yellow = 98.0
 green = 135.0
 
 [fg]
-lightness = 0.72
+lightness = 0.73
 chroma = 0.05
 
 [bg]
-lightness = 0.16
-chroma = 0.05
+lightness = 0.30
+chroma = 0.03
 
 [colors]
-fg = [ 0.72, 0.00, 86 ]
-bg = [ 0.10, 0.00, 86 ]
+fg = [ 0.73, 0.00, 86 ]
+bg = [ 0.12, 0.00, 86 ]
 
 [themes.ui]
 fg = "fg"
@@ -25,13 +25,13 @@ fg_dim = { color = "fg", mix = ["bg", 0.1] }
 fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
 
 bg = "bg"
-bg_visual =        { color = "bg", lighten_absolute = 0.1 }
-bg_highlight =     { color = "bg", lighten_absolute = 0.15 }
-bg_highlight_dim = { color = "bg", lighten_absolute = 0.08 }
+bg_visual =        { color = "bg", lighten_absolute = 0.15 }
+bg_highlight =     { color = "bg", lighten_absolute = 0.20 }
+bg_highlight_dim = { color = "bg", lighten_absolute = 0.10 }
 bg_border =        { color = "fg" }
-bg_gutter =        { color = "bg", lighten_absolute = 0.05 }
+bg_gutter =        { color = "bg", lighten_absolute = 0.10 }
 bg_dim =           { color = "bg", lighten_absolute = -0.05 }
-bg_selected =      { color = "bg", lighten_absolute = 0.1 }
+bg_selected =      { color = "bg", lighten_absolute = 0.10 }
 
 float_bg =     { color = "bg", lighten_absolute = 0.05 }
 float_fg =     { color = "fg", lighten_absolute = 0.05 }
@@ -48,11 +48,11 @@ special = "fg"
 nontext = { color = "fg", mix = ["bg", 0.3] }
 
 [themes.syn]
-string =   { color = "fg", lighten_absolute = 0.16 }
-number =   { color = "fg", lighten_absolute = 0.16 }
-constant = { color = "fg", lighten_absolute = 0.08 }
-regex =    { color = "fg", lighten_absolute = 0.16 }
-preproc =  { color = "fg", lighten_absolute = 0.16 }
+string =   { color = "fg", lighten_absolute = 0.12 }
+number =   { color = "fg", lighten_absolute = 0.12 }
+constant = { color = "fg", lighten_absolute = 0.12 }
+regex =    { color = "fg", lighten_absolute = 0.12 }
+preproc =  { color = "fg", lighten_absolute = 0.12 }
 type =        "fg"
 variable =    "fg"
 identifier =  "fg"
@@ -60,19 +60,19 @@ parameter =   "fg"
 function =    "fg"
 constructor = "fg"
 statement =   "fg"
-keyword =     { color = "fg", lighten_absolute = -0.12 }
-operator =    { color = "fg", lighten_absolute = -0.12 }
-deprecated =  { color = "fg", lighten_absolute = -0.16 }
-comment =     { color = "fg", lighten_absolute = -0.12 }
-special =     { color = "fg", lighten_absolute = 0.08 }
-punctuation = { color = "fg", lighten_absolute = -0.16 }
+keyword =     { color = "fg", lighten_absolute = -0.05 }
+operator =    { color = "fg", lighten_absolute = -0.05 }
+deprecated =  { color = "fg", lighten_absolute = -0.10 }
+comment =     { color = "fg", lighten_absolute = -0.10 }
+special =     { color = "fg", lighten_absolute = 0.10 }
+punctuation = { color = "fg", lighten_absolute = -0.10 }
 
 [themes.diagnostics]
-error =   { color = "fg", lighten_absolute = 0.2 }
-warning = { color = "fg", lighten_absolute = 0.2 }
-info =    { color = "fg", lighten_absolute = 0.2 }
-hint =    { color = "fg", lighten_absolute = 0.2 }
-ok =      { color = "fg", lighten_absolute = 0.2 }
+error =   { color = "fg.red" }
+warning = { color = "fg.yellow" }
+info =    { color = "fg.yellow" }
+hint =    { color = "fg.green" }
+ok =      { color = "fg.green" }
 
 [themes.vcs]
 removed = "fg.red"
