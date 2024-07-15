@@ -70,6 +70,14 @@
               rustfmt
             ]) ++ [
               # Automated screenshots
+              (pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped {
+                packpathDirs = {
+                  myNeovimPackages.start = [
+                    pkgs.vimPlugins.nvim-treesitter
+                    pkgs.vimPlugins.nvim-treesitter-parsers.rust
+                  ];
+                };
+              })
               termsnap.packages.${system}.default
             ];
           };
