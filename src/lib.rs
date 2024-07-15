@@ -11,5 +11,5 @@ mod modifiers;
 pub use colorscheme::{parse, Colorscheme, Srgb, Theme};
 pub use compiler_neovim::compile as compile_neovim;
 pub use compiler_vim::compile as compile_vim;
-pub use configuration::{Highlight, NamespacedThemeElement};
+pub use configuration::{Highlight, Kind, NamespacedThemeElement};
 pub use error::Error;

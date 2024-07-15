@@ -1,6 +1,6 @@
 use std::borrow::Cow;
 
-use hi_nvim_rs::{Colorscheme, Highlight};
+use hi_nvim_rs::{Colorscheme, Highlight, Kind};
 
 pub enum Target {
     Neovim,
@@ -37,17 +37,22 @@ fn style_group(
         highlight
     };
 
+    let (normal, inverse) = match colorscheme.kind() {
+        Kind::Light => ("light", "dark"),
+        Kind::Dark => ("dark", "light"),
+    };
+
     if let Some(fg) = highlight.fg.and_then(|c| colorscheme.get_color(c)) {
-        write!(w, "--{group}--fg: {fg}; ").unwrap();
+        write!(w, "--{group}--{normal}-fg: {fg}; ").unwrap();
     }
     if let Some(bg) = highlight.bg.and_then(|c| colorscheme.get_color(c)) {
-        write!(w, "--{group}--bg: {bg}; ").unwrap();
+        write!(w, "--{group}--{normal}-bg: {bg}; ").unwrap();
     }
     if let Some(fg) = highlight.fg.and_then(|c| colorscheme.get_inverse_color(c)) {
-        write!(w, "--{group}--inverse-fg: {fg}; ").unwrap();
+        write!(w, "--{group}--{inverse}-fg: {fg}; ").unwrap();
     }
     if let Some(bg) = highlight.bg.and_then(|c| colorscheme.get_inverse_color(c)) {
-        write!(w, "--{group}--inverse-bg: {bg}; ").unwrap();
+        write!(w, "--{group}--{inverse}-bg: {bg}; ").unwrap();
     }
     if highlight.bold.unwrap_or(false) {
         write!(w, "--{group}--font-weight: 600; ").unwrap();

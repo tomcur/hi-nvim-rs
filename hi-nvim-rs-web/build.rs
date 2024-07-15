@@ -94,16 +94,18 @@ fn styles_to_write(mut w: impl std::io::Write) -> Result<(), Box<dyn std::error:
             w,
             r#"
 .{group} {{
-    color: var(--{group}--fg);
-    background-color: var(--{group}--bg);
     font-weight: var(--{group}--font-weight);
     font-style: var(--{group}--font-style);
     text-decoration: var(--{group}--text-decoration);
-}}
 
-.preview.inverse .{group} {{
-    color: var(--{group}--inverse-fg);
-    background-color: var(--{group}--inverse-bg);
+    .light & {{
+        color: var(--{group}--light-fg);
+        background-color: var(--{group}--light-bg);
+    }}
+    .dark & {{
+        color: var(--{group}--dark-fg);
+        background-color: var(--{group}--dark-bg);
+    }}
 }}
 "#
         )?;

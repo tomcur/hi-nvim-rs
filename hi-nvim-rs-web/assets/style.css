@@ -10,16 +10,16 @@
 }
 
 html {
-  --fg: var(--Normal--fg);
-  --bg: var(--Normal--bg);
-  --bg-light: var(--Normal--bg);
-  --border: var(--WinSeparator--fg);
-  --textarea-fg: var(--NormalFloat--fg);
-  --textarea-bg: var(--NormalFloat--bg);
-  --link-fg: var(--DiagnosticInfo--fg);
-  --link-bg: var(--DiagnosticInfo--bg);
-  --link-hover-fg: var(--Visual--fg);
-  --link-hover-bg: var(--Visual--bg);
+  --fg: var(--Normal--light-fg);
+  --bg: var(--Normal--light-bg);
+  --bg-light: var(--Normal--light-bg);
+  --border: var(--WinSeparator--light-fg);
+  --textarea-fg: var(--NormalFloat--light-fg);
+  --textarea-bg: var(--NormalFloat--light-bg);
+  --link-fg: var(--DiagnosticInfo--light-fg);
+  --link-bg: var(--DiagnosticInfo--light-bg);
+  --link-hover-fg: var(--Visual--light-fg);
+  --link-hover-bg: var(--Visual--light-bg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,15 +103,23 @@ a:hover {
 }
 
 .preview {
-  max-width: calc(min(100%, 42rem))
+  max-width: calc(min(100%, 42rem));
 }
 
 .preview > div {
-  border: 1px solid var(--FloatBorder--fg);
+  border: 1px solid var(--FloatBorder--light-fg);
   box-shadow: var(--ring-box-shadow);
-  color: var(--Normal--fg);
-  background-color: var(--Normal--bg);
   font-family: monospace;
+
+  .light & {
+    color: var(--Normal--light-fg);
+    background-color: var(--Normal--light-bg);
+  }
+
+  .dark & {
+    color: var(--Normal--dark-fg);
+    background-color: var(--Normal--dark-bg);
+  }
 }
 
 .preview > h3 {
@@ -126,8 +134,16 @@ a:hover {
   margin: 0;
   padding-inline: 0.5em;
   text-align: right;
-  color: var(--LineNr--fg);
-  background-color: var(--LineNr--bg);
+
+  .light & {
+    color: var(--LineNr--light-fg);
+    background-color: var(--LineNr--light-bg);
+  }
+
+  .dark & {
+    color: var(--LineNr--dark-fg);
+    background-color: var(--LineNr--dark-bg);
+  }
 }
 
 .buffer article {
@@ -143,8 +159,16 @@ a:hover {
 
 .statusline {
   display: flex;
-  color: var(--StatusLine--fg);
-  background-color: var(--StatusLine--bg);
+
+  .light & {
+    color: var(--StatusLine--light-fg);
+    background-color: var(--StatusLine--light-bg);
+  }
+
+  .dark & {
+    color: var(--StatusLine--dark-fg);
+    background-color: var(--StatusLine--dark-bg);
+  }
 }
 
 .statusline > span:first-child {
@@ -152,28 +176,15 @@ a:hover {
 }
 
 .msgarea {
-  color: var(--MsgArea--fg);
-  background-color: var(--MsgArea--bg);
-}
+  .light & {
+    color: var(--MsgArea--light-fg);
+    background-color: var(--MsgArea--light-bg);
+  }
 
-.preview.inverse > div {
-  color: var(--Normal--inverse-fg);
-  background-color: var(--Normal--inverse-bg);
-}
-
-.preview.inverse .linenr {
-  color: var(--LineNr--inverse-fg);
-  background-color: var(--LineNr--inverse-bg);
-}
-
-.preview.inverse .statusline {
-  color: var(--StatusLine--inverse-fg);
-  background-color: var(--StatusLine--inverse-bg);
-}
-
-.preview.inverse .msgarea {
-  color: var(--MsgArea--inverse-fg);
-  background-color: var(--MsgArea--inverse-bg);
+  .dark & {
+    color: var(--MsgArea--dark-fg);
+    background-color: var(--MsgArea--dark-bg);
+  }
 }
 
 #error p {

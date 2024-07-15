@@ -209,13 +209,13 @@ markup::define! {
     }
 
     PreviewContainerInner(language: Language) {
-        article #preview1 .preview {
-            h2 { "Normal" }
+        article #preview1 .preview .light {
+            h2 { "Light" }
             div { @Preview { language: *language } }
         }
 
-        article #preview2 .preview .inverse {
-            h2 { "Inverse" }
+        article #preview2 .preview .dark {
+            h2 { "Dark" }
             div { @Preview { language: *language } }
         }
     }
