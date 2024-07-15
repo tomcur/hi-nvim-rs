@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5] - 2024-07-15
+
+### Build System and CI
+
+- Temporarily don't publish crates to test workflows
+- Allow release-plz to trigger actions
+
 ## [0.1.4] - 2024-07-12
 
 ### Build System and CI
