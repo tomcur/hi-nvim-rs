@@ -14,6 +14,16 @@ jobs:
     name: Release-plz
     runs-on: ubuntu-latest
     steps:
+      # Based on
+      # https://github.com/MarcoIeni/release-plz/blob/16ff38e4d3a52975ef989330e2dbda9ef0d4827b/.github/workflows/release-plz.yml#L18-L25
+      # Generate a GitHub token, so that PRs and tags created by the
+      # release-plz-action trigger workflow actions.
+      - name: Generate GitHub token
+        uses: actions/create-github-app-token@v1
+        id: generate-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -23,5 +33,5 @@ jobs:
       - name: Run release-plz
         uses: MarcoIeni/release-plz-action@v0.5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
