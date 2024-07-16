@@ -60,27 +60,32 @@
               cp "${name}.vim" $out
             '';
           };
-        devShells.default = pkgs.mkShell
-          {
-            buildInputs = (with pkgs; [
-              cargo
-              clippy
-              rust-analyzer
-              rustc
-              rustfmt
-            ]) ++ [
-              # Automated screenshots
-              (pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped {
-                packpathDirs = {
-                  myNeovimPackages.start = [
-                    pkgs.vimPlugins.nvim-treesitter
-                    pkgs.vimPlugins.nvim-treesitter-parsers.rust
-                  ];
-                };
-              })
-              termsnap.packages.${system}.default
-            ];
-          };
+        devShells.default =
+          let
+            nvim = (pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped {
+              packpathDirs = {
+                myNeovimPackages.start = [
+                  pkgs.vimPlugins.nvim-treesitter
+                  pkgs.vimPlugins.nvim-treesitter-parsers.rust
+                ];
+              };
+            });
+          in
+          pkgs.mkShell
+            {
+              buildInputs = (with pkgs; [
+                cargo
+                clippy
+                rust-analyzer
+                rustc
+                rustfmt
+              ]) ++ [
+                # Automated screenshots
+                termsnap.packages.${system}.default
+              ];
+
+              SCREENSHOT_NVIM = "${nvim}/bin/nvim";
+            };
       }
     );
 }
