@@ -26,11 +26,11 @@
 <rect x="0" y="16" width="2.4" height="1" style="fill: #f1d2c0;" />
 <rect x="0" y="18" width="34.800003" height="1" style="fill: #52453d;" />
 <text x="1.2" y="0.75" textLength="0.6" style="fill: #83746c;">1</text>
-<text x="2.4" y="0.75" textLength="10.8" style="fill: #52453d;">//! Calculate A+B.</text>
+<text x="2.4" y="0.75" textLength="10.8" style="fill: #52453d; font-style: italic;">//! Calculate A+B.</text>
 <text x="1.2" y="1.75" textLength="0.6" style="fill: #83746c;">2</text>
-<text x="2.4" y="1.75" textLength="1.8000001" style="fill: #52453d;">//!</text>
+<text x="2.4" y="1.75" textLength="1.8000001" style="fill: #52453d; font-style: italic;">//!</text>
 <text x="1.2" y="2.75" textLength="0.6" style="fill: #83746c;">3</text>
-<text x="2.4" y="2.75" textLength="25.2" style="fill: #52453d;">//! From: https://rosettacode.org/wiki/A+B</text>
+<text x="2.4" y="2.75" textLength="25.2" style="fill: #52453d; font-style: italic;">//! From: https://rosettacode.org/wiki/A+B</text>
 <text x="1.2" y="3.75" textLength="0.6" style="fill: #83746c;">4</text>
 <text x="2.4" y="3.75" textLength="1.8000001" style="fill: #623e27;">use</text>
 <text x="4.8" y="3.75" textLength="1.8000001" style="fill: #683817; font-weight: 600;">std</text>

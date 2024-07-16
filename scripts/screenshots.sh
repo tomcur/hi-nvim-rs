@@ -10,7 +10,8 @@ for light_dark in "light" "dark"; do
     for colorscheme in "highlow" "twocolor" "grayscale"; do
         cargo run -- ./colorschemes/$colorscheme.toml >"$DIR/$colorscheme.vim"
 
-        termsnap -c 58 -l 20 -- nvim --clean \
+        termsnap --term xterm-256color --columns 58 --lines 20 --render-before-clear -- \
+            nvim --clean \
             -c "source ./scripts/nvim-config.vim" \
             -c "set bg=$light_dark" \
             -c "source $DIR/$colorscheme.vim" \
