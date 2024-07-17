@@ -75,6 +75,7 @@ impl Highlight<'_> {
             .into_iter()
             .map(|_| "bold")
             .chain(self.italic.into_iter().map(|_| "italic"))
+            .chain(self.underline.into_iter().map(|_| "underline"))
             .chain(self.undercurl.into_iter().map(|_| "undercurl"))
             .chain(self.underdouble.into_iter().map(|_| "underdouble"))
             .chain(self.underdashed.into_iter().map(|_| "underdashed"))
