@@ -43,9 +43,9 @@ impl From<Lch> for Oklch {
 
 /// A Neovim highlight group.
 ///
-/// The `fg` and `bg` fields code for specific theme colors. If `Link` is set the highlight group
-/// is linked to a different group, taking the color attributes from that group. The other fields
-/// refer to the highlight `gui` attr-list.
+/// The `fg`, `bg` and `sp` fields code for specific theme colors. If `Link` is set the highlight
+/// group is linked to a different group, taking the color attributes from that group. The other
+/// fields refer to the highlight `gui` attr-list.
 #[derive(Debug, Deserialize, Clone, Copy)]
 pub struct Highlight<'a> {
     /// A theme color to use as the foreground color (e.g., `syn.function`, `ui.fg_dim`).
