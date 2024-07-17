@@ -183,6 +183,11 @@ DiagnosticUnderlineWarn = { underline = true, sp = "diagnostics.warning" }
 DiagnosticUnderlineInfo = { underline = true, sp = "diagnostics.info" }
 DiagnosticUnderlineHint = { underline = true, sp = "diagnostics.hint" }
 
+SpellBad = { undercurl = true, sp = "diagnostics.error" }
+SpellCap = { undercurl = true, sp = "diagnostics.warning" }
+SpellRare = { undercurl = true, sp = "diagnostics.info" }
+SpellLocal = { undercurl = true, sp = "diagnostics.ok" }
+
 # LspSignatureActiveParameter = { fg = theme.diag.warning },
 # LspCodeLens = { fg = theme.syn.comment },
 # 
