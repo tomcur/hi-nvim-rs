@@ -71,6 +71,13 @@ impl<'c> Compiler<'c> {
             write!(self.program, " guibg=NONE")?;
         }
 
+        if let Some(bg) = highlight.sp {
+            let color = theme.get_color(bg).unwrap();
+            write!(self.program, " guisp={color}",)?;
+        } else {
+            write!(self.program, " guisp=NONE")?;
+        }
+
         write!(self.program, " gui=")?;
         {
             let mut some = false;

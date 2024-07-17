@@ -52,6 +52,8 @@ pub struct Highlight<'a> {
     pub fg: Option<NamespacedThemeElement<'a>>,
     /// A theme color to use as the background color (e.g., `diff.removed`, `ui.bg_gutter`).
     pub bg: Option<NamespacedThemeElement<'a>>,
+    /// A theme color to use as the special color (e.g., `diagnostics.error`).
+    pub sp: Option<NamespacedThemeElement<'a>>,
     /// If set, this highlight group is linked to a different group, taking its colors. The other
     /// attributes will be ignored.
     pub link: Option<&'a str>,

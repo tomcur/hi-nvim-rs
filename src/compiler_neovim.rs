@@ -80,6 +80,14 @@ impl Compiler<'_> {
                     name = bg.element_name,
                 )?;
             }
+            if let Some(sp) = highlight.sp {
+                write!(
+                    self.program,
+                    "sp = {ns}.{name}, ",
+                    ns = sp.theme_namespace,
+                    name = sp.element_name,
+                )?;
+            }
 
             for style in highlight.gui_styles_iter() {
                 write_unquoted(&mut self.program, style, Some("true"));
