@@ -72,17 +72,16 @@ impl Highlight<'_> {
     #[rustfmt::skip]
     pub fn gui_styles_iter(&self) -> impl Iterator<Item = &'static str> {
         self.bold
-            .clone()
             .into_iter()
             .map(|_| "bold")
-            .chain(self.italic.clone().into_iter().map(|_| "italic"))
-            .chain(self.undercurl.clone().into_iter().map(|_| "undercurl"))
-            .chain(self.underdouble.clone().into_iter().map(|_| "underdouble"))
-            .chain(self.underdashed.clone().into_iter().map(|_| "underdashed"))
-            .chain(self.underdotted.clone().into_iter().map(|_| "underdotted"))
-            .chain(self.strikethrough.clone().into_iter().map(|_| "strikethrough"))
-            .chain(self.reverse.clone().into_iter().map(|_| "reverse"))
-            .chain(self.nocombine.clone().into_iter().map(|_| "nocombine"))
+            .chain(self.italic.into_iter().map(|_| "italic"))
+            .chain(self.undercurl.into_iter().map(|_| "undercurl"))
+            .chain(self.underdouble.into_iter().map(|_| "underdouble"))
+            .chain(self.underdashed.into_iter().map(|_| "underdashed"))
+            .chain(self.underdotted.into_iter().map(|_| "underdotted"))
+            .chain(self.strikethrough.into_iter().map(|_| "strikethrough"))
+            .chain(self.reverse.into_iter().map(|_| "reverse"))
+            .chain(self.nocombine.into_iter().map(|_| "nocombine"))
     }
 }
 
