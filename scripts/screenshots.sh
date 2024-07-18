@@ -12,7 +12,7 @@ if [ -n "$SCREENSHOT_NVIM" ]; then
 fi
 
 for light_dark in "light" "dark"; do
-    for colorscheme in "highlow" "twocolor" "grayscale"; do
+    for colorscheme in "highlow" "verf" "twocolor" "grayscale"; do
         cargo run -- ./colorschemes/$colorscheme.toml >"$DIR/$colorscheme.vim"
 
         (

@@ -1,0 +1,96 @@
+name = "verf"
+kind = "dark"
+
+[hues]
+red = 15.0
+orange = 62.0
+yellow = 100.0
+green = 135.0
+cyan = 168.0
+blue = 262.0
+purple = 314.0
+pink = 346.0
+
+[fg]
+lightness = 0.70
+chroma = 0.10
+
+[bg]
+lightness = 0.30
+chroma = 0.10
+
+[colors]
+bg =   [ 0.15, 0.05, 280 ]
+fg =   [ 0.70, 0.03, 280 ]
+grey = [ 0.70, 0.0,  280 ]
+
+[themes.ui]
+fg = "fg"
+fg_dim = { color = "fg", mix = ["bg", 0.1] }
+fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
+
+bg = "bg"
+bg_visual = { color = "bg", lighten_absolute = 0.20, saturate = -0.02 }
+bg_highlight = { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
+bg_highlight_dim = { color = "bg", lighten_absolute = 0.12, saturate = 0.02 }
+bg_border = { color = "fg" }
+bg_gutter = { color = "bg", lighten_absolute = 0.1, saturate = -0.01 }
+bg_dim = { color = "bg", lighten_absolute = 0.05, saturate = -0.005 }
+bg_selected = { color = "bg", lighten_absolute = 0.1 }
+
+float_bg = { color = "bg", lighten_absolute = 0.02, saturate = 0.01 }
+float_fg = { color = "fg", lighten_absolute = 0.02 }
+float_border = "fg"
+
+pmenu_bg = { color = "bg", lighten_absolute = 0.1, saturate = 0.03 }
+pmenu_fg = { color = "fg", lighten_absolute = 0.1 }
+pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1, saturate = 0.03 }
+pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25, saturate = 0.08 }
+
+special = { color = "fg.purple", lighten_absolute = 0.05, saturate = 0.02 }
+nontext = { color = "grey", mix = ["bg", 0.15] }
+
+[themes.syn]
+string = "fg.green"
+number = "fg.orange"
+constant = "fg.blue"
+regex = "fg.yellow"
+preproc = "fg.yellow"
+type = { color = "fg.cyan", saturate = -0.03 }
+variable = "fg"
+identifier = "fg"
+parameter = { color = "fg.blue", saturate = -0.03 }
+function = { color = "fg.blue", saturate = -0.03 }
+constructor = { color = "fg.orange", saturate = -0.03 }
+statement = { color = "fg.purple", saturate = -0.03 }
+keyword = { color = "fg.purple", saturate = -0.03 }
+operator = { color = "fg.yellow", saturate = -0.03 }
+deprecated = { color = "grey", saturate = -0.03 }
+comment = "grey"
+special = "fg.yellow"
+punctuation = { color = "grey", saturate = -0.03 }
+
+[themes.diagnostics]
+error = { color = "fg.red", saturate = 0.03 }
+warning = { color = "fg.orange", saturate = 0.03 }
+info = { color = "fg.blue", saturate = 0.03 }
+hint =  "grey"
+ok = { color = "fg.green", saturate = 0.03 }
+
+[themes.vcs]
+removed = "fg.red"
+added = "fg.green"
+changed = "fg.yellow"
+
+[themes.diff]
+removed = "bg.red"
+added = "bg.green"
+changed = "bg.yellow"
+text = "bg"
+
+[inverse]
+saturate = 0.01
+gamma = 0.80
+lighten_absolute = 0.05
+
+[highlights]

@@ -40,6 +40,12 @@ low color saturation, and low contrast between foreground elements.
 
 | Light | Dark |
 |---|---|
+| <img width="2000" alt="A screenshot of Neovim using the 'verf' light color scheme" src="./media/verf-light.svg" /> | <img width="2000" alt="A screenshot of Neovim using the 'verf' dark color scheme" src="./media/verf-dark.svg" /> |
+
+[_verf_](./colorschemes/verf.toml): a colorful color scheme.
+
+| Light | Dark |
+|---|---|
 | <img width="2000" alt="A screenshot of Neovim using the 'twocolor' light color scheme" src="./media/twocolor-light.svg" /> | <img width="2000" alt="A screenshot of Neovim using the 'twocolor' dark color scheme" src="./media/twocolor-dark.svg" /> |
 
 [_twocolor_](./colorschemes/twocolor.toml): a color scheme using (mostly) just two hues.
