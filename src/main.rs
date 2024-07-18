@@ -8,8 +8,11 @@ pub(crate) mod compiler_neovim;
 pub(crate) mod compiler_vim;
 pub(crate) mod configuration;
 pub(crate) mod de;
+pub mod default_highlights;
 pub(crate) mod error;
 pub(crate) mod modifiers;
+
+pub(crate) use default_highlights::DEFAULT_HIGHLIGHTS;
 
 #[derive(Clone, Copy, Debug, ValueEnum)]
 enum Target {

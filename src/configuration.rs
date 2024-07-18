@@ -3,7 +3,6 @@
 use std::{
     collections::{BTreeMap, HashMap},
     fmt::Display,
-    sync::OnceLock,
 };
 
 use palette::Oklch;
@@ -11,8 +10,6 @@ use serde::Deserialize;
 
 use crate::error::Error;
 use crate::{de::string_or_struct, modifiers::ColorModifiers};
-
-static DEFAULT_HIGHLIGHTS: OnceLock<BTreeMap<&'static str, Highlight<'static>>> = OnceLock::new();
 
 #[derive(Clone, Copy, Debug)]
 pub enum Kind {
@@ -71,6 +68,25 @@ pub struct Highlight<'a> {
 }
 
 impl Highlight<'_> {
+    pub const fn empty() -> Self {
+        Highlight {
+            fg: None,
+            bg: None,
+            sp: None,
+            link: None,
+            bold: None,
+            italic: None,
+            underline: None,
+            undercurl: None,
+            underdouble: None,
+            underdotted: None,
+            underdashed: None,
+            strikethrough: None,
+            reverse: None,
+            nocombine: None,
+        }
+    }
+
     #[rustfmt::skip]
     pub fn gui_styles_iter(&self) -> impl Iterator<Item = &'static str> {
         self.bold
@@ -265,11 +281,7 @@ pub fn parse<'a>(config_file: &'a str) -> Result<Configuration<'a>, Error> {
 
     let highlights = {
         let mut highlights = config.highlights;
-        let default_highlights = DEFAULT_HIGHLIGHTS.get_or_init(|| {
-            let default_highlights = include_str!("../default_highlights.toml");
-            toml::from_str(default_highlights).unwrap()
-        });
-        for (name, highlight) in default_highlights {
+        for (name, highlight) in crate::DEFAULT_HIGHLIGHTS {
             highlights.entry(name).or_insert(*highlight);
         }
         highlights

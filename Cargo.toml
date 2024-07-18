@@ -17,6 +17,11 @@ serde = { version = "1", features = ["derive"] }
 thiserror = "1"
 toml = "0.5"
 
+[build-dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+toml = { version = "0.8" }
+
 [workspace]
 members = [
     "hi-nvim-rs-web",
