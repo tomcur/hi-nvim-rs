@@ -28,22 +28,22 @@ fg_dim = { color = "fg", mix = ["bg", 0.1] }
 fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
 
 bg = "bg"
-bg_visual = { color = "bg", lighten = 0.15, saturate = 0.04 }
-bg_highlight = { color = "bg", lighten = 0.17, saturate = 0.03 }
-bg_highlight_dim = { color = "bg", lighten = 0.09, saturate = 0.03 }
+bg_visual = { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
+bg_highlight = { color = "bg", lighten_absolute = 0.17, saturate = 0.03 }
+bg_highlight_dim = { color = "bg", lighten_absolute = 0.12, saturate = 0.02 }
 bg_border = { color = "fg" }
-bg_gutter = { color = "bg", lighten = 0.05, saturate = 0.02 }
-bg_dim = { color = "bg", lighten = -0.05, saturate = -0.005 }
-bg_selected = { color = "bg", lighten = 0.1 }
+bg_gutter = { color = "bg", lighten_absolute = 0.05, saturate = 0.02 }
+bg_dim = { color = "bg", lighten_absolute = -0.05, saturate = -0.005 }
+bg_selected = { color = "bg", lighten_absolute = 0.1 }
 
 float_bg = { color = "bg", lighten_absolute = 0.02, saturate = 0.01 }
 float_fg = { color = "fg", lighten_absolute = 0.02 }
 float_border = "fg"
 
-pmenu_bg = { color = "bg", lighten = 0.1, saturate = 0.03 }
-pmenu_fg = { color = "fg", lighten = 0.1 }
-pmenu_fg_selected = { color = "fg", lighten = 0.1, saturate = 0.03 }
-pmenu_bg_selected = { color = "bg", lighten = 0.25, saturate = 0.08 }
+pmenu_bg = { color = "bg", lighten_absolute = 0.1, saturate = 0.03 }
+pmenu_fg = { color = "fg", lighten_absolute = 0.1 }
+pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1, saturate = 0.03 }
+pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25, saturate = 0.08 }
 
 special = "fg.c2"
 nontext = { color = "fg", mix = ["bg", 0.3] }
@@ -54,10 +54,10 @@ number = "fg.c1"
 constant = "fg.c1"
 regex = "fg.c1"
 preproc = "fg.c1"
-type = { color = "fg.c1", lighten = 0.02, saturate = 0.03 }
-variable = { color = "fg", lighten = -0.03, saturate = 0.02 }
-identifier = { color = "fg.c1", lighten = -0.03, saturate = 0.02 }
-parameter = { color = "fg.c1", lighten = -0.03, saturate = 0.02 }
+type = { color = "fg.c1", lighten_absolute = 0.02, saturate = 0.03 }
+variable = { color = "fg", lighten_absolute = -0.03, saturate = 0.02 }
+identifier = { color = "fg.c1", lighten_absolute = -0.03, saturate = 0.02 }
+parameter = { color = "fg.c1", lighten_absolute = -0.03, saturate = 0.02 }
 function = { color = "fg.c1", saturate = 0.01 }
 constructor = { color = "fg.c1", saturate = 0.01 }
 statement = { color = "fg.c1", saturate = 0.01 }
@@ -69,8 +69,8 @@ special = "fg.c1"
 punctuation = { color = "fg.c1", saturate = -0.03 }
 
 [themes.diagnostics]
-error = { color = "fg.c2", lighten = 0.1, saturate = 0.05 }
-warning = { color = "fg.c2", lighten = 0.05, saturate = 0.03 }
+error = { color = "fg.c2", lighten_absolute = 0.1, saturate = 0.05 }
+warning = { color = "fg.c2", lighten_absolute = 0.05, saturate = 0.03 }
 info = { color = "fg.c2", saturate = 0.03 }
 hint =  { color = "fg.c2" }
 ok = { color = "fg.c2", saturate = 0.03 }

@@ -112,13 +112,13 @@ fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
 
 # Background and background highlights
 bg = "bg"
-bg_visual = { color = "bg", lighten = -0.15, saturate = 0.04 }
-bg_highlight = { color = "bg", lighten = -0.15, saturate = 0.03 }
-bg_highlight_dim = { color = "bg", lighten = -0.07, saturate = 0.02 }
+bg_visual = { color = "bg", lighten_absolute = -0.15, saturate = 0.04 }
+bg_highlight = { color = "bg", lighten_absolute = -0.15, saturate = 0.03 }
+bg_highlight_dim = { color = "bg", lighten_absolute = -0.07, saturate = 0.02 }
 bg_border = { color = "fg" }
-bg_gutter = { color = "bg", lighten = -0.04, saturate = 0.015 }
-bg_dim = { color = "bg", lighten = -0.05, saturate = -0.005 }
-bg_selected = { color = "bg", lighten = -0.1 }
+bg_gutter = { color = "bg", lighten_absolute = -0.04, saturate = 0.015 }
+bg_dim = { color = "bg", lighten_absolute = -0.05, saturate = -0.005 }
+bg_selected = { color = "bg", lighten_absolute = -0.1 }
 
 # Floating windows
 float_bg = { color = "bg", lighten_absolute = -0.02, saturate = 0.01 }
@@ -126,12 +126,12 @@ float_fg = { color = "fg", lighten_absolute = -0.02 }
 float_border = "fg"
 
 # Popup menu (e.g., tab completion)
-pmenu_bg = { color = "bg", lighten = -0.1, saturate = 0.03 }
-pmenu_fg = { color = "fg", lighten = -0.1 }
-pmenu_fg_selected = { color = "fg", lighten = -0.1, saturate = 0.03 }
-pmenu_bg_selected = { color = "bg", lighten = -0.25, saturate = 0.08 }
+pmenu_bg = { color = "bg", lighten_absolute = -0.1, saturate = 0.03 }
+pmenu_fg = { color = "fg", lighten_absolute = -0.1 }
+pmenu_fg_selected = { color = "fg", lighten_absolute = -0.1, saturate = 0.03 }
+pmenu_bg_selected = { color = "bg", lighten_absolute = -0.25, saturate = 0.08 }
 
-special = { color = "fg.purple", lighten = -0.05, saturate = 0.02 }
+special = { color = "fg.purple", lighten_absolute = -0.05, saturate = 0.02 }
 nontext = { color = "grey", mix = ["bg", 0.15] }
 
 [themes.syn]
@@ -141,8 +141,8 @@ constant = "fg.blue"
 regex = "fg.yellow"
 preproc = "fg.yellow"
 type = "fg.pink"
-variable = { color = "fg", lighten = -0.1, saturate = 0.01 }
-identifier = { color = "fg", lighten = -0.1, saturate = 0.01 }
+variable = { color = "fg", lighten_absolute = -0.1, saturate = 0.01 }
+identifier = { color = "fg", lighten_absolute = -0.1, saturate = 0.01 }
 parameter = { color = "fg.blue", saturate = 0.01 }
 function = "fg.blue"
 constructor = "fg.orange"
@@ -150,7 +150,7 @@ statement = "fg.purple"
 keyword = { color = "fg.purple", saturate = 0.01 }
 operator = "fg"
 deprecated = "grey"
-comment = { color = "grey", lighten = 0.05 }
+comment = { color = "grey", lighten_absolute = 0.05 }
 special = "fg.yellow"
 punctuation = "grey"
 
