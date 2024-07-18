@@ -30,13 +30,13 @@ pink = 346.0
 
 [fg]
 # Specify the lightness and chromacity for foreground colors defined in [hues].
-lightness = 0.42
-chroma = 0.075
+lightness = 0.36
+chroma = 0.05
 
 [bg]
 # Specify the lightness and chromacity for background colors defined in [hues].
 lightness = 0.85
-chroma = 0.075
+chroma = 0.05
 
 [colors]
 # Specify colors (with lightness, chromacity, and hue) to use in the theme. The
@@ -44,8 +44,8 @@ chroma = 0.075
 # is useful for naming specific colors that may differ in lightness and
 # chromacity from the colors in the `fg` and `bg` sections.
 bg =   [ 0.95, 0.016,  77 ]
-fg =   [ 0.42, 0.035, 272 ]
-grey = [ 0.42, 0.0,    77 ]
+fg =   [ 0.36, 0.035, 272 ]
+grey = [ 0.36, 0.0,    77 ]
 
 # [themes]
 # In the themes sections the specific color elements that will be used by the
@@ -176,7 +176,7 @@ text = "bg"
 # Color post-processing for the inverse color theme. This is performed after
 # inverting the lightness of all colors. The transformations are the same as
 # documented in the themes section.
-saturate = -0.005
+saturate = -0.015
 gamma = 0.85
 lighten_absolute = 0.10
 
