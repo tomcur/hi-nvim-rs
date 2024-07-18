@@ -130,8 +130,6 @@ pmenu_bg = { color = "bg", lighten = -0.1, saturate = 0.03 }
 pmenu_fg = { color = "fg", lighten = -0.1 }
 pmenu_fg_selected = { color = "fg", lighten = -0.1, saturate = 0.03 }
 pmenu_bg_selected = { color = "bg", lighten = -0.25, saturate = 0.08 }
-pmenu_scrollbar = { color = "bg", lighten = -0.2 }
-pmenu_thumb = { color = "fg" }
 
 special = { color = "fg.purple", lighten = -0.05, saturate = 0.02 }
 nontext = { color = "grey", mix = ["bg", 0.15] }

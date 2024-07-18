@@ -105,9 +105,9 @@ Pmenu = { fg = "ui.pmenu_fg", bg = "ui.pmenu_bg" }
 # Popup menu: Selected item.
 PmenuSel = { fg = "ui.pmenu_fg_selected", bg = "ui.pmenu_bg_selected" }
 # Popup menu: Scrollbar.
-PmenuSbar = { bg = "ui.pmenu_scrollbar" }
+PmenuSbar = { bg = "ui.bg_highlight" }
 # Popup menu: Thumb of the scrollbar.
-PmenuThumb = { bg = "ui.pmenu_thumb" }
+PmenuThumb = { bg = "ui.fg" }
 # |hit-enter| prompt and yes/no questions.
 Question = { link = "MoreMsg" }
 # Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.

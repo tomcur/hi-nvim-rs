@@ -41,8 +41,6 @@ pmenu_bg =          { color = "bg", lighten_absolute = 0.1 }
 pmenu_fg =          { color = "fg", lighten_absolute = 0.1 }
 pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1 }
 pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25 }
-pmenu_scrollbar =   { color = "bg", lighten_absolute = 0.2 }
-pmenu_thumb = "fg"
 
 special = "fg"
 nontext = { color = "fg", mix = ["bg", 0.3] }
