@@ -176,7 +176,7 @@ text = "bg"
 # Color post-processing for the inverse color theme. This is performed after
 # inverting the lightness of all colors. The transformations are the same as
 # documented in the themes section.
-saturate = -0.015
+saturate = -0.005
 gamma = 0.85
 lighten_absolute = 0.10
 
