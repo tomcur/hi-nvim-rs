@@ -1,0 +1,42 @@
+# dapui
+# see: https://github.com/rcarriga/nvim-dap-ui/blob/b7267003ba4dd860350be86f75b9d9ea287cedca/lua/dapui/config/highlights.lua#L17-L49
+DapUINormal = { link = "Normal" }
+DapUIVariable = { link = "Normal" }
+DapUIScope = { fg = "syn.special" }
+DapUIType = { fg = "syn.type" }
+DapUIValue = { fg = "ui.special" }
+DapUIModifiedValue = { fg = "ui.fg", bold = true }
+DapUIDecoration = { fg = "ui.special" }
+DapUIThread = { fg = "syn.function" }
+DapUIStoppedThread = { fg = "syn.function", bold = true }
+DapUIFrameName = { link = "Normal" }
+DapUISource = { fg = "ui.special" }
+DapUILineNumber = { link = "Normal" }
+DapUIFloatNormal = { link = "NormalFloat" }
+DapUIFloatBorder = { link = "FloatBorder" }
+DapUIWatchesEmpty = { fg = "diagnostics.error" }
+DapUIWatchesValue = { fg = "ui.special" }
+DapUIWatchesError = { fg = "diagnostics.error" }
+DapUIBreakpointsPath = { link = "Normal" }
+DapUIBreakpointsInfo = { fg = "ui.special" }
+DapUIBreakpointsCurrentLine = { fg = "ui.special", bold = true }
+DapUIBreakpointsLine = { link = "DapUILineNumber" }
+DapUIBreakpointsDisabledLine = { fg = "ui.fg_very_dim" }
+DapUICurrentFrameName = { link = "DapUIBreakpointsCurrentLine" }
+DapUIStepOver = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepOverNC = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepInto = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepIntoNC = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepBack = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepBackNC = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepOut = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStepOutNC = { fg = "diagnostics.info", bg = "ui.bg_dim" }
+DapUIStop = { fg = "diagnostics.error", bg = "ui.bg_dim" }
+DapUIStopNC = { fg = "diagnostics.error", bg = "ui.bg_dim" }
+DapUIPlayPause = { fg = "diagnostics.ok", bg = "ui.bg_dim" }
+DapUIPlayPauseNC = { fg = "diagnostics.ok", bg = "ui.bg_dim" }
+DapUIRestart = { fg = "diagnostics.ok", bg = "ui.bg_dim" }
+DapUIRestartNC = { fg = "diagnostics.ok", bg = "ui.bg_dim" }
+DapUIUnavailable = { fg = "ui.fg_very_dim" }
+DapUIWinSelect = { link = "PmenuSel" }
+DapUIEndofBuffer = { link = "EndofBuffer" }

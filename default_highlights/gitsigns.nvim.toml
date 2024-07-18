@@ -1,0 +1,5 @@
+# https://github.com/lewis6991/gitsigns.nvim
+
+GitSignsAdd = { fg = "vcs.added", bg = "ui.bg_gutter" }
+GitSignsDelete = { fg = "vcs.removed",  bg = "ui.bg_gutter" }
+GitSignsChange = { fg = "vcs.changed", bg = "ui.bg_gutter" }

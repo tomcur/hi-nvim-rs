@@ -38,11 +38,7 @@ impl std::fmt::Display for ThemeElement<'_> {
 fn main() -> anyhow::Result<()> {
     use std::io::Write;
 
-    println!("cargo::rerun-if-changed=./default_highlights.toml");
-
-    let default_highlights = std::fs::read_to_string("./default_highlights.toml")?;
-
-    let table: toml::Table = toml::from_str(&default_highlights)?;
+    println!("cargo::rerun-if-changed=./default_highlights");
 
     let out_dir = env::var_os("OUT_DIR").unwrap();
     let dest_path = Path::new(&out_dir).join("default_highlights.rs");
@@ -52,35 +48,45 @@ fn main() -> anyhow::Result<()> {
         code,
         "pub static DEFAULT_HIGHLIGHTS: &'static [(&'static str, Highlight<'static>)] = &["
     )?;
-    for (highlight_group, value) in table {
-        writeln!(code, "(")?;
-        writeln!(code, r#""{highlight_group}","#)?;
-        writeln!(code, "Highlight {{")?;
+    for path in fs::read_dir("./default_highlights")? {
+        let path = path?.path();
+        if !path.is_file() {
+            continue;
+        }
+        let default_highlights = std::fs::read_to_string(path)?;
+        let table: toml::Table = toml::from_str(&default_highlights)?;
 
-        for (key, value) in value
-            .as_table()
-            .expect("highlight value must be a TOML table")
-        {
-            match key.as_str() {
-                "fg" | "bg" | "sp" => {
-                    let theme_element =
-                        ThemeElement(value.as_str().expect("fg, bg and sp values must be str"));
-                    writeln!(code, "    {key}: Some({theme_element}),")?;
-                }
-                "link" => {
-                    let link = value.as_str().expect("link must be str");
-                    writeln!(code, "    link: Some({link:?}),")?;
-                }
-                _ => {
-                    let attr_value = value.as_bool().expect("highlight attributes must be bool");
-                    writeln!(code, "    {key}: Some({attr_value}),")?;
+        for (highlight_group, value) in table {
+            writeln!(code, "(")?;
+            writeln!(code, r#""{highlight_group}","#)?;
+            writeln!(code, "Highlight {{")?;
+
+            for (key, value) in value
+                .as_table()
+                .expect("highlight value must be a TOML table")
+            {
+                match key.as_str() {
+                    "fg" | "bg" | "sp" => {
+                        let theme_element =
+                            ThemeElement(value.as_str().expect("fg, bg and sp values must be str"));
+                        writeln!(code, "    {key}: Some({theme_element}),")?;
+                    }
+                    "link" => {
+                        let link = value.as_str().expect("link must be str");
+                        writeln!(code, "    link: Some({link:?}),")?;
+                    }
+                    _ => {
+                        let attr_value =
+                            value.as_bool().expect("highlight attributes must be bool");
+                        writeln!(code, "    {key}: Some({attr_value}),")?;
+                    }
                 }
             }
-        }
 
-        writeln!(code, "    ..Highlight::empty()")?;
-        writeln!(code, "}}")?;
-        writeln!(code, "),")?;
+            writeln!(code, "    ..Highlight::empty()")?;
+            writeln!(code, "}}")?;
+            writeln!(code, "),")?;
+        }
     }
     writeln!(code, "];")?;
 

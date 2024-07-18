@@ -1,0 +1,7 @@
+# https://github.com/lukas-reineke/indent-blankline.nvim
+
+## Version 2
+IndentBlanklineChar = { fg = "ui.bg_selected" }
+## Version 3
+IblScope = { fg = "ui.bg_selected", bg = "ui.bg_gutter" }
+IblIndent = { fg = "ui.bg_selected" }
