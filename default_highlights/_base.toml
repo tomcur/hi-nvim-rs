@@ -223,6 +223,7 @@ Boolean = { link = "Constant" }
 Ignore = { fg = "ui.nontext" }
 
 # Treesitter
+"@module" = { fg = "syn.special", bold = true }
 "@parameter" = { fg = "syn.parameter" }
 "@constructor" = { fg = "syn.constructor", bold = true }
 
