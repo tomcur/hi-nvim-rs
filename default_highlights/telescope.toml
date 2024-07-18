@@ -1,0 +1,2 @@
+TelescopeNormal = { fg = "ui.float_fg", bg = "ui.float_bg" }
+TelescopeBorder = { fg = "ui.float_border", bg = "ui.float_bg" }
