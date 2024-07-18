@@ -33,9 +33,9 @@ bg_gutter =        { color = "bg", lighten_absolute = 0.10 }
 bg_dim =           { color = "bg", lighten_absolute = -0.05 }
 bg_selected =      { color = "bg", lighten_absolute = 0.10 }
 
-float_bg =     { color = "bg", lighten_absolute = 0.05 }
-float_fg =     { color = "fg", lighten_absolute = 0.05 }
-float_border = { color = "fg", lighten_absolute = 0.1 }
+float_bg =     { color = "bg", lighten_absolute = 0.03 }
+float_fg =     { color = "fg", lighten_absolute = 0.03 }
+float_border = "fg"
 
 pmenu_bg =          { color = "bg", lighten_absolute = 0.1 }
 pmenu_fg =          { color = "fg", lighten_absolute = 0.1 }
