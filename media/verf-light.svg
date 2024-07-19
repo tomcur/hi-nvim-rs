@@ -25,11 +25,8 @@
 <rect x="0" y="13" width="2.4" height="1" style="fill: #c5c9ed;" />
 <rect x="2.4" y="13" width="30.000002" height="1" style="fill: #abaeca;" />
 <rect x="0" y="14" width="2.4" height="1" style="fill: #c5c9ed;" />
-<rect x="2.4" y="14" width="3" height="1" style="fill: #abaeca;" />
 <rect x="0" y="15" width="2.4" height="1" style="fill: #c5c9ed;" />
-<rect x="2.4" y="15" width="13.200001" height="1" style="fill: #abaeca;" />
 <rect x="0" y="16" width="2.4" height="1" style="fill: #c5c9ed;" />
-<rect x="2.4" y="16" width="0.6" height="1" style="fill: #abaeca;" />
 <rect x="0" y="18" width="34.800003" height="1" style="fill: #4c4e66;" />
 <text x="1.2" y="0.75" textLength="0.6" style="fill: #656671;">1</text>
 <text x="2.4" y="0.75" textLength="10.8" style="fill: #4f5056; font-style: italic;">//! Calculate A+B.</text>
@@ -120,9 +117,9 @@
 <text x="0.6" y="16.75" textLength="1.2" style="fill: #656671;">17</text>
 <text x="2.4" y="16.75" textLength="0.6" style="fill: #505050;">}</text>
 <text x="0" y="17.75" textLength="0.6" style="fill: #4c4e66;">~</text>
-<text x="0" y="18.75" textLength="34.800003" style="fill: #dfe4ff;">./hi-nvim-rs-web/code-examples/rust.rs &#160;17,2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
+<text x="0" y="18.75" textLength="34.800003" style="fill: #dfe4ff;">./hi-nvim-rs-web/code-examples/rust.rs &#160;14,51 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
 <text x="0" y="19.75" textLength="10.200001" style="fill: #7d3d00; font-weight: 600;">-- VISUAL LINE --</text>
-<text x="28.2" y="19.75" textLength="0.6" style="fill: #5a5d77;">6</text>
+<text x="28.2" y="19.75" textLength="0.6" style="fill: #5a5d77;">3</text>
 
 </g>
 </svg>
