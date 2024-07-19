@@ -16,13 +16,13 @@ lightness = 0.70
 chroma = 0.10
 
 [bg]
-lightness = 0.30
-chroma = 0.10
+lightness = 0.32
+chroma = 0.04
 
 [colors]
-bg =   [ 0.15, 0.05, 280 ]
-fg =   [ 0.70, 0.03, 280 ]
-grey = [ 0.70, 0.0,  280 ]
+bg =   [ 0.24, 0.02, 284 ]
+fg =   [ 0.84, 0.03, 77 ]
+grey = [ 0.70, 0.01, 284 ]
 
 [themes.ui]
 fg = "fg"
@@ -48,7 +48,7 @@ pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1, saturate = 0.03 }
 pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25, saturate = 0.08 }
 
 special = { color = "fg.purple", lighten_absolute = 0.05, saturate = 0.02 }
-nontext = { color = "grey", mix = ["bg", 0.15] }
+nontext = { color = "bg", lighten_absolute = 0.35, saturate = 0.01 }
 
 [themes.syn]
 string = "fg.green"
@@ -89,8 +89,6 @@ changed = "bg.yellow"
 text = "bg"
 
 [inverse]
-saturate = 0.01
-gamma = 0.80
-lighten_absolute = 0.05
+lighten_absolute = 0.17
 
 [highlights]
