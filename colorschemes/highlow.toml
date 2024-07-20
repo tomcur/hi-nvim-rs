@@ -32,6 +32,16 @@ pink = 346.0
 [groups.fg]
 # Specify the lightness and chromacity for foreground colors defined in [hues].
 lightness = 0.36
+chroma = 0.07
+
+[groups.fg_accented]
+# Specify the lightness and chromacity for accented foreground colors defined in [hues].
+lightness = 0.36
+chroma = 0.10
+
+[groups.fg_unaccented]
+# Specify the lightness and chromacity for unaccented foreground colors defined in [hues].
+lightness = 0.36
 chroma = 0.05
 
 [groups.bg]
@@ -107,28 +117,28 @@ grey = [ 0.36, 0.0,    77 ]
 
 [themes.ui]
 # Normal foreground text
-fg = "fg"
-fg_dim = { color = "fg", mix = ["bg", 0.1] }
+fg =          "fg"
+fg_dim =      { color = "fg", mix = ["bg", 0.1] }
 fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
 
 # Background and background highlights
-bg = "bg"
-bg_visual = { color = "bg", lighten_absolute = -0.15, saturate = 0.04 }
-bg_highlight = { color = "bg", lighten_absolute = -0.15, saturate = 0.03 }
+bg =               "bg"
+bg_visual =        { color = "bg", lighten_absolute = -0.15, saturate = 0.04 }
+bg_highlight =     { color = "bg", lighten_absolute = -0.15, saturate = 0.03 }
 bg_highlight_dim = { color = "bg", lighten_absolute = -0.07, saturate = 0.02 }
-bg_border = { color = "fg" }
-bg_gutter = { color = "bg", lighten_absolute = -0.04, saturate = 0.015 }
-bg_dim = { color = "bg", lighten_absolute = -0.05, saturate = -0.005 }
-bg_selected = { color = "bg", lighten_absolute = -0.1 }
+bg_border =        { color = "fg" }
+bg_gutter =        { color = "bg", lighten_absolute = -0.04, saturate = 0.015 }
+bg_dim =           { color = "bg", lighten_absolute = -0.05, saturate = -0.005 }
+bg_selected =      { color = "bg", lighten_absolute = -0.1 }
 
 # Floating windows
-float_bg = { color = "bg", lighten_absolute = -0.02, saturate = 0.01 }
-float_fg = { color = "fg", lighten_absolute = -0.02 }
+float_bg =     { color = "bg", lighten_absolute = -0.02, saturate = 0.01 }
+float_fg =     { color = "fg", lighten_absolute = -0.02 }
 float_border = "fg"
 
 # Popup menu (e.g., tab completion)
-pmenu_bg = { color = "bg", lighten_absolute = -0.1, saturate = 0.03 }
-pmenu_fg = { color = "fg", lighten_absolute = -0.1 }
+pmenu_bg =          { color = "bg", lighten_absolute = -0.1, saturate = 0.03 }
+pmenu_fg =          { color = "fg", lighten_absolute = -0.1 }
 pmenu_fg_selected = { color = "fg", lighten_absolute = -0.1, saturate = 0.03 }
 pmenu_bg_selected = { color = "bg", lighten_absolute = -0.25, saturate = 0.08 }
 
@@ -136,50 +146,49 @@ special = { color = "fg.purple", lighten_absolute = -0.05, saturate = 0.02 }
 nontext = { color = "grey", mix = ["bg", 0.15] }
 
 [themes.syn]
-string = "fg.blue"
-number = "fg.orange"
-constant = "fg.blue"
-regex = "fg.yellow"
-preproc = "fg.yellow"
-type = "fg.pink"
-variable = { color = "fg", lighten_absolute = -0.1, saturate = 0.01 }
-identifier = { color = "fg", lighten_absolute = -0.1, saturate = 0.01 }
-parameter = { color = "fg.blue", saturate = 0.01 }
-function = "fg.blue"
-constructor = "fg.orange"
-statement = "fg.purple"
-keyword = { color = "fg.purple", saturate = 0.01 }
-operator = "fg"
-deprecated = "grey"
-comment = { color = "grey", lighten_absolute = 0.05 }
-special = "fg.yellow"
-punctuation = "grey"
+string =      "fg.green"
+number =      "fg.orange"
+constant =    "fg.blue"
+regex =       "fg.yellow"
+preproc =     "fg.yellow"
+type =        "fg.pink"
+variable =    "fg"
+identifier =  "fg"
+parameter =   "fg_unaccented.blue"
+function =    "fg_unaccented.blue"
+constructor = "fg_unaccented.orange"
+statement =   "fg_unaccented.purple"
+keyword =     "fg_unaccented.purple"
+operator =    "fg_unaccented.yellow"
+deprecated =  { color = "grey", lighten_absolute = 0.05 }
+comment =     "grey"
+special =     "fg.yellow"
+punctuation = { color = "grey", lighten_absolute = 0.05 }
 
 [themes.diagnostics]
-error = { color = "fg.red", saturate = 0.03 }
-warning = { color = "fg.orange", saturate = 0.03 }
-info = { color = "fg.blue", saturate = 0.03 }
-hint =  "grey"
-ok = { color = "fg.green", saturate = 0.03 }
+error =   { color = "fg_accented.red" }
+warning = { color = "fg_accented.orange" }
+info =    { color = "fg_accented.blue" }
+hint =    { color = "fg_accented.blue", saturate = -0.05 }
+ok =      { color = "fg_accented.green" }
 
 [themes.vcs]
 removed = "fg.red"
-added = "fg.green"
+added =   "fg.green"
 changed = "fg.yellow"
 
 [themes.diff]
 removed = "bg.red"
-added = "bg.green"
+added =   "bg.green"
 changed = "bg.yellow"
-text = "bg"
+text =    "bg"
 
 [inverse]
 # Color post-processing for the inverse color theme. This is performed after
 # inverting the lightness of all colors. The transformations are the same as
 # documented in the themes section.
-saturate = -0.005
-gamma = 0.85
-lighten_absolute = 0.10
+saturate = -0.03
+lighten_absolute = 0.08
 
 [highlights]
 # Specify (Neo)vim highlight groups. The default groups are available at
