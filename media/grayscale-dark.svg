@@ -115,7 +115,7 @@
 <text x="14.400001" y="15.75" textLength="1.2" style="fill: #898989;">);</text>
 <text x="0.6" y="16.75" textLength="1.2" style="fill: #717171;">17</text>
 <text x="2.4" y="16.75" textLength="0.6" style="fill: #898989;">}</text>
-<text x="0" y="17.75" textLength="0.6" style="fill: #a8a8a8;">~</text>
+<text x="0" y="17.75" textLength="0.6" style="fill: #717171;">~</text>
 <text x="0" y="18.75" textLength="34.800003" style="fill: #060606;">./hi-nvim-rs-web/code-examples/rust.rs &#160;14,51 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
 <text x="0" y="19.75" textLength="10.200001" style="fill: #b0a985; font-weight: 600;">-- VISUAL LINE --</text>
 <text x="28.2" y="19.75" textLength="0.6" style="fill: #959595;">3</text>

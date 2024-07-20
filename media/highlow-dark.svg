@@ -6,117 +6,120 @@
   }
 </style>
 <g class="screen">
-<rect x="0" y="0" width="34.800003" height="20" style="fill: #14110c;" />
-<rect x="0" y="0" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="1" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="2" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="3" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="4" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="5" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="6" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="7" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="8" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="9" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="10" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="11" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="2.4" y="11" width="10.200001" height="1" style="fill: #4b381b;" />
-<rect x="0" y="12" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="2.4" y="12" width="16.2" height="1" style="fill: #4b381b;" />
-<rect x="0" y="13" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="2.4" y="13" width="30.000002" height="1" style="fill: #4b381b;" />
-<rect x="0" y="14" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="15" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="16" width="2.4" height="1" style="fill: #241b0e;" />
-<rect x="0" y="18" width="34.800003" height="1" style="fill: #b2b8cd;" />
-<text x="1.2" y="0.75" textLength="0.6" style="fill: #9f9f9f;">1</text>
-<text x="2.4" y="0.75" textLength="10.8" style="fill: #aaaaaa; font-style: italic;">//! Calculate A+B.</text>
-<text x="1.2" y="1.75" textLength="0.6" style="fill: #9f9f9f;">2</text>
-<text x="2.4" y="1.75" textLength="1.8000001" style="fill: #aaaaaa; font-style: italic;">//!</text>
-<text x="1.2" y="2.75" textLength="0.6" style="fill: #9f9f9f;">3</text>
-<text x="2.4" y="2.75" textLength="25.2" style="fill: #aaaaaa; font-style: italic;">//! From: https://rosettacode.org/wiki/A+B</text>
-<text x="1.2" y="3.75" textLength="0.6" style="fill: #9f9f9f;">4</text>
-<text x="2.4" y="3.75" textLength="1.8000001" style="fill: #c6afd2;">use</text>
-<text x="4.8" y="3.75" textLength="1.8000001" style="fill: #c0ba99; font-weight: 600;">std</text>
-<text x="6.6000004" y="3.75" textLength="1.2" style="fill: #b9b9b9;">::</text>
-<text x="7.8" y="3.75" textLength="1.2" style="fill: #b2b8cd;">io</text>
-<text x="9" y="3.75" textLength="0.6" style="fill: #b9b9b9;">;</text>
-<text x="1.2" y="4.75" textLength="0.6" style="fill: #9f9f9f;">5</text>
-<text x="1.2" y="5.75" textLength="0.6" style="fill: #9f9f9f;">6</text>
-<text x="2.4" y="5.75" textLength="1.2" style="fill: #c6afd2;">fn</text>
-<text x="4.2000003" y="5.75" textLength="2.4" style="fill: #a9b9d6;">main</text>
-<text x="6.6000004" y="5.75" textLength="1.2" style="fill: #b9b9b9;">()</text>
-<text x="8.400001" y="5.75" textLength="0.6" style="fill: #b9b9b9;">{</text>
-<text x="1.2" y="6.75" textLength="0.6" style="fill: #9f9f9f;">7</text>
-<text x="4.8" y="6.75" textLength="1.8000001" style="fill: #c6afd2;">let</text>
-<text x="7.2000003" y="6.75" textLength="1.8000001" style="fill: #c6afd2;">mut</text>
-<text x="9.6" y="6.75" textLength="3.6000001" style="fill: #b2b8cd;">line =</text>
-<text x="13.8" y="6.75" textLength="3.6000001" style="fill: #cfaebf; font-weight: 600;">String</text>
-<text x="17.400002" y="6.75" textLength="1.2" style="fill: #b9b9b9;">::</text>
-<text x="18.6" y="6.75" textLength="1.8000001" style="fill: #a9b9d6;">new</text>
-<text x="20.400002" y="6.75" textLength="1.8000001" style="fill: #b9b9b9;">();</text>
-<text x="1.2" y="7.75" textLength="0.6" style="fill: #9f9f9f;">8</text>
-<text x="4.8" y="7.75" textLength="1.2" style="fill: #c0ba99; font-weight: 600;">io</text>
-<text x="6" y="7.75" textLength="1.2" style="fill: #b9b9b9;">::</text>
-<text x="7.2000003" y="7.75" textLength="3" style="fill: #a9b9d6;">stdin</text>
-<text x="10.200001" y="7.75" textLength="1.8000001" style="fill: #b9b9b9;">().</text>
-<text x="12" y="7.75" textLength="5.4" style="fill: #a9b9d6;">read_line</text>
-<text x="17.400002" y="7.75" textLength="0.6" style="fill: #b9b9b9;">(</text>
-<text x="18" y="7.75" textLength="0.6" style="fill: #b2b8cd;">&amp;</text>
-<text x="18.6" y="7.75" textLength="1.8000001" style="fill: #c6afd2;">mut</text>
-<text x="21" y="7.75" textLength="2.4" style="fill: #b2b8cd;">line</text>
-<text x="23.400002" y="7.75" textLength="1.2" style="fill: #b9b9b9;">).</text>
-<text x="24.6" y="7.75" textLength="3.6000001" style="fill: #a9b9d6;">expect</text>
-<text x="28.2" y="7.75" textLength="0.6" style="fill: #b9b9b9;">(</text>
-<text x="28.800001" y="7.75" textLength="4.2000003" style="fill: #a9b9d6;">"stdin"</text>
-<text x="33" y="7.75" textLength="1.2" style="fill: #b9b9b9;">);</text>
-<text x="1.2" y="8.75" textLength="0.6" style="fill: #9f9f9f;">9</text>
-<text x="0.6" y="9.75" textLength="1.2" style="fill: #9f9f9f;">10</text>
-<text x="4.8" y="9.75" textLength="1.8000001" style="fill: #c6afd2;">let</text>
-<text x="7.2000003" y="9.75" textLength="1.8000001" style="fill: #c6afd2;">mut</text>
-<text x="9.6" y="9.75" textLength="0.6" style="fill: #b2b8cd;">i</text>
-<text x="10.200001" y="9.75" textLength="0.6" style="fill: #b9b9b9;">:</text>
-<text x="11.400001" y="9.75" textLength="1.8000001" style="fill: #c0ba99;">i64</text>
-<text x="13.8" y="9.75" textLength="0.6" style="fill: #b2b8cd;">=</text>
-<text x="15.000001" y="9.75" textLength="0.6" style="fill: #ceb39c;">0</text>
-<text x="15.6" y="9.75" textLength="0.6" style="fill: #b9b9b9;">;</text>
-<text x="0.6" y="10.75" textLength="1.2" style="fill: #9f9f9f;">11</text>
-<text x="4.8" y="10.75" textLength="1.8000001" style="fill: #c6afd2;">for</text>
-<text x="7.2000003" y="10.75" textLength="2.4" style="fill: #b2b8cd;">word</text>
-<text x="10.200001" y="10.75" textLength="1.2" style="fill: #c6afd2;">in</text>
-<text x="12" y="10.75" textLength="2.4" style="fill: #b2b8cd;">line</text>
-<text x="14.400001" y="10.75" textLength="0.6" style="fill: #b9b9b9;">.</text>
-<text x="15.000001" y="10.75" textLength="9.6" style="fill: #a9b9d6;">split_whitespace</text>
-<text x="24.6" y="10.75" textLength="1.2" style="fill: #b9b9b9;">()</text>
-<text x="26.400002" y="10.75" textLength="0.6" style="fill: #b9b9b9;">{</text>
-<text x="0.6" y="11.75" textLength="1.2" style="fill: #9f9f9f;">12</text>
-<text x="7.2000003" y="11.75" textLength="5.4" style="fill: #b2b8cd;">i += word</text>
-<text x="0.6" y="12.75" textLength="1.2" style="fill: #9f9f9f;">13</text>
-<text x="9.6" y="12.75" textLength="0.6" style="fill: #b9b9b9;">.</text>
-<text x="10.200001" y="12.75" textLength="3" style="fill: #a9b9d6;">parse</text>
-<text x="13.200001" y="12.75" textLength="1.8000001" style="fill: #b9b9b9;">::&lt;</text>
-<text x="15.000001" y="12.75" textLength="1.8000001" style="fill: #c0ba99;">i64</text>
-<text x="16.800001" y="12.75" textLength="1.8000001" style="fill: #b9b9b9;">>()</text>
-<text x="0.6" y="13.75" textLength="1.2" style="fill: #9f9f9f;">14</text>
-<text x="9.6" y="13.75" textLength="0.6" style="fill: #b9b9b9;">.</text>
-<text x="10.200001" y="13.75" textLength="3.6000001" style="fill: #a9b9d6;">expect</text>
-<text x="13.8" y="13.75" textLength="0.6" style="fill: #b9b9b9;">(</text>
-<text x="14.400001" y="13.75" textLength="16.800001" style="fill: #a9b9d6;">"interpret input as numbers"</text>
-<text x="31.2" y="13.75" textLength="1.2" style="fill: #b9b9b9;">);</text>
-<text x="0.6" y="14.75" textLength="1.2" style="fill: #9f9f9f;">15</text>
-<text x="4.8" y="14.75" textLength="0.6" style="fill: #b9b9b9;">}</text>
-<text x="0.6" y="15.75" textLength="1.2" style="fill: #9f9f9f;">16</text>
-<text x="4.8" y="15.75" textLength="4.8" style="fill: #a9b9d6;">println!</text>
-<text x="9.6" y="15.75" textLength="0.6" style="fill: #b9b9b9;">(</text>
-<text x="10.200001" y="15.75" textLength="2.4" style="fill: #a9b9d6;">"{}"</text>
-<text x="12.6" y="15.75" textLength="0.6" style="fill: #b9b9b9;">,</text>
-<text x="13.8" y="15.75" textLength="0.6" style="fill: #b2b8cd;">i</text>
-<text x="14.400001" y="15.75" textLength="1.2" style="fill: #b9b9b9;">);</text>
-<text x="0.6" y="16.75" textLength="1.2" style="fill: #9f9f9f;">17</text>
-<text x="2.4" y="16.75" textLength="0.6" style="fill: #b9b9b9;">}</text>
-<text x="0" y="17.75" textLength="0.6" style="fill: #b2b8cd;">~</text>
-<text x="0" y="18.75" textLength="34.800003" style="fill: #14110c;">./hi-nvim-rs-web/code-examples/rust.rs &#160;14,51 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
-<text x="0" y="19.75" textLength="10.200001" style="fill: #dcae87; font-weight: 600;">-- VISUAL LINE --</text>
-<text x="28.2" y="19.75" textLength="0.6" style="fill: #a2a7b8;">3</text>
+<rect x="0" y="0" width="34.800003" height="20" style="fill: #070707;" />
+<rect x="0" y="0" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="1" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="2" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="3" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="4" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="5" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="6" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="7" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="8" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="9" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="10" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="11" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="2.4" y="11" width="10.200001" height="1" style="fill: #30271a;" />
+<rect x="0" y="12" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="2.4" y="12" width="16.2" height="1" style="fill: #30271a;" />
+<rect x="0" y="13" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="2.4" y="13" width="30.000002" height="1" style="fill: #30271a;" />
+<rect x="0" y="14" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="15" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="16" width="2.4" height="1" style="fill: #100f0f;" />
+<rect x="0" y="18" width="34.800003" height="1" style="fill: #a3a4a8;" />
+<text x="1.2" y="0.75" textLength="0.6" style="fill: #898989;">1</text>
+<text x="2.4" y="0.75" textLength="10.8" style="fill: #a4a4a4; font-style: italic;">//! Calculate A+B.</text>
+<text x="1.2" y="1.75" textLength="0.6" style="fill: #898989;">2</text>
+<text x="2.4" y="1.75" textLength="1.8000001" style="fill: #a4a4a4; font-style: italic;">//!</text>
+<text x="1.2" y="2.75" textLength="0.6" style="fill: #898989;">3</text>
+<text x="2.4" y="2.75" textLength="25.2" style="fill: #a4a4a4; font-style: italic;">//! From: https://rosettacode.org/wiki/A+B</text>
+<text x="1.2" y="3.75" textLength="0.6" style="fill: #898989;">4</text>
+<text x="2.4" y="3.75" textLength="1.8000001" style="fill: #a9a1ae;">use</text>
+<text x="4.8" y="3.75" textLength="1.8000001" style="fill: #aba589; font-weight: 600;">std</text>
+<text x="6.6000004" y="3.75" textLength="1.2" style="fill: #959595;">::</text>
+<text x="7.8" y="3.75" textLength="1.2" style="fill: #a3a4a8;">io</text>
+<text x="9" y="3.75" textLength="0.6" style="fill: #959595;">;</text>
+<text x="1.2" y="4.75" textLength="0.6" style="fill: #898989;">5</text>
+<text x="1.2" y="5.75" textLength="0.6" style="fill: #898989;">6</text>
+<text x="2.4" y="5.75" textLength="1.2" style="fill: #a9a1ae;">fn</text>
+<text x="4.2000003" y="5.75" textLength="2.4" style="fill: #9ea5b2;">main</text>
+<text x="6.6000004" y="5.75" textLength="1.2" style="fill: #959595;">()</text>
+<text x="8.400001" y="5.75" textLength="0.6" style="fill: #959595;">{</text>
+<text x="1.2" y="6.75" textLength="0.6" style="fill: #898989;">7</text>
+<text x="4.8" y="6.75" textLength="1.8000001" style="fill: #a9a1ae;">let</text>
+<text x="7.2000003" y="6.75" textLength="1.8000001" style="fill: #a9a1ae;">mut</text>
+<text x="9.6" y="6.75" textLength="2.4" style="fill: #a3a4a8;">line</text>
+<text x="12.6" y="6.75" textLength="0.6" style="fill: #a8a597;">=</text>
+<text x="13.8" y="6.75" textLength="3.6000001" style="fill: #b89baa; font-weight: 600;">String</text>
+<text x="17.400002" y="6.75" textLength="1.2" style="fill: #959595;">::</text>
+<text x="18.6" y="6.75" textLength="1.8000001" style="fill: #9ea5b2;">new</text>
+<text x="20.400002" y="6.75" textLength="1.8000001" style="fill: #959595;">();</text>
+<text x="1.2" y="7.75" textLength="0.6" style="fill: #898989;">8</text>
+<text x="4.8" y="7.75" textLength="1.2" style="fill: #aba589; font-weight: 600;">io</text>
+<text x="6" y="7.75" textLength="1.2" style="fill: #959595;">::</text>
+<text x="7.2000003" y="7.75" textLength="3" style="fill: #9ea5b2;">stdin</text>
+<text x="10.200001" y="7.75" textLength="1.8000001" style="fill: #959595;">().</text>
+<text x="12" y="7.75" textLength="5.4" style="fill: #9ea5b2;">read_line</text>
+<text x="17.400002" y="7.75" textLength="0.6" style="fill: #959595;">(</text>
+<text x="18" y="7.75" textLength="0.6" style="fill: #a8a597;">&amp;</text>
+<text x="18.6" y="7.75" textLength="1.8000001" style="fill: #a9a1ae;">mut</text>
+<text x="21" y="7.75" textLength="2.4" style="fill: #a3a4a8;">line</text>
+<text x="23.400002" y="7.75" textLength="1.2" style="fill: #959595;">).</text>
+<text x="24.6" y="7.75" textLength="3.6000001" style="fill: #9ea5b2;">expect</text>
+<text x="28.2" y="7.75" textLength="0.6" style="fill: #959595;">(</text>
+<text x="28.800001" y="7.75" textLength="4.2000003" style="fill: #9aab92;">"stdin"</text>
+<text x="33" y="7.75" textLength="1.2" style="fill: #959595;">);</text>
+<text x="1.2" y="8.75" textLength="0.6" style="fill: #898989;">9</text>
+<text x="0.6" y="9.75" textLength="1.2" style="fill: #898989;">10</text>
+<text x="4.8" y="9.75" textLength="1.8000001" style="fill: #a9a1ae;">let</text>
+<text x="7.2000003" y="9.75" textLength="1.8000001" style="fill: #a9a1ae;">mut</text>
+<text x="9.6" y="9.75" textLength="0.6" style="fill: #a3a4a8;">i</text>
+<text x="10.200001" y="9.75" textLength="0.6" style="fill: #959595;">:</text>
+<text x="11.400001" y="9.75" textLength="1.8000001" style="fill: #aba589;">i64</text>
+<text x="13.8" y="9.75" textLength="0.6" style="fill: #a8a597;">=</text>
+<text x="15.000001" y="9.75" textLength="0.6" style="fill: #b8a08c;">0</text>
+<text x="15.6" y="9.75" textLength="0.6" style="fill: #959595;">;</text>
+<text x="0.6" y="10.75" textLength="1.2" style="fill: #898989;">11</text>
+<text x="4.8" y="10.75" textLength="1.8000001" style="fill: #a9a1ae;">for</text>
+<text x="7.2000003" y="10.75" textLength="2.4" style="fill: #a3a4a8;">word</text>
+<text x="10.200001" y="10.75" textLength="1.2" style="fill: #a9a1ae;">in</text>
+<text x="12" y="10.75" textLength="2.4" style="fill: #a3a4a8;">line</text>
+<text x="14.400001" y="10.75" textLength="0.6" style="fill: #959595;">.</text>
+<text x="15.000001" y="10.75" textLength="9.6" style="fill: #9ea5b2;">split_whitespace</text>
+<text x="24.6" y="10.75" textLength="1.2" style="fill: #959595;">()</text>
+<text x="26.400002" y="10.75" textLength="0.6" style="fill: #959595;">{</text>
+<text x="0.6" y="11.75" textLength="1.2" style="fill: #898989;">12</text>
+<text x="7.2000003" y="11.75" textLength="0.6" style="fill: #a3a4a8;">i</text>
+<text x="8.400001" y="11.75" textLength="1.2" style="fill: #a8a597;">+=</text>
+<text x="10.200001" y="11.75" textLength="2.4" style="fill: #a3a4a8;">word</text>
+<text x="0.6" y="12.75" textLength="1.2" style="fill: #898989;">13</text>
+<text x="9.6" y="12.75" textLength="0.6" style="fill: #959595;">.</text>
+<text x="10.200001" y="12.75" textLength="3" style="fill: #9ea5b2;">parse</text>
+<text x="13.200001" y="12.75" textLength="1.8000001" style="fill: #959595;">::&lt;</text>
+<text x="15.000001" y="12.75" textLength="1.8000001" style="fill: #aba589;">i64</text>
+<text x="16.800001" y="12.75" textLength="1.8000001" style="fill: #959595;">>()</text>
+<text x="0.6" y="13.75" textLength="1.2" style="fill: #898989;">14</text>
+<text x="9.6" y="13.75" textLength="0.6" style="fill: #959595;">.</text>
+<text x="10.200001" y="13.75" textLength="3.6000001" style="fill: #9ea5b2;">expect</text>
+<text x="13.8" y="13.75" textLength="0.6" style="fill: #959595;">(</text>
+<text x="14.400001" y="13.75" textLength="16.800001" style="fill: #9aab92;">"interpret input as numbers"</text>
+<text x="31.2" y="13.75" textLength="1.2" style="fill: #959595;">);</text>
+<text x="0.6" y="14.75" textLength="1.2" style="fill: #898989;">15</text>
+<text x="4.8" y="14.75" textLength="0.6" style="fill: #959595;">}</text>
+<text x="0.6" y="15.75" textLength="1.2" style="fill: #898989;">16</text>
+<text x="4.8" y="15.75" textLength="4.8" style="fill: #9ea5b2;">println!</text>
+<text x="9.6" y="15.75" textLength="0.6" style="fill: #959595;">(</text>
+<text x="10.200001" y="15.75" textLength="2.4" style="fill: #9aab92;">"{}"</text>
+<text x="12.6" y="15.75" textLength="0.6" style="fill: #959595;">,</text>
+<text x="13.8" y="15.75" textLength="0.6" style="fill: #a3a4a8;">i</text>
+<text x="14.400001" y="15.75" textLength="1.2" style="fill: #959595;">);</text>
+<text x="0.6" y="16.75" textLength="1.2" style="fill: #898989;">17</text>
+<text x="2.4" y="16.75" textLength="0.6" style="fill: #959595;">}</text>
+<text x="0" y="17.75" textLength="0.6" style="fill: #898989;">~</text>
+<text x="0" y="18.75" textLength="34.800003" style="fill: #070707;">./hi-nvim-rs-web/code-examples/rust.rs &#160;14,51 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
+<text x="0" y="19.75" textLength="10.200001" style="fill: #c59b77; font-weight: 600;">-- VISUAL LINE --</text>
+<text x="28.2" y="19.75" textLength="0.6" style="fill: #929292;">3</text>
 
 </g>
 </svg>
