@@ -70,10 +70,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1717974879,
-        "narHash": "sha256-GTO3C88+5DX171F/gVS3Qga/hOs/eRMxPFpiHq2t+D8=",
-        "path": "/nix/store/rljkm6h18fjvavm6l17jiil8glphc44f-source",
-        "rev": "c7b821ba2e1e635ba5a76d299af62821cbcb09f3",
+        "lastModified": 1721138476,
+        "narHash": "sha256-+W5eZOhhemLQxelojLxETfbFbc19NWawsXBlapYpqIA=",
+        "path": "/nix/store/70y8v9qfn34sdfsnwh3l9772lk4rpfiy-source",
+        "rev": "ad0b5eed1b6031efaed382844806550c3dcb4206",
         "type": "path"
       },
       "original": {
@@ -128,11 +128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1721146900,
-        "narHash": "sha256-r2gsLZD7tI0Q+gg+Us6hNUD5urll5/rGVyYusMZDYPY=",
+        "lastModified": 1721154485,
+        "narHash": "sha256-FTgbbiDlHXGjkv3a2TAxjAqdClWkuteyUrtjQ8fMSIs=",
         "owner": "tomcur",
         "repo": "termsnap",
-        "rev": "b30e27b62fcc3bb5ed9c4c0b2d232cd24cee4ff6",
+        "rev": "6801095f9222b4e86d2829f444e329294d1cc3e8",
         "type": "github"
       },
       "original": {
