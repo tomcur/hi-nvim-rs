@@ -50,12 +50,10 @@ impl<'de: 'a, 'a> Deserialize<'de> for NamespacedColor<'a> {
     {
         let s = <&str>::deserialize(deserializer)?;
 
-        let (namespace, color_name) = if s.starts_with("fg.") {
-            (ColorNamespace::Fg, &s[3..])
-        } else if s.starts_with("bg.") {
-            (ColorNamespace::Bg, &s[3..])
+        let (namespace, color_name) = if let Some((namespace, color_name)) = s.split_once('.') {
+            (ColorNamespace::Group(namespace), color_name)
         } else {
-            (ColorNamespace::Colors, &s[0..])
+            (ColorNamespace::Colors, s)
         };
 
         Ok(NamespacedColor {

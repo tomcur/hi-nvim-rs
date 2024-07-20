@@ -117,9 +117,8 @@ struct Configuration_<'a> {
     kind: &'a str,
     inverse: Inverse<'a>,
     colors: HashMap<&'a str, Lch>,
-    fg: HuesConfig,
-    bg: HuesConfig,
     hues: HashMap<&'a str, f32>,
+    groups: HashMap<&'a str, HuesConfig>,
     themes: ThemeNamespaces<'a>,
     highlights: BTreeMap<&'a str, Highlight<'a>>,
 }
@@ -154,12 +153,10 @@ pub struct ThemeElement<'a> {
 
 impl<'a> From<&'a str> for ThemeElement<'a> {
     fn from(s: &'a str) -> Self {
-        let (namespace, color_name) = if s.starts_with("fg.") {
-            (ColorNamespace::Fg, &s[3..])
-        } else if s.starts_with("bg.") {
-            (ColorNamespace::Bg, &s[3..])
+        let (namespace, color_name) = if let Some((namespace, color_name)) = s.split_once('.') {
+            (ColorNamespace::Group(namespace), color_name)
         } else {
-            (ColorNamespace::Colors, &s[0..])
+            (ColorNamespace::Colors, s)
         };
 
         let color = NamespacedColor {
@@ -176,21 +173,23 @@ impl<'a> From<&'a str> for ThemeElement<'a> {
 
 /// The namespaces of colors.
 #[derive(Debug, Clone, Copy, Eq, PartialEq, Hash)]
-pub enum ColorNamespace {
+pub enum ColorNamespace<'a> {
     Colors,
-    Fg,
-    Bg,
+    Group(&'a str),
 }
 
 /// Colors in a color namespace (e.g. `fg.green` is `green` in the `fg` namespace).
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct NamespacedColor<'a> {
-    pub namespace: ColorNamespace,
+    pub namespace: ColorNamespace<'a>,
     pub color_name: &'a str,
 }
 
 impl<'a> NamespacedColor<'a> {
-    pub fn from_namespace_and_color_name(namespace: ColorNamespace, color_name: &'a str) -> Self {
+    pub fn from_namespace_and_color_name(
+        namespace: ColorNamespace<'a>,
+        color_name: &'a str,
+    ) -> Self {
         NamespacedColor {
             namespace,
             color_name,
@@ -207,11 +206,9 @@ impl Display for NamespacedColor<'_> {
 
         match namespace {
             ColorNamespace::Colors => {}
-            ColorNamespace::Fg => {
-                f.write_str("fg.")?;
-            }
-            ColorNamespace::Bg => {
-                f.write_str("bg.")?;
+            ColorNamespace::Group(group) => {
+                f.write_str(group)?;
+                f.write_str(".")?;
             }
         }
 
@@ -265,17 +262,17 @@ pub fn parse<'a>(config_file: &'a str) -> Result<Configuration<'a>, Error> {
                 Oklch::from(color),
             )
         })
-        .chain(config.hues.iter().map(|(&name, &hue)| {
-            (
-                NamespacedColor::from_namespace_and_color_name(ColorNamespace::Fg, name),
-                Oklch::new(config.fg.lightness, config.fg.chroma, hue),
-            )
-        }))
-        .chain(config.hues.iter().map(|(&name, &hue)| {
-            (
-                NamespacedColor::from_namespace_and_color_name(ColorNamespace::Bg, name),
-                Oklch::new(config.bg.lightness, config.bg.chroma, hue),
-            )
+        // generate all hue/color group combinations
+        .chain(config.hues.iter().flat_map(|(&name, &hue)| {
+            config.groups.iter().map(move |(group, group_config)| {
+                (
+                    NamespacedColor::from_namespace_and_color_name(
+                        ColorNamespace::Group(group),
+                        name,
+                    ),
+                    Oklch::new(group_config.lightness, group_config.chroma, hue),
+                )
+            })
         }))
         .collect();
 

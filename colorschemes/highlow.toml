@@ -15,10 +15,11 @@ name = "highlow"
 kind = "light"
 
 [hues]
-# Hues to use in the theme. A set of foreground and background colors will be
-# generated from these hues, using the lightness and chroma specified in `fg`
-# and `bg`. These can be referenced in the `theme` section as `fg.<name>` and
-# `bg.<name>`.
+# Hues to use in the theme. Groups of colors will be generated from these hues,
+# using the lightness and chromacity of the color groups specified in `groups`.
+# These can be referenced in the `theme` section as `<group_name>.<hue_name>`.
+# For example, `fg.red` refers to the `red` hue with the lightness and
+# chromacity of `groups.fg`.
 red = 15.0
 orange = 62.0
 yellow = 98.0
@@ -28,12 +29,12 @@ blue = 262.0
 purple = 314.0
 pink = 346.0
 
-[fg]
+[groups.fg]
 # Specify the lightness and chromacity for foreground colors defined in [hues].
 lightness = 0.36
 chroma = 0.05
 
-[bg]
+[groups.bg]
 # Specify the lightness and chromacity for background colors defined in [hues].
 lightness = 0.85
 chroma = 0.05

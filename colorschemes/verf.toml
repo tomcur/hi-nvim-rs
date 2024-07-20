@@ -11,11 +11,11 @@ blue = 262.0
 purple = 314.0
 pink = 346.0
 
-[fg]
+[groups.fg]
 lightness = 0.70
 chroma = 0.10
 
-[bg]
+[groups.bg]
 lightness = 0.32
 chroma = 0.04
 

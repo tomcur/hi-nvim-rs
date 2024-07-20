@@ -10,11 +10,11 @@ red = 15.0
 yellow = 98.0
 green = 135.0
 
-[fg]
+[groups.fg]
 lightness = 0.73
 chroma = 0.07
 
-[bg]
+[groups.bg]
 lightness = 0.30
 chroma = 0.05
 

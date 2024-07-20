@@ -73,12 +73,13 @@ $ hi-nvim-rs ./path/to/colorscheme.toml > ~/.config/nvim/colors/a-colorscheme-na
 
 In hi.nvim.rs color scheme configurations, you define the hues you want to use
 in your color scheme, as well as the default lightness and chromacity of
-background and foreground colors. You then derive the desired theme elements of
-your color scheme by referring to these hues with optional color
-transformations: lightening/darkening, saturating/desaturating and color
-mixing. Neovim highlight group colors refer to these theme elements. One theme
-element can be common to various highlight groups, such as various types of
-seperators in Neovim referring to a single `ui.bg_border` theme element.
+various color groups (background and foreground colors, for example). You then
+derive the desired theme elements of your color scheme by referring to these
+hues with optional color transformations: lightening/darkening,
+saturating/desaturating and color mixing. Neovim highlight group colors refer
+to these theme elements. One theme element can be common to various highlight
+groups, such as various types of seperators in Neovim referring to a single
+`ui.bg_border` theme element.
 
 See [_highlow_](./colorschemes/highlow.toml) for a color scheme configuration
 with an inline explanation of the various configuration settings.
