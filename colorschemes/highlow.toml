@@ -193,3 +193,5 @@ lighten_absolute = 0.08
 [highlights]
 # Specify (Neo)vim highlight groups. The default groups are available at
 # https://github.com/tomcur/hi-nvim-rs
+StatusLine = { fg = "ui.bg", bg = "ui.fg" }
+StatusLineNC = { fg = "ui.bg_dim", bg = "ui.fg_very_dim" }

@@ -46,7 +46,7 @@ EndOfBuffer = { link = "NonText" }
 ErrorMsg = { fg = "diagnostics.error" }
 
 # Separators between window splits.
-WinSeparator = { fg = "ui.bg_border", bg = "ui.bg_border" }
+WinSeparator = { fg = "ui.bg_border", bg = "ui.bg" }
 VertSplit = { link = "WinSeparator" }
 
 # Line used for closed folds.
@@ -125,9 +125,9 @@ SpecialKey = { fg = "ui.special" }
 # -- SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
 # SpellRare = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
 # Status line of current window.
-StatusLine = { fg = "ui.bg", bg = "ui.fg" }
+StatusLine = { fg = "ui.fg", bg = "ui.bg_gutter" }
 # Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
-StatusLineNC = { fg = "ui.bg", bg = "ui.fg_very_dim" }
+StatusLineNC = { fg = "ui.fg_very_dim", bg = "ui.bg_gutter" }
 # -- TabLine		Tab pages line, not active tab page label.
 # TabLine = { bg = theme.ui.bg_m3, fg = theme.ui.special },
 # -- TabLineFill	Tab pages line, where there are no labels.

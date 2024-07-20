@@ -44,7 +44,7 @@ bg =               "bg"
 bg_visual =        { color = "bg", lighten_absolute = 0.20, saturate = -0.02 }
 bg_highlight =     { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
 bg_highlight_dim = { color = "bg", lighten_absolute = 0.12, saturate = 0.02 }
-bg_border =        { color = "fg" }
+bg_border =        { color = "bg", lighten_absolute = -0.05 }
 bg_gutter =        { color = "bg", lighten_absolute = 0.1, saturate = -0.01 }
 bg_dim =           { color = "bg", lighten_absolute = 0.05, saturate = -0.005 }
 bg_selected =      { color = "bg", lighten_absolute = 0.1 }
