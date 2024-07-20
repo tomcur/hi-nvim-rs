@@ -2,8 +2,8 @@ name = "twocolor"
 kind = "dark"
 
 [hues]
-"c1" = 52.0
-"c2" = 126.0
+"c1" = 64.0
+"c2" = 118.0
 
 # We cheat and add some colors for vcs/diff
 red = 15.0
@@ -11,84 +11,86 @@ yellow = 98.0
 green = 135.0
 
 [groups.fg]
-lightness = 0.73
+lightness = 0.70
 chroma = 0.07
 
-[groups.bg]
-lightness = 0.30
+[groups.fg_unaccented]
+lightness = 0.70
 chroma = 0.05
 
+[groups.bg]
+lightness = 0.32
+chroma = 0.04
+
 [colors]
-fg = [ 0.73, 0.02, 52.0 ]
-bg = [ 0.15, 0.02, 52.0 ]
+fg = [ 0.84, 0.03, 64.0 ]
+bg = [ 0.18, 0.02, 64.0 ]
 
 [themes.ui]
-fg = "fg"
-fg_dim = { color = "fg", mix = ["bg", 0.1] }
+fg =          "fg"
+fg_dim =      { color = "fg", mix = ["bg", 0.1] }
 fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
 
-bg = "bg"
-bg_visual = { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
-bg_highlight = { color = "bg", lighten_absolute = 0.17, saturate = 0.03 }
+bg =               "bg"
+bg_visual =        { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
+bg_highlight =     { color = "bg", lighten_absolute = 0.17, saturate = 0.03 }
 bg_highlight_dim = { color = "bg", lighten_absolute = 0.12, saturate = 0.02 }
-bg_border = { color = "fg" }
-bg_gutter = { color = "bg", lighten_absolute = 0.05, saturate = 0.02 }
-bg_dim = { color = "bg", lighten_absolute = -0.05, saturate = -0.005 }
-bg_selected = { color = "bg", lighten_absolute = 0.1 }
+bg_border =        { color = "fg" }
+bg_gutter =        { color = "bg", lighten_absolute = 0.05, saturate = 0.02 }
+bg_dim =           { color = "bg", lighten_absolute = -0.05, saturate = -0.005 }
+bg_selected =      { color = "bg", lighten_absolute = 0.1 }
 
-float_bg = { color = "bg", lighten_absolute = 0.02, saturate = 0.01 }
-float_fg = { color = "fg", lighten_absolute = 0.02 }
+float_bg =     { color = "bg", lighten_absolute = 0.02, saturate = 0.01 }
+float_fg =     { color = "fg", lighten_absolute = 0.02 }
 float_border = "fg"
 
-pmenu_bg = { color = "bg", lighten_absolute = 0.1, saturate = 0.03 }
-pmenu_fg = { color = "fg", lighten_absolute = 0.1 }
+pmenu_bg =          { color = "bg", lighten_absolute = 0.1, saturate = 0.03 }
+pmenu_fg =          { color = "fg", lighten_absolute = 0.1 }
 pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1, saturate = 0.03 }
 pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25, saturate = 0.08 }
 
 special = "fg.c2"
-nontext = { color = "fg", mix = ["bg", 0.3] }
+nontext = { color = "fg", mix = ["bg", 0.5] }
 
 [themes.syn]
-string = "fg.c1"
-number = "fg.c1"
-constant = "fg.c1"
-regex = "fg.c1"
-preproc = "fg.c1"
-type = { color = "fg.c1", lighten_absolute = 0.02, saturate = 0.03 }
-variable = { color = "fg", lighten_absolute = -0.03, saturate = 0.02 }
-identifier = { color = "fg.c1", lighten_absolute = -0.03, saturate = 0.02 }
-parameter = { color = "fg.c1", lighten_absolute = -0.03, saturate = 0.02 }
-function = { color = "fg.c1", saturate = 0.01 }
-constructor = { color = "fg.c1", saturate = 0.01 }
-statement = { color = "fg.c1", saturate = 0.01 }
-keyword = { color = "fg.c1", saturate = 0.01 }
-operator = "fg.c1"
-deprecated = { color = "fg.c1", saturate = -0.03 }
-comment = { color = "fg.c1", saturate = -0.03 }
-special = "fg.c1"
-punctuation = { color = "fg.c1", saturate = -0.03 }
+string      = "fg.c2"
+number      = "fg.c2"
+constant    = "fg.c1"
+regex       = "fg.c2"
+preproc     = "fg.c2"
+type        = "fg_unaccented.c1"
+variable    = "fg"
+identifier  = "fg"
+parameter   = "fg_unaccented.c1"
+function    = "fg_unaccented.c1"
+constructor = "fg_unaccented.c1"
+statement   = "fg_unaccented.c1"
+keyword     = "fg_unaccented.c1"
+operator    = "fg_unaccented.c1"
+deprecated  = { color = "fg", lighten_absolute = -0.2, saturate = -0.02 }
+comment     = { color = "fg", lighten_absolute = -0.2, saturate = -0.02 }
+special     = "fg.c1"
+punctuation = { color = "fg", lighten_absolute = -0.1, saturate = -0.02 }
 
 [themes.diagnostics]
-error = { color = "fg.c2", lighten_absolute = 0.1, saturate = 0.05 }
-warning = { color = "fg.c2", lighten_absolute = 0.05, saturate = 0.03 }
-info = { color = "fg.c2", saturate = 0.03 }
-hint =  { color = "fg.c2" }
-ok = { color = "fg.c2", saturate = 0.03 }
+error =   { color = "fg.c1", lighten_absolute = 0.1, saturate = 0.05 }
+warning = { color = "fg.c1", lighten_absolute = 0.05, saturate = 0.03 }
+info =    { color = "fg.c2", saturate = 0.03 }
+hint =    { color = "fg.c2" }
+ok =      { color = "fg.c2", saturate = 0.03 }
 
 [themes.vcs]
 removed = "fg.red"
-added = "fg.green"
+added   = "fg.green"
 changed = "fg.yellow"
 
 [themes.diff]
 removed = "bg.red"
-added = "bg.green"
+added   = "bg.green"
 changed = "bg.yellow"
-text = "bg"
+text    = "bg"
 
 [inverse]
-saturate = 0.0025
-gamma = 0.78
-lighten_absolute = 0.04
+lighten_absolute = 0.15
 
 [highlights]
