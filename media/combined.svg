@@ -2,24 +2,28 @@
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 190 140">
+  viewBox="0 0 146 100">
   <defs>
-    <filter id="shadow" x="-10" y="-10" width="140" height="90" color-interpolation-filters="sRGB">
+    <filter id="shadow" x="-10" y="-10" width="86" height="80" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="0.5" stdDeviation="1.5" flood-opacity="0.9"/>
     </filter>
 
-    <rect id="cs1" x="5" y="5" width="120" height="70" rx="1"/>
+    <rect id="cs1" x="5" y="5" width="96" height="50" rx="1"/>
     <clipPath id="clip1"><use xlink:href="#cs1"/></clipPath>
 
-    <rect id="cs2" x="35" y="35" width="120" height="70" rx="1"/>
+    <rect id="cs2" x="25" y="25" width="96" height="50" rx="1"/>
     <clipPath id="clip2"><use xlink:href="#cs2"/></clipPath>
 
-    <rect id="cs3" x="65" y="65" width="120" height="70" rx="1"/>
+    <rect id="cs3" x="45" y="45" width="96" height="50" rx="1"/>
     <clipPath id="clip3"><use xlink:href="#cs3"/></clipPath>
   </defs>
   <g filter="url(#shadow)">
   {img1}
+  </g>
+  <g filter="url(#shadow)">
   {img2}
+  </g>
+  <g filter="url(#shadow)">
   {img3}
   </g>
 </svg>

@@ -40,6 +40,7 @@ for COLORSCHEME_AND_KIND in "highlow-light" "verf-dark" "twocolor-dark" "graysca
     (
         # exit on a timer to perform some other commands in the meantime
         echo ":lua vim.defer_fn(function() vim.cmd('qa!') end, 3000)"
+        echo ":set nowrap"
         echo ":LspStart"
         sleep 0.3
         echo ":Trouble lsp_document_symbols"
@@ -47,10 +48,10 @@ for COLORSCHEME_AND_KIND in "highlow-light" "verf-dark" "twocolor-dark" "graysca
         printf '\x17l\r'
         sleep 0.3
         echo ":set splitright"
-        echo ":68vsplit ./Cargo.toml"
-        printf '\x17h\r/fn main\r'
+        echo ":55vsplit ./Cargo.toml"
+        printf '\x17h\r/Cli\rz\r/fn main\r'
         sleep 3.0
-    ) | termsnap --term xterm-256color --columns 200 --lines 70 --render-before-clear -- \
+    ) | termsnap --term xterm-256color --columns 160 --lines 50 --render-before-clear -- \
         "$NVIM" --clean \
         -c "source ./scripts/nvim-config.vim" \
         -c "set bg=$kind" \
@@ -70,9 +71,9 @@ def set_dimensions(svg: str, x: int, y: int, width: int, height: int) -> str:
 
 template = Path("./media/combined.svg").read_text()
 
-img1 = set_dimensions(Path("./media/highlow.svg").read_text(), 5, 5, 120, 70)
-img2 = set_dimensions(Path("./media/twocolor.svg").read_text(), 35, 35, 120, 70)
-img3 = set_dimensions(Path("./media/verf.svg").read_text(), 65, 65, 120, 70)
+img1 = set_dimensions(Path("./media/highlow.svg").read_text(), 5, 5, 96, 50)
+img2 = set_dimensions(Path("./media/twocolor.svg").read_text(), 25, 25, 96, 50)
+img3 = set_dimensions(Path("./media/verf.svg").read_text(), 45, 45, 96, 50)
 
 template = template.replace("{img1}", img1)
 template = template.replace("{img2}", img2)
