@@ -373,7 +373,7 @@
 <text x="78.600006" y="10.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="79.8" y="10.75" textLength="1.2" style="fill: #565553;">11</text>
 <text x="81.600006" y="10.75" textLength="8.400001" style="fill: #2f3d58; font-weight: 600;">[dependencies]</text>
-<text x="2.4" y="11.75" textLength="5.4" style="fill: #363c50;"> asd.svg</text>
+<text x="2.4" y="11.75" textLength="6" style="fill: #363c50;"> build.rs</text>
 <text x="18" y="11.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="11.75" textLength="1.2" style="fill: #565553;">12</text>
 <text x="21" y="11.75" textLength="1.8000001" style="fill: #473550;">pub</text>
@@ -387,7 +387,7 @@
 <text x="79.8" y="11.75" textLength="1.2" style="fill: #565553;">12</text>
 <text x="81.600006" y="11.75" textLength="4.8" style="fill: #363c50;">anyhow =</text>
 <text x="87" y="11.75" textLength="1.8000001" style="fill: #2c451e;">"1"</text>
-<text x="2.4" y="12.75" textLength="6" style="fill: #363c50;"> build.rs</text>
+<text x="2.4" y="12.75" textLength="7.2000003" style="fill: #363c50;"> Cargo.lock</text>
 <text x="18" y="12.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="12.75" textLength="1.2" style="fill: #565553;">13</text>
 <text x="21" y="12.75" textLength="1.8000001" style="fill: #473550;">pub</text>
@@ -404,15 +404,15 @@
 <text x="96" y="12.75" textLength="8.400001" style="fill: #363c50;">, features = [</text>
 <text x="104.4" y="12.75" textLength="4.8" style="fill: #2c451e;">"derive"</text>
 <text x="109.200005" y="12.75" textLength="1.8000001" style="fill: #363c50;">] }</text>
-<text x="2.4" y="13.75" textLength="7.2000003" style="fill: #363c50;"> Cargo.lock</text>
+<text x="2.4" y="13.75" textLength="0.6" style="fill: #363c50;"></text>
+<text x="3.6000001" y="13.75" textLength="6" style="fill: #2f3d58; font-weight: 600;">Cargo.toml</text>
 <text x="18" y="13.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="13.75" textLength="1.2" style="fill: #565553;">14</text>
 <text x="78.600006" y="13.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="79.8" y="13.75" textLength="1.2" style="fill: #565553;">14</text>
 <text x="81.600006" y="13.75" textLength="5.4" style="fill: #363c50;">palette =</text>
 <text x="87.600006" y="13.75" textLength="4.2000003" style="fill: #2c451e;">"0.7.6"</text>
-<text x="2.4" y="14.75" textLength="0.6" style="fill: #363c50;"></text>
-<text x="3.6000001" y="14.75" textLength="6" style="fill: #2f3d58; font-weight: 600;">Cargo.toml</text>
+<text x="2.4" y="14.75" textLength="8.400001" style="fill: #363c50;"> CHANGELOG.md</text>
 <text x="18" y="14.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="14.75" textLength="1.2" style="fill: #565553;">15</text>
 <text x="21" y="14.75" textLength="1.8000001" style="fill: #473550;">pub</text>
@@ -428,7 +428,7 @@
 <text x="79.8" y="14.75" textLength="1.2" style="fill: #565553;">15</text>
 <text x="81.600006" y="14.75" textLength="13.8" style="fill: #363c50;">palette-gamut-mapping =</text>
 <text x="96" y="14.75" textLength="4.2000003" style="fill: #2c451e;">"0.1.0"</text>
-<text x="2.4" y="15.75" textLength="8.400001" style="fill: #363c50;"> CHANGELOG.md</text>
+<text x="2.4" y="15.75" textLength="7.2000003" style="fill: #363c50;"> flake.lock</text>
 <text x="18" y="15.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="15.75" textLength="1.2" style="fill: #565553;">16</text>
 <text x="78.600006" y="15.75" textLength="0.6" style="fill: #363c50;">│</text>
@@ -438,7 +438,7 @@
 <text x="95.4" y="15.75" textLength="8.400001" style="fill: #363c50;">, features = [</text>
 <text x="103.8" y="15.75" textLength="4.8" style="fill: #2c451e;">"derive"</text>
 <text x="108.600006" y="15.75" textLength="1.8000001" style="fill: #363c50;">] }</text>
-<text x="2.4" y="16.75" textLength="7.2000003" style="fill: #363c50;"> flake.lock</text>
+<text x="2.4" y="16.75" textLength="6.6000004" style="fill: #363c50;"> flake.nix</text>
 <text x="18" y="16.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="16.75" textLength="1.2" style="fill: #565553;">17</text>
 <text x="21" y="16.75" textLength="0.6" style="fill: #473d07;">#</text>
@@ -457,7 +457,7 @@
 <text x="79.8" y="16.75" textLength="1.2" style="fill: #565553;">17</text>
 <text x="81.600006" y="16.75" textLength="6.6000004" style="fill: #363c50;">thiserror =</text>
 <text x="88.8" y="16.75" textLength="1.8000001" style="fill: #2c451e;">"1"</text>
-<text x="2.4" y="17.75" textLength="6.6000004" style="fill: #363c50;"> flake.nix</text>
+<text x="2.4" y="17.75" textLength="7.8" style="fill: #363c50;"> highlow.lua</text>
 <text x="18" y="17.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="17.75" textLength="1.2" style="fill: #565553;">18</text>
 <text x="21" y="17.75" textLength="2.4" style="fill: #473550;">enum</text>
@@ -467,14 +467,14 @@
 <text x="79.8" y="17.75" textLength="1.2" style="fill: #565553;">18</text>
 <text x="81.600006" y="17.75" textLength="3.6000001" style="fill: #363c50;">toml =</text>
 <text x="85.8" y="17.75" textLength="3" style="fill: #2c451e;">"0.5"</text>
-<text x="2.4" y="18.75" textLength="7.8" style="fill: #363c50;"> highlow.lua</text>
+<text x="2.4" y="18.75" textLength="9.6" style="fill: #363c50;"> LICENSE-APACHE</text>
 <text x="18" y="18.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="18.75" textLength="1.2" style="fill: #565553;">19</text>
 <text x="23.400002" y="18.75" textLength="3.6000001" style="fill: #283c62; font-weight: 600;">Neovim</text>
 <text x="27.000002" y="18.75" textLength="0.6" style="fill: #4a4a4a;">,</text>
 <text x="78.600006" y="18.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="79.8" y="18.75" textLength="1.2" style="fill: #565553;">19</text>
-<text x="2.4" y="19.75" textLength="9.6" style="fill: #363c50;"> LICENSE-APACHE</text>
+<text x="2.4" y="19.75" textLength="7.8" style="fill: #363c50;"> LICENSE-MIT</text>
 <text x="18" y="19.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="19.75" textLength="1.2" style="fill: #565553;">20</text>
 <text x="23.400002" y="19.75" textLength="1.8000001" style="fill: #283c62; font-weight: 600;">Vim</text>
@@ -482,7 +482,8 @@
 <text x="78.600006" y="19.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="79.8" y="19.75" textLength="1.2" style="fill: #565553;">20</text>
 <text x="81.600006" y="19.75" textLength="12" style="fill: #2f3d58; font-weight: 600;">[build-dependencies]</text>
-<text x="2.4" y="20.75" textLength="7.8" style="fill: #363c50;"> LICENSE-MIT</text>
+<text x="2.4" y="20.75" textLength="0.6" style="fill: #363c50;"></text>
+<text x="3.6000001" y="20.75" textLength="5.4" style="fill: #2f3d58; font-weight: 600;">README.md</text>
 <text x="18" y="20.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="20.75" textLength="1.2" style="fill: #565553;">21</text>
 <text x="21" y="20.75" textLength="0.6" style="fill: #4a4a4a;">}</text>
@@ -490,8 +491,7 @@
 <text x="79.8" y="20.75" textLength="1.2" style="fill: #565553;">21</text>
 <text x="81.600006" y="20.75" textLength="4.8" style="fill: #363c50;">anyhow =</text>
 <text x="87" y="20.75" textLength="1.8000001" style="fill: #2c451e;">"1"</text>
-<text x="2.4" y="21.75" textLength="0.6" style="fill: #363c50;"></text>
-<text x="3.6000001" y="21.75" textLength="5.4" style="fill: #2f3d58; font-weight: 600;">README.md</text>
+<text x="2.4" y="21.75" textLength="10.8" style="fill: #363c50;"> release-plz.toml</text>
 <text x="18" y="21.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="21.75" textLength="1.2" style="fill: #565553;">22</text>
 <text x="78.600006" y="21.75" textLength="0.6" style="fill: #363c50;">│</text>
@@ -501,7 +501,7 @@
 <text x="95.4" y="21.75" textLength="8.400001" style="fill: #363c50;">, features = [</text>
 <text x="103.8" y="21.75" textLength="4.8" style="fill: #2c451e;">"derive"</text>
 <text x="108.600006" y="21.75" textLength="1.8000001" style="fill: #363c50;">] }</text>
-<text x="2.4" y="22.75" textLength="10.8" style="fill: #363c50;"> release-plz.toml</text>
+<text x="2.4" y="22.75" textLength="8.400001" style="fill: #363c50;"> rustfmt.toml</text>
 <text x="18" y="22.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="22.75" textLength="1.2" style="fill: #565553;">23</text>
 <text x="21" y="22.75" textLength="44.4" style="fill: #3d3d3d; font-style: italic;">/// Compile a (Neo)vim color scheme from a hi.nvim.rs theme configuration.</text>
@@ -510,13 +510,13 @@
 <text x="81.600006" y="22.75" textLength="10.8" style="fill: #363c50;">toml = { version =</text>
 <text x="93" y="22.75" textLength="3" style="fill: #2c451e;">"0.8"</text>
 <text x="96.600006" y="22.75" textLength="0.6" style="fill: #363c50;">}</text>
-<text x="2.4" y="23.75" textLength="8.400001" style="fill: #363c50;"> rustfmt.toml</text>
+<text x="0" y="23.75" textLength="0.6" style="fill: #565553;">~</text>
 <text x="18" y="23.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="23.75" textLength="1.2" style="fill: #565553;">24</text>
 <text x="21" y="23.75" textLength="1.8000001" style="fill: #3d3d3d; font-style: italic;">///</text>
 <text x="78.600006" y="23.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="79.8" y="23.75" textLength="1.2" style="fill: #565553;">24</text>
-<text x="2.4" y="24.75" textLength="8.400001" style="fill: #363c50;"> test-bla.svg</text>
+<text x="0" y="24.75" textLength="0.6" style="fill: #565553;">~</text>
 <text x="18" y="24.75" textLength="0.6" style="fill: #363c50;">│</text>
 <text x="19.2" y="24.75" textLength="1.2" style="fill: #565553;">25</text>
 <text x="21" y="24.75" textLength="30.6" style="fill: #3d3d3d; font-style: italic;">/// The color scheme is written to standard output.</text>

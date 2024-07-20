@@ -60,3 +60,11 @@ for COLORSCHEME_AND_KIND in "highlow-light" "verf-dark" "twocolor-dark" "graysca
 done
 
 wait
+
+# prepare combined SVG from template
+sed \
+    -e "s~./highlow.svg~data:image/svg+xml;base64,$(base64 -w 0 ./media/highlow.svg)~" \
+    -e "s~./twocolor.svg~data:image/svg+xml;base64,$(base64 -w 0 ./media/twocolor.svg)~" \
+    -e "s~./verf.svg~data:image/svg+xml;base64,$(base64 -w 0 ./media/verf.svg)~" \
+    "./media/combined.svg" \
+    >./media/combined-embedded.svg
