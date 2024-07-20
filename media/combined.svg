@@ -18,20 +18,8 @@
     <clipPath id="clip3"><use xlink:href="#cs3"/></clipPath>
   </defs>
   <g filter="url(#shadow)">
-    <image
-      id="img1"
-      x="5" y="5" width="120" height="70"
-      clip-path="url(#clip1)"
-      xlink:href="./highlow.svg" />
-    <image
-      id="img2"
-      x="35" y="35" width="120" height="70"
-      clip-path="url(#clip2)"
-      xlink:href="./twocolor.svg" />
-    <image
-      id="img3"
-      x="65" y="65" width="120" height="70"
-      clip-path="url(#clip3)"
-      xlink:href="./verf.svg" />
+  {img1}
+  {img2}
+  {img3}
   </g>
 </svg>

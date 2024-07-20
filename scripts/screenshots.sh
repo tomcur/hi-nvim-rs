@@ -62,9 +62,21 @@ done
 wait
 
 # prepare combined SVG from template
-sed \
-    -e "s~./highlow.svg~data:image/svg+xml;base64,$(base64 -w 0 ./media/highlow.svg)~" \
-    -e "s~./twocolor.svg~data:image/svg+xml;base64,$(base64 -w 0 ./media/twocolor.svg)~" \
-    -e "s~./verf.svg~data:image/svg+xml;base64,$(base64 -w 0 ./media/verf.svg)~" \
-    "./media/combined.svg" \
-    >./media/combined-embedded.svg
+python3 <<EOF
+from pathlib import Path
+
+def set_dimensions(svg: str, x: int, y: int, width: int, height: int) -> str:
+  return svg.replace("<svg", f"""<svg x="{x}" y="{y}" width="{width}" height="{height}" """)
+
+template = Path("./media/combined.svg").read_text()
+
+img1 = set_dimensions(Path("./media/highlow.svg").read_text(), 5, 5, 120, 70)
+img2 = set_dimensions(Path("./media/twocolor.svg").read_text(), 35, 35, 120, 70)
+img3 = set_dimensions(Path("./media/verf.svg").read_text(), 65, 65, 120, 70)
+
+template = template.replace("{img1}", img1)
+template = template.replace("{img2}", img2)
+template = template.replace("{img3}", img3)
+
+Path("./media/combined-embedded.svg").write_text(template)
+EOF
