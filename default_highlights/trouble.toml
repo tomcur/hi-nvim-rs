@@ -1,0 +1,4 @@
+TroubleNormal = { fg = "ui.fg" }
+TroubleIndent = { fg = "ui.fg" }
+TroubleFoldIcon = { fg = "ui.fg" }
+TroublePos = { fg = "ui.special" }
