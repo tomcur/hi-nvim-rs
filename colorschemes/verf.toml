@@ -1,6 +1,11 @@
 name = "verf"
 kind = "dark"
 
+[colors]
+bg =   [ 0.24, 0.02, 284 ]
+fg =   [ 0.84, 0.03, 77 ]
+grey = [ 0.70, 0.01, 284 ]
+
 [hues]
 red = 15.0
 orange = 62.0
@@ -15,35 +20,41 @@ pink = 346.0
 lightness = 0.70
 chroma = 0.10
 
+[groups.fg_accented]
+lightness = 0.72
+chroma = 0.14
+
+[groups.fg_unaccented]
+lightness = 0.70
+chroma = 0.07
+
 [groups.bg]
 lightness = 0.32
 chroma = 0.04
 
-[colors]
-bg =   [ 0.24, 0.02, 284 ]
-fg =   [ 0.84, 0.03, 77 ]
-grey = [ 0.70, 0.01, 284 ]
+[inverse]
+lighten_absolute = 0.17
 
 [themes.ui]
-fg = "fg"
-fg_dim = { color = "fg", mix = ["bg", 0.1] }
+fg =          "fg"
+fg_dim =      { color = "fg", mix = ["bg", 0.1] }
 fg_very_dim = { color = "fg", mix = ["bg", 0.3] }
 
-bg = "bg"
-bg_visual = { color = "bg", lighten_absolute = 0.20, saturate = -0.02 }
-bg_highlight = { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
+bg =               "bg"
+bg_visual =        { color = "bg", lighten_absolute = 0.20, saturate = -0.02 }
+bg_highlight =     { color = "bg", lighten_absolute = 0.20, saturate = 0.04 }
 bg_highlight_dim = { color = "bg", lighten_absolute = 0.12, saturate = 0.02 }
-bg_border = { color = "fg" }
-bg_gutter = { color = "bg", lighten_absolute = 0.1, saturate = -0.01 }
-bg_dim = { color = "bg", lighten_absolute = 0.05, saturate = -0.005 }
-bg_selected = { color = "bg", lighten_absolute = 0.1 }
+bg_border =        { color = "fg" }
+bg_gutter =        { color = "bg", lighten_absolute = 0.1, saturate = -0.01 }
+bg_dim =           { color = "bg", lighten_absolute = 0.05, saturate = -0.005 }
+bg_selected =      { color = "bg", lighten_absolute = 0.1 }
 
-float_bg = { color = "bg", lighten_absolute = 0.02, saturate = 0.01 }
-float_fg = { color = "fg", lighten_absolute = 0.02 }
+float_bg =     { color = "bg", lighten_absolute = 0.02, saturate = 0.01 }
+float_fg =     { color = "fg", lighten_absolute = 0.02 }
 float_border = "fg"
 
-pmenu_bg = { color = "bg", lighten_absolute = 0.1, saturate = 0.03 }
-pmenu_fg = { color = "fg", lighten_absolute = 0.1 }
+pmenu_bg =          { color = "bg", lighten_absolute = 0.1, saturate = 0.03 }
+pmenu_fg =          { color = "fg", lighten_absolute = 0.1 }
 pmenu_fg_selected = { color = "fg", lighten_absolute = 0.1, saturate = 0.03 }
 pmenu_bg_selected = { color = "bg", lighten_absolute = 0.25, saturate = 0.08 }
 
@@ -51,44 +62,41 @@ special = { color = "fg.purple", lighten_absolute = 0.05, saturate = 0.02 }
 nontext = { color = "bg", lighten_absolute = 0.35, saturate = 0.01 }
 
 [themes.syn]
-string = "fg.green"
-number = "fg.orange"
-constant = "fg.blue"
-regex = "fg.yellow"
-preproc = "fg.yellow"
-type = { color = "fg.cyan", saturate = -0.03 }
-variable = "fg"
-identifier = "fg"
-parameter = { color = "fg.blue", saturate = -0.03 }
-function = { color = "fg.blue", saturate = -0.03 }
-constructor = { color = "fg.orange", saturate = -0.03 }
-statement = { color = "fg.purple", saturate = -0.03 }
-keyword = { color = "fg.purple", saturate = -0.03 }
-operator = { color = "fg.yellow", saturate = -0.03 }
-deprecated = { color = "grey", saturate = -0.03 }
-comment = "grey"
-special = "fg.yellow"
-punctuation = { color = "grey", saturate = -0.03 }
+string      = "fg.green"
+number      = "fg.orange"
+constant    = "fg.blue"
+regex       = "fg.yellow"
+preproc     = "fg.yellow"
+type        = "fg_unaccented.cyan"
+variable    = "fg"
+identifier  = "fg"
+parameter   = "fg_unaccented.blue"
+function    = "fg_unaccented.blue"
+constructor = "fg_unaccented.orange"
+statement   = "fg_unaccented.purple"
+keyword     = "fg_unaccented.purple"
+operator    = "fg_unaccented.yellow"
+deprecated  = { color = "grey", lighten_absolute = -0.05 }
+comment     = "grey"
+special     = "fg.yellow"
+punctuation = { color = "grey", lighten_absolute = -0.05 }
 
 [themes.diagnostics]
-error = { color = "fg.red", saturate = 0.03 }
-warning = { color = "fg.orange", saturate = 0.03 }
-info = { color = "fg.blue", saturate = 0.03 }
-hint =  "grey"
-ok = { color = "fg.green", saturate = 0.03 }
+error   = "fg_accented.red"
+warning = "fg_accented.orange"
+info    = "fg_accented.blue"
+hint    = { color = "fg_accented.blue", saturate = -0.05 }
+ok      = "fg_accented.green"
 
 [themes.vcs]
 removed = "fg.red"
-added = "fg.green"
+added   = "fg.green"
 changed = "fg.yellow"
 
 [themes.diff]
 removed = "bg.red"
-added = "bg.green"
+added   = "bg.green"
 changed = "bg.yellow"
-text = "bg"
-
-[inverse]
-lighten_absolute = 0.17
+text    = "bg"
 
 [highlights]
