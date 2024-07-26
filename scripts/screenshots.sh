@@ -65,16 +65,36 @@ wait
 # prepare combined SVG from template
 python3 <<EOF
 from pathlib import Path
+import re
 
-def set_dimensions(svg: str, x: int, y: int, width: int, height: int) -> str:
+def set_dimensions(svg: str, x: int, y: int, width: float, height: float) -> str:
   return svg.replace("<svg", f"""<svg x="{x}" y="{y}" width="{width}" height="{height}" """)
 
 template = Path("./media/combined.svg").read_text()
 
-img1 = set_dimensions(Path("./media/highlow.svg").read_text(), 5, 5, 96, 50)
-img2 = set_dimensions(Path("./media/twocolor.svg").read_text(), 25, 25, 96, 50)
-img3 = set_dimensions(Path("./media/verf.svg").read_text(), 45, 45, 96, 50)
+img1 = Path("./media/highlow.svg").read_text()
+img2 = Path("./media/twocolor.svg").read_text()
+img3 = Path("./media/verf.svg").read_text()
 
+p = re.compile(r'.*viewBox="\d+ \d+ (\d+) (\d+)"')
+aspect_ratio = img1.partition('\n')[0]
+match = p.match(aspect_ratio)
+width = float(match.groups()[0])
+height = float(match.groups()[1])
+ratio = height/width
+
+PADDING = 5
+GAP = 25
+
+total_width = PADDING * 2 + GAP * 2 + 100
+total_height = PADDING * 2 + GAP * 2 + 100 * ratio
+
+img1 = set_dimensions(Path("./media/highlow.svg").read_text(), PADDING, PADDING, 100, 100 * ratio)
+img2 = set_dimensions(Path("./media/twocolor.svg").read_text(), PADDING + GAP, PADDING + GAP, 100, 100 * ratio)
+img3 = set_dimensions(Path("./media/verf.svg").read_text(), PADDING + GAP * 2, PADDING + GAP * 2, 100, 100 * ratio)
+
+template = template.replace("{width}", str(total_width))
+template = template.replace("{height}", str(total_height))
 template = template.replace("{img1}", img1)
 template = template.replace("{img2}", img2)
 template = template.replace("{img3}", img3)

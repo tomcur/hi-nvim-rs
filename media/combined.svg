@@ -2,7 +2,7 @@
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 146 100">
+  viewBox="0 0 {width} {height}">
   <defs>
     <filter id="shadow" x="-10" y="-10" width="86" height="80" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="0.5" stdDeviation="1.5" flood-opacity="0.9"/>
