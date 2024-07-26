@@ -128,11 +128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1721154485,
-        "narHash": "sha256-FTgbbiDlHXGjkv3a2TAxjAqdClWkuteyUrtjQ8fMSIs=",
+        "lastModified": 1722003854,
+        "narHash": "sha256-6WyVu3sRrmBYybswcW2+SH899ESYJCUrMVGDSjcgzWM=",
         "owner": "tomcur",
         "repo": "termsnap",
-        "rev": "6801095f9222b4e86d2829f444e329294d1cc3e8",
+        "rev": "8d2a3cbe2d569c1f3fb7cf3cb62e4c494a8bd6c1",
         "type": "github"
       },
       "original": {
