@@ -51,7 +51,7 @@ for COLORSCHEME_AND_KIND in "highlow-light" "verf-dark" "twocolor-dark" "graysca
         echo ":55vsplit ./Cargo.toml"
         printf '\x17h\r/Cli\rz\r/fn main\r'
         sleep 3.0
-    ) | termsnap --term xterm-256color --columns 160 --lines 50 --render-before-clear -- \
+    ) | termsnap --term xterm-256color --columns 160 --lines 45 --render-before-clear -- \
         "$NVIM" --clean \
         -c "source ./scripts/nvim-config.vim" \
         -c "set bg=$kind" \
