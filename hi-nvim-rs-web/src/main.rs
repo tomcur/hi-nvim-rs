@@ -94,6 +94,9 @@ markup::define! {
                     a [href="/?colorscheme=Highlow"] { "Highlow" }
                 }
                 li {
+                    a [href="/?colorscheme=Verf"] { "Verf" }
+                }
+                li {
                     a [href="/?colorscheme=Twocolor"] { "Twocolor" }
                 }
                 li {
