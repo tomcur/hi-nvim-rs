@@ -3,16 +3,17 @@
 use clap::{Parser, ValueEnum};
 use std::{io::Read, path::PathBuf};
 
-pub(crate) mod colorscheme;
-pub(crate) mod compiler_neovim;
-pub(crate) mod compiler_vim;
-pub(crate) mod configuration;
-pub(crate) mod de;
+mod colorscheme;
+mod compiler_neovim;
+mod compiler_vim;
+mod configuration;
+mod de;
 pub mod default_highlights;
-pub(crate) mod error;
-pub(crate) mod modifiers;
+mod error;
+mod gamut_map;
+mod modifiers;
 
-pub(crate) use default_highlights::DEFAULT_HIGHLIGHTS;
+use default_highlights::DEFAULT_HIGHLIGHTS;
 
 #[derive(Clone, Copy, Debug, ValueEnum)]
 enum Target {

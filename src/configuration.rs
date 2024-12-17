@@ -5,7 +5,7 @@ use std::{
     fmt::Display,
 };
 
-use palette::Oklch;
+use color::{Oklch, OpaqueColor};
 use serde::Deserialize;
 
 use crate::error::Error;
@@ -32,9 +32,9 @@ impl TryFrom<&str> for Kind {
 #[derive(Debug, Deserialize, PartialEq, Clone, Copy)]
 struct Lch(f32, f32, f32);
 
-impl From<Lch> for Oklch {
+impl From<Lch> for OpaqueColor<Oklch> {
     fn from(Lch(l, chroma, hue): Lch) -> Self {
-        Oklch::new(l, chroma, hue)
+        OpaqueColor::<Oklch>::new([l, chroma, hue])
     }
 }
 
@@ -239,13 +239,13 @@ pub struct Configuration<'a> {
     pub name: &'a str,
     pub kind: Kind,
     pub inverse: Inverse<'a>,
-    pub colors: HashMap<NamespacedColor<'a>, Oklch>,
+    pub colors: HashMap<NamespacedColor<'a>, OpaqueColor<Oklch>>,
     pub themes: ThemeNamespaces<'a>,
     pub highlights: BTreeMap<&'a str, Highlight<'a>>,
 }
 
 impl Configuration<'_> {
-    pub fn get_color(&self, namespaced_color: NamespacedColor) -> Option<Oklch> {
+    pub fn get_color(&self, namespaced_color: NamespacedColor) -> Option<OpaqueColor<Oklch>> {
         self.colors.get(&namespaced_color).copied()
     }
 }
@@ -259,7 +259,7 @@ pub fn parse<'a>(config_file: &'a str) -> Result<Configuration<'a>, Error> {
         .map(|(name, color)| {
             (
                 NamespacedColor::from_namespace_and_color_name(ColorNamespace::Colors, name),
-                Oklch::from(color),
+                color.into(),
             )
         })
         // generate all hue/color group combinations
@@ -270,7 +270,7 @@ pub fn parse<'a>(config_file: &'a str) -> Result<Configuration<'a>, Error> {
                         ColorNamespace::Group(group),
                         name,
                     ),
-                    Oklch::new(group_config.lightness, group_config.chroma, hue),
+                    OpaqueColor::<Oklch>::new([group_config.lightness, group_config.chroma, hue]),
                 )
             })
         }))
