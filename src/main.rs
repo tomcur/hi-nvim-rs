@@ -57,7 +57,6 @@ fn main() -> anyhow::Result<()> {
     };
 
     println!("{}", &program);
-    std::fs::write("highlow.lua", &program).unwrap();
 
     Ok(())
 }
