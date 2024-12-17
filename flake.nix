@@ -63,15 +63,13 @@
         devShells.default =
           let
             nvim = (pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped {
-              packpathDirs = {
-                myNeovimPackages.start = [
-                  pkgs.vimPlugins.nvim-treesitter
-                  pkgs.vimPlugins.nvim-treesitter-parsers.rust
-                  pkgs.vimPlugins.nvim-lspconfig
-                  pkgs.vimPlugins.nvim-tree-lua
-                  pkgs.vimPlugins.trouble-nvim
-                ];
-              };
+              plugins = [
+                pkgs.vimPlugins.nvim-treesitter
+                pkgs.vimPlugins.nvim-treesitter-parsers.rust
+                pkgs.vimPlugins.nvim-lspconfig
+                pkgs.vimPlugins.nvim-tree-lua
+                pkgs.vimPlugins.trouble-nvim
+              ];
             });
           in
           pkgs.mkShell
