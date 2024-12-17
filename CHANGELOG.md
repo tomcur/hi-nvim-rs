@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.3.0] - 2024-12-17
+
+### Breaking
+- [**breaking**] migrate to the Color crate
+([e10f769](https://github.com/tomcur/hi-nvim-rs/commit/e10f769acb39e2dad285fa7891567bf98e03eed1))
+
+
+### Bug Fixes
+- remove accidental write
+([a838987](https://github.com/tomcur/hi-nvim-rs/commit/a83898785473bf1a5bfb2f376fe47c606b03659d))
+
+
+### Build System and CI
+- deploy Verf
+([cdf8dfb](https://github.com/tomcur/hi-nvim-rs/commit/cdf8dfb5a4c1aa8b8531d87e212ac129b5f69e81))
+
+
+### Other
+- Bump input flakes
+([267bd2a](https://github.com/tomcur/hi-nvim-rs/commit/267bd2a50bdf1f8708a34cd7c2d3a50cd2b29519))
+- *(web)* Add Verf to example color schemes
+([ea51b29](https://github.com/tomcur/hi-nvim-rs/commit/ea51b29e53c79a168720f66d7c99e087a0723289))
+
+
 ## [0.2.0] - 2024-07-20
 
 ### Breaking
