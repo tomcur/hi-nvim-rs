@@ -1,4 +1,4 @@
-use palette::{Darken, FromColor, Lighten, MixAssign, Oklab, Oklch};
+use color::{Oklab, Oklch, OpaqueColor};
 use serde::Deserialize;
 
 use crate::configuration::NamespacedColor;
@@ -35,43 +35,41 @@ impl ColorModifiers<'_> {
     /// calculate the `blend` calculation.
     pub fn apply(
         &self,
-        mut color: Oklch<f32>,
-        color_map: impl Fn(NamespacedColor) -> Option<Oklch<f32>>,
-    ) -> Result<Oklch<f32>, Error> {
+        mut color: OpaqueColor<Oklch>,
+        color_map: impl Fn(NamespacedColor) -> Option<OpaqueColor<Oklch>>,
+    ) -> Result<OpaqueColor<Oklch>, Error> {
         if let Some((mix_with, factor)) = self.mix.as_ref() {
             let color2_lab = {
                 let color2 = color_map(*mix_with)
                     .ok_or_else(|| Error::ColorMissing(format!("{}", mix_with)))?;
-                Oklab::from_color(color2)
+                color2.convert::<Oklab>()
             };
-            let mut color_lab = Oklab::from_color(color);
-            color_lab.mix_assign(color2_lab, *factor);
-
-            color = Oklch::from_color(color_lab);
+            let color_lab = color.convert::<Oklab>();
+            color = color_lab.lerp_rect(color2_lab, *factor).convert();
         }
 
         if let Some(saturate) = self.saturate {
-            color.chroma += saturate;
+            color.components[1] += saturate;
         }
 
         if let Some(gamma) = self.gamma {
-            color.l = color.l.powf(gamma);
+            color.components[0] = color.components[0].powf(gamma);
         }
 
         if let Some(lighten) = self.lighten {
             if lighten > 0. {
-                color = color.lighten(lighten);
+                color.components[0] += (1. - color.components[0]) * lighten;
             } else {
-                color = color.darken(-lighten);
+                color.components[0] -= color.components[0] * (1. - lighten);
             }
         }
 
         if let Some(lighten_multiplier) = self.lighten_multiplier {
-            color.l *= lighten_multiplier;
+            color.components[0] *= lighten_multiplier;
         }
 
         if let Some(lighten) = self.lighten_absolute {
-            color.l += lighten;
+            color.components[0] += lighten;
         }
 
         Ok(color)

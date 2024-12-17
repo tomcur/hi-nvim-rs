@@ -7,11 +7,12 @@ mod configuration;
 mod de;
 mod default_highlights;
 mod error;
+mod gamut_map;
 mod modifiers;
 
-pub use colorscheme::{parse, Colorscheme, Srgb, Theme};
+pub use colorscheme::{parse, Colorscheme, Rgb8, Theme};
 pub use compiler_neovim::compile as compile_neovim;
 pub use compiler_vim::compile as compile_vim;
 pub use configuration::{Highlight, Kind, NamespacedThemeElement};
-pub use error::Error;
 pub use default_highlights::DEFAULT_HIGHLIGHTS;
+pub use error::Error;

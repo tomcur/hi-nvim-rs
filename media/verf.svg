@@ -66,17 +66,17 @@
 <rect x="223.20001" y="388.80002" width="28.800001" height="14.400001" style="fill: #37373d;" />
 <rect x="756" y="388.80002" width="28.800001" height="14.400001" style="fill: #37373d;" />
 <rect x="223.20001" y="403.2" width="28.800001" height="14.400001" style="fill: #37373d;" />
-<rect x="756" y="403.2" width="28.800001" height="14.400001" style="fill: #37373d;" />
 <rect x="223.20001" y="417.6" width="28.800001" height="14.400001" style="fill: #37373d;" />
 <rect x="223.20001" y="432.00003" width="28.800001" height="14.400001" style="fill: #37373d;" />
 <rect x="223.20001" y="446.40002" width="28.800001" height="28.800001" style="fill: #37373d;" />
 <rect x="252.00002" y="460.80002" width="900.00006" height="14.400001" style="fill: #37373d;" />
-<rect x="223.20001" y="475.2" width="928.80005" height="129.6" style="fill: #222232;" />
-<rect x="223.20001" y="604.80005" width="928.80005" height="14.400001" style="fill: #4e4e73;" />
+<rect x="223.20001" y="475.2" width="928.80005" height="72" style="fill: #222232;" />
+<rect x="223.20001" y="547.2" width="928.80005" height="14.400001" style="fill: #4e4e73;" />
+<rect x="223.20001" y="561.60004" width="928.80005" height="57.600002" style="fill: #222232;" />
 <rect x="0" y="619.2" width="1152" height="14.400001" style="fill: #37373d;" />
 <text x="14.400001" y="10.8" textLength="187.20001" style="fill: #879fcb; font-weight: 600;">~/code/other/hi.nvim.rs/..</text>
 <text x="216.00002" y="10.8" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="10.8" textLength="14.400001" style="fill: #7b7b8f;">28</text>
+<text x="230.40001" y="10.8" textLength="14.400001" style="fill: #7b7b8f;">29</text>
 <text x="252.00002" y="10.8" textLength="43.2" style="fill: #ae92bd;">struct</text>
 <text x="302.40002" y="10.8" textLength="21.6" style="fill: #72ad96; font-weight: 600;">Cli</text>
 <text x="331.2" y="10.8" textLength="7.2000003" style="fill: #8e8e95;">{</text>
@@ -86,7 +86,7 @@
 <text x="14.400001" y="25.2" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="25.2" textLength="28.800001" style="fill: #72ad96;">.git</text>
 <text x="216.00002" y="25.2" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="25.2" textLength="14.400001" style="fill: #7b7b8f;">29</text>
+<text x="230.40001" y="25.2" textLength="14.400001" style="fill: #7b7b8f;">30</text>
 <text x="280.80002" y="25.2" textLength="468.00003" style="fill: #9d9ea5; font-style: italic;">/// The compilation target. When Vim is chosen as target, highlig</text>
 <text x="748.80005" y="25.2" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="770.4" y="25.2" textLength="7.2000003" style="fill: #7b7b8f;">2</text>
@@ -95,7 +95,7 @@
 <text x="14.400001" y="39.600002" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="39.600002" textLength="50.4" style="fill: #72ad96;">.github</text>
 <text x="216.00002" y="39.600002" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="39.600002" textLength="14.400001" style="fill: #7b7b8f;">30</text>
+<text x="230.40001" y="39.600002" textLength="14.400001" style="fill: #7b7b8f;">31</text>
 <text x="280.80002" y="39.600002" textLength="460.80002" style="fill: #9d9ea5; font-style: italic;">/// names are removed. Supported characters in Vim correspond to</text>
 <text x="748.80005" y="39.600002" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="770.4" y="39.600002" textLength="7.2000003" style="fill: #7b7b8f;">3</text>
@@ -104,7 +104,7 @@
 <text x="14.400001" y="54.000004" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="54.000004" textLength="86.4" style="fill: #72ad96;">colorschemes</text>
 <text x="216.00002" y="54.000004" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="54.000004" textLength="14.400001" style="fill: #7b7b8f;">31</text>
+<text x="230.40001" y="54.000004" textLength="14.400001" style="fill: #7b7b8f;">32</text>
 <text x="280.80002" y="54.000004" textLength="468.00003" style="fill: #9d9ea5; font-style: italic;">/// Neovim adds two characters, supporting regexp [a-zA-Z0-9_\.@]</text>
 <text x="748.80005" y="54.000004" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="770.4" y="54.000004" textLength="7.2000003" style="fill: #7b7b8f;">4</text>
@@ -113,7 +113,7 @@
 <text x="14.400001" y="68.4" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="68.4" textLength="129.6" style="fill: #72ad96;">default_highlights</text>
 <text x="216.00002" y="68.4" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="68.4" textLength="14.400001" style="fill: #7b7b8f;">32</text>
+<text x="230.40001" y="68.4" textLength="14.400001" style="fill: #7b7b8f;">33</text>
 <text x="280.80002" y="68.4" textLength="7.2000003" style="fill: #ada052;">#</text>
 <text x="288" y="68.4" textLength="7.2000003" style="fill: #8e8e95;">[</text>
 <text x="295.2" y="68.4" textLength="21.6" style="fill: #ada052; font-weight: 600;">arg</text>
@@ -136,7 +136,7 @@
 <text x="14.400001" y="82.8" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="82.8" textLength="100.8" style="fill: #72ad96;">hi-nvim-rs-web</text>
 <text x="216.00002" y="82.8" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="82.8" textLength="14.400001" style="fill: #7b7b8f;">33</text>
+<text x="230.40001" y="82.8" textLength="14.400001" style="fill: #7b7b8f;">34</text>
 <text x="280.80002" y="82.8" textLength="43.2" style="fill: #d6c8b5;">target</text>
 <text x="324" y="82.8" textLength="7.2000003" style="fill: #8e8e95;">:</text>
 <text x="338.40002" y="82.8" textLength="43.2" style="fill: #72ad96; font-weight: 600;">Target</text>
@@ -154,7 +154,7 @@
 <text x="14.400001" y="97.200005" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="97.200005" textLength="151.20001" style="fill: #72ad96;">hi-nvim-rs-web-styler</text>
 <text x="216.00002" y="97.200005" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="97.200005" textLength="14.400001" style="fill: #7b7b8f;">34</text>
+<text x="230.40001" y="97.200005" textLength="14.400001" style="fill: #7b7b8f;">35</text>
 <text x="748.80005" y="97.200005" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="770.4" y="97.200005" textLength="7.2000003" style="fill: #7b7b8f;">7</text>
 <text x="784.80005" y="97.200005" textLength="64.8" style="fill: #d6c8b5;">license =</text>
@@ -162,7 +162,7 @@
 <text x="14.400001" y="111.600006" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="111.600006" textLength="36" style="fill: #72ad96;">media</text>
 <text x="216.00002" y="111.600006" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="111.600006" textLength="14.400001" style="fill: #7b7b8f;">35</text>
+<text x="230.40001" y="111.600006" textLength="14.400001" style="fill: #7b7b8f;">36</text>
 <text x="280.80002" y="111.600006" textLength="468.00003" style="fill: #9d9ea5; font-style: italic;">/// Color scheme input file. Reads from standard input if not set</text>
 <text x="748.80005" y="111.600006" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="770.4" y="111.600006" textLength="7.2000003" style="fill: #7b7b8f;">8</text>
@@ -171,7 +171,7 @@
 <text x="14.400001" y="126.00001" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="126.00001" textLength="50.4" style="fill: #72ad96;">scripts</text>
 <text x="216.00002" y="126.00001" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="126.00001" textLength="14.400001" style="fill: #7b7b8f;">36</text>
+<text x="230.40001" y="126.00001" textLength="14.400001" style="fill: #7b7b8f;">37</text>
 <text x="280.80002" y="126.00001" textLength="468.00003" style="fill: #9d9ea5; font-style: italic;">// TODO: perhaps accept multiple files, merging the configuration</text>
 <text x="748.80005" y="126.00001" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="770.4" y="126.00001" textLength="7.2000003" style="fill: #7b7b8f;">9</text>
@@ -180,13 +180,13 @@
 <text x="14.400001" y="140.4" textLength="21.6" style="fill: #d6c8b5;"> </text>
 <text x="43.2" y="140.4" textLength="21.6" style="fill: #72ad96;">src</text>
 <text x="216.00002" y="140.4" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="140.4" textLength="14.400001" style="fill: #7b7b8f;">37</text>
+<text x="230.40001" y="140.4" textLength="14.400001" style="fill: #7b7b8f;">38</text>
 <text x="280.80002" y="140.4" textLength="439.2" style="fill: #9d9ea5; font-style: italic;">// configurations overridden by more specific configurations)</text>
 <text x="748.80005" y="140.4" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="140.4" textLength="14.400001" style="fill: #7b7b8f;">10</text>
 <text x="28.800001" y="154.8" textLength="86.4" style="fill: #d6c8b5;"> .gitignore</text>
 <text x="216.00002" y="154.8" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="154.8" textLength="14.400001" style="fill: #7b7b8f;">38</text>
+<text x="230.40001" y="154.8" textLength="14.400001" style="fill: #7b7b8f;">39</text>
 <text x="280.80002" y="154.8" textLength="28.800001" style="fill: #d6c8b5;">file</text>
 <text x="309.6" y="154.8" textLength="7.2000003" style="fill: #8e8e95;">:</text>
 <text x="324" y="154.8" textLength="43.2" style="fill: #72ad96; font-weight: 600;">Option</text>
@@ -196,18 +196,17 @@
 <text x="748.80005" y="154.8" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="154.8" textLength="14.400001" style="fill: #7b7b8f;">11</text>
 <text x="784.80005" y="154.8" textLength="100.8" style="fill: #879fcb; font-weight: 600;">[dependencies]</text>
-<text x="28.800001" y="169.2" textLength="7.2000003" style="fill: #d6c8b5;"></text>
-<text x="43.2" y="169.2" textLength="172.8" style="fill: #73a3fc;">20240721_13h12m43s_grim.</text>
+<text x="28.800001" y="169.2" textLength="72" style="fill: #d6c8b5;"> build.rs</text>
 <text x="216.00002" y="169.2" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="169.2" textLength="14.400001" style="fill: #7b7b8f;">39</text>
+<text x="230.40001" y="169.2" textLength="14.400001" style="fill: #7b7b8f;">40</text>
 <text x="252.00002" y="169.2" textLength="7.2000003" style="fill: #8e8e95;">}</text>
 <text x="748.80005" y="169.2" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="169.2" textLength="14.400001" style="fill: #7b7b8f;">12</text>
 <text x="784.80005" y="169.2" textLength="57.600002" style="fill: #d6c8b5;">anyhow =</text>
 <text x="849.60004" y="169.2" textLength="21.6" style="fill: #83ad6d;">"1"</text>
-<text x="28.800001" y="183.6" textLength="72" style="fill: #d6c8b5;"> build.rs</text>
+<text x="28.800001" y="183.6" textLength="86.4" style="fill: #d6c8b5;"> Cargo.lock</text>
 <text x="216.00002" y="183.6" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="183.6" textLength="14.400001" style="fill: #7b7b8f;">40</text>
+<text x="230.40001" y="183.6" textLength="14.400001" style="fill: #7b7b8f;">41</text>
 <text x="748.80005" y="183.6" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="183.6" textLength="14.400001" style="fill: #7b7b8f;">13</text>
 <text x="784.80005" y="183.6" textLength="129.6" style="fill: #d6c8b5;">clap = { version =</text>
@@ -215,9 +214,10 @@
 <text x="957.60004" y="183.6" textLength="100.8" style="fill: #d6c8b5;">, features = [</text>
 <text x="1058.4" y="183.6" textLength="57.600002" style="fill: #83ad6d;">"derive"</text>
 <text x="1116" y="183.6" textLength="21.6" style="fill: #d6c8b5;">] }</text>
-<text x="28.800001" y="198" textLength="86.4" style="fill: #d6c8b5;"> Cargo.lock</text>
+<text x="28.800001" y="198" textLength="7.2000003" style="fill: #d6c8b5;"></text>
+<text x="43.2" y="198" textLength="72" style="fill: #879fcb; font-weight: 600;">Cargo.toml</text>
 <text x="216.00002" y="198" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="198" textLength="14.400001" style="fill: #7b7b8f;">41</text>
+<text x="230.40001" y="198" textLength="14.400001" style="fill: #7b7b8f;">42</text>
 <text x="252.00002" y="198" textLength="50.4" style="fill: #d6c8b5; font-weight: 600;">fn main</text>
 <text x="302.40002" y="198" textLength="14.400001" style="fill: #8e8e95;">()</text>
 <text x="324" y="198" textLength="14.400001" style="fill: #8e8e95;">-></text>
@@ -228,12 +228,11 @@
 <text x="482.40002" y="198" textLength="7.2000003" style="fill: #8e8e95;">{</text>
 <text x="748.80005" y="198" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="198" textLength="14.400001" style="fill: #7b7b8f;">14</text>
-<text x="784.80005" y="198" textLength="64.8" style="fill: #d6c8b5;">palette =</text>
-<text x="856.80005" y="198" textLength="50.4" style="fill: #83ad6d;">"0.7.6"</text>
-<text x="28.800001" y="212.40001" textLength="7.2000003" style="fill: #d6c8b5;"></text>
-<text x="43.2" y="212.40001" textLength="72" style="fill: #879fcb; font-weight: 600;">Cargo.toml</text>
+<text x="784.80005" y="198" textLength="50.4" style="fill: #d6c8b5;">color =</text>
+<text x="842.4" y="198" textLength="36" style="fill: #83ad6d;">"0.1"</text>
+<text x="28.800001" y="212.40001" textLength="100.8" style="fill: #d6c8b5;"> CHANGELOG.md</text>
 <text x="216.00002" y="212.40001" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="212.40001" textLength="14.400001" style="fill: #7b7b8f;">42</text>
+<text x="230.40001" y="212.40001" textLength="14.400001" style="fill: #7b7b8f;">43</text>
 <text x="280.80002" y="212.40001" textLength="21.6" style="fill: #ae92bd;">let</text>
 <text x="309.6" y="212.40001" textLength="21.6" style="fill: #d6c8b5;">cli</text>
 <text x="338.40002" y="212.40001" textLength="7.2000003" style="fill: #a8a06d;">=</text>
@@ -243,21 +242,21 @@
 <text x="424.80002" y="212.40001" textLength="21.6" style="fill: #8e8e95;">();</text>
 <text x="748.80005" y="212.40001" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="212.40001" textLength="14.400001" style="fill: #7b7b8f;">15</text>
-<text x="784.80005" y="212.40001" textLength="165.6" style="fill: #d6c8b5;">palette-gamut-mapping =</text>
-<text x="957.60004" y="212.40001" textLength="50.4" style="fill: #83ad6d;">"0.1.0"</text>
-<text x="28.800001" y="226.8" textLength="100.8" style="fill: #d6c8b5;"> CHANGELOG.md</text>
+<text x="784.80005" y="212.40001" textLength="136.8" style="fill: #d6c8b5;">serde = { version =</text>
+<text x="928.80005" y="212.40001" textLength="21.6" style="fill: #83ad6d;">"1"</text>
+<text x="950.4" y="212.40001" textLength="100.8" style="fill: #d6c8b5;">, features = [</text>
+<text x="1051.2001" y="212.40001" textLength="57.600002" style="fill: #83ad6d;">"derive"</text>
+<text x="1108.8" y="212.40001" textLength="21.6" style="fill: #d6c8b5;">] }</text>
+<text x="28.800001" y="226.8" textLength="86.4" style="fill: #d6c8b5;"> flake.lock</text>
 <text x="216.00002" y="226.8" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="226.8" textLength="14.400001" style="fill: #7b7b8f;">43</text>
+<text x="230.40001" y="226.8" textLength="14.400001" style="fill: #7b7b8f;">44</text>
 <text x="748.80005" y="226.8" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="226.8" textLength="14.400001" style="fill: #7b7b8f;">16</text>
-<text x="784.80005" y="226.8" textLength="136.8" style="fill: #d6c8b5;">serde = { version =</text>
-<text x="928.80005" y="226.8" textLength="21.6" style="fill: #83ad6d;">"1"</text>
-<text x="950.4" y="226.8" textLength="100.8" style="fill: #d6c8b5;">, features = [</text>
-<text x="1051.2001" y="226.8" textLength="57.600002" style="fill: #83ad6d;">"derive"</text>
-<text x="1108.8" y="226.8" textLength="21.6" style="fill: #d6c8b5;">] }</text>
-<text x="28.800001" y="241.2" textLength="86.4" style="fill: #d6c8b5;"> flake.lock</text>
+<text x="784.80005" y="226.8" textLength="79.200005" style="fill: #d6c8b5;">thiserror =</text>
+<text x="871.2" y="226.8" textLength="21.6" style="fill: #83ad6d;">"1"</text>
+<text x="28.800001" y="241.2" textLength="79.200005" style="fill: #d6c8b5;"> flake.nix</text>
 <text x="216.00002" y="241.2" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="241.2" textLength="14.400001" style="fill: #7b7b8f;">44</text>
+<text x="230.40001" y="241.2" textLength="14.400001" style="fill: #7b7b8f;">45</text>
 <text x="280.80002" y="241.2" textLength="21.6" style="fill: #ae92bd;">let</text>
 <text x="309.6" y="241.2" textLength="43.2" style="fill: #d6c8b5;">config</text>
 <text x="360" y="241.2" textLength="7.2000003" style="fill: #a8a06d;">=</text>
@@ -274,11 +273,11 @@
 <text x="583.2" y="241.2" textLength="7.2000003" style="fill: #8e8e95;">{</text>
 <text x="748.80005" y="241.2" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="241.2" textLength="14.400001" style="fill: #7b7b8f;">17</text>
-<text x="784.80005" y="241.2" textLength="79.200005" style="fill: #d6c8b5;">thiserror =</text>
-<text x="871.2" y="241.2" textLength="21.6" style="fill: #83ad6d;">"1"</text>
-<text x="28.800001" y="255.6" textLength="79.200005" style="fill: #d6c8b5;"> flake.nix</text>
+<text x="784.80005" y="241.2" textLength="43.2" style="fill: #d6c8b5;">toml =</text>
+<text x="835.2" y="241.2" textLength="36" style="fill: #83ad6d;">"0.5"</text>
+<text x="28.800001" y="255.6" textLength="115.200005" style="fill: #d6c8b5;"> LICENSE-APACHE</text>
 <text x="216.00002" y="255.6" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="255.6" textLength="14.400001" style="fill: #7b7b8f;">45</text>
+<text x="230.40001" y="255.6" textLength="14.400001" style="fill: #7b7b8f;">46</text>
 <text x="309.6" y="255.6" textLength="21.6" style="fill: #ada052; font-weight: 600;">std</text>
 <text x="331.2" y="255.6" textLength="14.400001" style="fill: #8e8e95;">::</text>
 <text x="345.6" y="255.6" textLength="14.400001" style="fill: #ada052; font-weight: 600;">fs</text>
@@ -290,19 +289,19 @@
 <text x="518.4" y="255.6" textLength="7.2000003" style="fill: #a8a06d;">?</text>
 <text x="748.80005" y="255.6" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="255.6" textLength="14.400001" style="fill: #7b7b8f;">18</text>
-<text x="784.80005" y="255.6" textLength="43.2" style="fill: #d6c8b5;">toml =</text>
-<text x="835.2" y="255.6" textLength="36" style="fill: #83ad6d;">"0.5"</text>
-<text x="28.800001" y="270" textLength="93.600006" style="fill: #d6c8b5;"> highlow.lua</text>
+<text x="28.800001" y="270" textLength="93.600006" style="fill: #d6c8b5;"> LICENSE-MIT</text>
 <text x="216.00002" y="270" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="270" textLength="14.400001" style="fill: #7b7b8f;">46</text>
+<text x="230.40001" y="270" textLength="14.400001" style="fill: #7b7b8f;">47</text>
 <text x="280.80002" y="270" textLength="7.2000003" style="fill: #8e8e95;">}</text>
 <text x="295.2" y="270" textLength="28.800001" style="fill: #ae92bd;">else</text>
 <text x="331.2" y="270" textLength="7.2000003" style="fill: #8e8e95;">{</text>
 <text x="748.80005" y="270" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="270" textLength="14.400001" style="fill: #7b7b8f;">19</text>
-<text x="28.800001" y="284.4" textLength="115.200005" style="fill: #d6c8b5;"> LICENSE-APACHE</text>
+<text x="784.80005" y="270" textLength="144" style="fill: #879fcb; font-weight: 600;">[build-dependencies]</text>
+<text x="28.800001" y="284.4" textLength="7.2000003" style="fill: #d6c8b5;"></text>
+<text x="43.2" y="284.4" textLength="64.8" style="fill: #879fcb; font-weight: 600;">README.md</text>
 <text x="216.00002" y="284.4" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="284.4" textLength="14.400001" style="fill: #7b7b8f;">47</text>
+<text x="230.40001" y="284.4" textLength="14.400001" style="fill: #7b7b8f;">48</text>
 <text x="309.6" y="284.4" textLength="21.6" style="fill: #ae92bd;">let</text>
 <text x="338.40002" y="284.4" textLength="21.6" style="fill: #ae92bd;">mut</text>
 <text x="367.2" y="284.4" textLength="43.2" style="fill: #d6c8b5;">config</text>
@@ -316,10 +315,11 @@
 <text x="727.2" y="284.4" textLength="14.400001" style="fill: #8e8e95;">);</text>
 <text x="748.80005" y="284.4" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="284.4" textLength="14.400001" style="fill: #7b7b8f;">20</text>
-<text x="784.80005" y="284.4" textLength="144" style="fill: #879fcb; font-weight: 600;">[build-dependencies]</text>
-<text x="28.800001" y="298.80002" textLength="93.600006" style="fill: #d6c8b5;"> LICENSE-MIT</text>
+<text x="784.80005" y="284.4" textLength="57.600002" style="fill: #d6c8b5;">anyhow =</text>
+<text x="849.60004" y="284.4" textLength="21.6" style="fill: #83ad6d;">"1"</text>
+<text x="28.800001" y="298.80002" textLength="129.6" style="fill: #d6c8b5;"> release-plz.toml</text>
 <text x="216.00002" y="298.80002" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="298.80002" textLength="14.400001" style="fill: #7b7b8f;">48</text>
+<text x="230.40001" y="298.80002" textLength="14.400001" style="fill: #7b7b8f;">49</text>
 <text x="309.6" y="298.80002" textLength="21.6" style="fill: #ada052; font-weight: 600;">std</text>
 <text x="331.2" y="298.80002" textLength="14.400001" style="fill: #8e8e95;">::</text>
 <text x="345.6" y="298.80002" textLength="14.400001" style="fill: #ada052; font-weight: 600;">io</text>
@@ -336,37 +336,35 @@
 <text x="676.80005" y="298.80002" textLength="21.6" style="fill: #8e8e95;">();</text>
 <text x="748.80005" y="298.80002" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="298.80002" textLength="14.400001" style="fill: #7b7b8f;">21</text>
-<text x="784.80005" y="298.80002" textLength="57.600002" style="fill: #d6c8b5;">anyhow =</text>
-<text x="849.60004" y="298.80002" textLength="21.6" style="fill: #83ad6d;">"1"</text>
-<text x="28.800001" y="313.2" textLength="7.2000003" style="fill: #d6c8b5;"></text>
-<text x="43.2" y="313.2" textLength="64.8" style="fill: #879fcb; font-weight: 600;">README.md</text>
+<text x="784.80005" y="298.80002" textLength="136.8" style="fill: #d6c8b5;">serde = { version =</text>
+<text x="928.80005" y="298.80002" textLength="21.6" style="fill: #83ad6d;">"1"</text>
+<text x="950.4" y="298.80002" textLength="100.8" style="fill: #d6c8b5;">, features = [</text>
+<text x="1051.2001" y="298.80002" textLength="57.600002" style="fill: #83ad6d;">"derive"</text>
+<text x="1108.8" y="298.80002" textLength="21.6" style="fill: #d6c8b5;">] }</text>
+<text x="28.800001" y="313.2" textLength="100.8" style="fill: #d6c8b5;"> rustfmt.toml</text>
 <text x="216.00002" y="313.2" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="313.2" textLength="14.400001" style="fill: #7b7b8f;">49</text>
+<text x="230.40001" y="313.2" textLength="14.400001" style="fill: #7b7b8f;">50</text>
 <text x="309.6" y="313.2" textLength="43.2" style="fill: #d6c8b5;">config</text>
 <text x="748.80005" y="313.2" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="313.2" textLength="14.400001" style="fill: #7b7b8f;">22</text>
-<text x="784.80005" y="313.2" textLength="136.8" style="fill: #d6c8b5;">serde = { version =</text>
-<text x="928.80005" y="313.2" textLength="21.6" style="fill: #83ad6d;">"1"</text>
-<text x="950.4" y="313.2" textLength="100.8" style="fill: #d6c8b5;">, features = [</text>
-<text x="1051.2001" y="313.2" textLength="57.600002" style="fill: #83ad6d;">"derive"</text>
-<text x="1108.8" y="313.2" textLength="21.6" style="fill: #d6c8b5;">] }</text>
-<text x="28.800001" y="327.6" textLength="129.6" style="fill: #d6c8b5;"> release-plz.toml</text>
+<text x="784.80005" y="313.2" textLength="129.6" style="fill: #d6c8b5;">toml = { version =</text>
+<text x="921.60004" y="313.2" textLength="36" style="fill: #83ad6d;">"0.8"</text>
+<text x="964.80005" y="313.2" textLength="7.2000003" style="fill: #d6c8b5;">}</text>
+<text x="0" y="327.6" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="327.6" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="327.6" textLength="14.400001" style="fill: #7b7b8f;">50</text>
+<text x="230.40001" y="327.6" textLength="14.400001" style="fill: #7b7b8f;">51</text>
 <text x="280.80002" y="327.6" textLength="14.400001" style="fill: #8e8e95;">};</text>
 <text x="748.80005" y="327.6" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="327.6" textLength="14.400001" style="fill: #7b7b8f;">23</text>
-<text x="784.80005" y="327.6" textLength="129.6" style="fill: #d6c8b5;">toml = { version =</text>
-<text x="921.60004" y="327.6" textLength="36" style="fill: #83ad6d;">"0.8"</text>
-<text x="964.80005" y="327.6" textLength="7.2000003" style="fill: #d6c8b5;">}</text>
-<text x="28.800001" y="342" textLength="100.8" style="fill: #d6c8b5;"> rustfmt.toml</text>
+<text x="0" y="342" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="342" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="342" textLength="14.400001" style="fill: #7b7b8f;">51</text>
+<text x="230.40001" y="342" textLength="14.400001" style="fill: #7b7b8f;">52</text>
 <text x="748.80005" y="342" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="342" textLength="14.400001" style="fill: #7b7b8f;">24</text>
+<text x="784.80005" y="342" textLength="79.200005" style="fill: #879fcb; font-weight: 600;">[workspace]</text>
 <text x="0" y="356.4" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="356.4" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="356.4" textLength="14.400001" style="fill: #7b7b8f;">52</text>
+<text x="230.40001" y="356.4" textLength="14.400001" style="fill: #7b7b8f;">53</text>
 <text x="280.80002" y="356.4" textLength="21.6" style="fill: #ae92bd;">let</text>
 <text x="309.6" y="356.4" textLength="79.200005" style="fill: #d6c8b5;">colorscheme</text>
 <text x="396.00003" y="356.4" textLength="7.2000003" style="fill: #a8a06d;">=</text>
@@ -381,16 +379,17 @@
 <text x="612" y="356.4" textLength="7.2000003" style="fill: #8e8e95;">;</text>
 <text x="748.80005" y="356.4" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="356.4" textLength="14.400001" style="fill: #7b7b8f;">25</text>
-<text x="784.80005" y="356.4" textLength="79.200005" style="fill: #879fcb; font-weight: 600;">[workspace]</text>
+<text x="784.80005" y="356.4" textLength="79.200005" style="fill: #d6c8b5;">members = [</text>
 <text x="0" y="370.80002" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="370.80002" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="370.80002" textLength="14.400001" style="fill: #7b7b8f;">53</text>
+<text x="230.40001" y="370.80002" textLength="14.400001" style="fill: #7b7b8f;">54</text>
 <text x="748.80005" y="370.80002" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="370.80002" textLength="14.400001" style="fill: #7b7b8f;">26</text>
-<text x="784.80005" y="370.80002" textLength="79.200005" style="fill: #d6c8b5;">members = [</text>
+<text x="813.60004" y="370.80002" textLength="115.200005" style="fill: #83ad6d;">"hi-nvim-rs-web"</text>
+<text x="928.80005" y="370.80002" textLength="7.2000003" style="fill: #d6c8b5;">,</text>
 <text x="0" y="385.2" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="385.2" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="385.2" textLength="14.400001" style="fill: #7b7b8f;">54</text>
+<text x="230.40001" y="385.2" textLength="14.400001" style="fill: #7b7b8f;">55</text>
 <text x="280.80002" y="385.2" textLength="21.6" style="fill: #ae92bd;">let</text>
 <text x="309.6" y="385.2" textLength="50.4" style="fill: #d6c8b5;">program</text>
 <text x="367.2" y="385.2" textLength="7.2000003" style="fill: #a8a06d;">=</text>
@@ -401,11 +400,11 @@
 <text x="504.00003" y="385.2" textLength="7.2000003" style="fill: #8e8e95;">{</text>
 <text x="748.80005" y="385.2" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="385.2" textLength="14.400001" style="fill: #7b7b8f;">27</text>
-<text x="813.60004" y="385.2" textLength="115.200005" style="fill: #83ad6d;">"hi-nvim-rs-web"</text>
-<text x="928.80005" y="385.2" textLength="7.2000003" style="fill: #d6c8b5;">,</text>
+<text x="813.60004" y="385.2" textLength="165.6" style="fill: #83ad6d;">"hi-nvim-rs-web-styler"</text>
+<text x="979.2" y="385.2" textLength="7.2000003" style="fill: #d6c8b5;">,</text>
 <text x="0" y="399.6" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="399.6" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="399.6" textLength="14.400001" style="fill: #7b7b8f;">55</text>
+<text x="230.40001" y="399.6" textLength="14.400001" style="fill: #7b7b8f;">56</text>
 <text x="309.6" y="399.6" textLength="43.2" style="fill: #72ad96; font-weight: 600;">Target</text>
 <text x="352.80002" y="399.6" textLength="14.400001" style="fill: #8e8e95;">::</text>
 <text x="367.2" y="399.6" textLength="43.2" style="fill: #7c9edd; font-weight: 600;">Neovim</text>
@@ -421,11 +420,10 @@
 <text x="720" y="399.6" textLength="7.2000003" style="fill: #8e8e95;">,</text>
 <text x="748.80005" y="399.6" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="763.2" y="399.6" textLength="14.400001" style="fill: #7b7b8f;">28</text>
-<text x="813.60004" y="399.6" textLength="165.6" style="fill: #83ad6d;">"hi-nvim-rs-web-styler"</text>
-<text x="979.2" y="399.6" textLength="7.2000003" style="fill: #d6c8b5;">,</text>
+<text x="784.80005" y="399.6" textLength="7.2000003" style="fill: #d6c8b5;">]</text>
 <text x="0" y="414" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="414" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="414" textLength="14.400001" style="fill: #7b7b8f;">56</text>
+<text x="230.40001" y="414" textLength="14.400001" style="fill: #7b7b8f;">57</text>
 <text x="309.6" y="414" textLength="43.2" style="fill: #72ad96; font-weight: 600;">Target</text>
 <text x="352.80002" y="414" textLength="14.400001" style="fill: #8e8e95;">::</text>
 <text x="367.2" y="414" textLength="21.6" style="fill: #7c9edd; font-weight: 600;">Vim</text>
@@ -440,22 +438,21 @@
 <text x="669.60004" y="414" textLength="7.2000003" style="fill: #a8a06d;">?</text>
 <text x="676.80005" y="414" textLength="7.2000003" style="fill: #8e8e95;">,</text>
 <text x="748.80005" y="414" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="763.2" y="414" textLength="14.400001" style="fill: #7b7b8f;">29</text>
-<text x="784.80005" y="414" textLength="7.2000003" style="fill: #d6c8b5;">]</text>
+<text x="756" y="414" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="0" y="428.40002" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="428.40002" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="428.40002" textLength="14.400001" style="fill: #7b7b8f;">57</text>
+<text x="230.40001" y="428.40002" textLength="14.400001" style="fill: #7b7b8f;">58</text>
 <text x="280.80002" y="428.40002" textLength="14.400001" style="fill: #8e8e95;">};</text>
 <text x="748.80005" y="428.40002" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="756" y="428.40002" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="0" y="442.80002" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="442.80002" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="442.80002" textLength="14.400001" style="fill: #7b7b8f;">58</text>
+<text x="230.40001" y="442.80002" textLength="14.400001" style="fill: #7b7b8f;">59</text>
 <text x="748.80005" y="442.80002" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="756" y="442.80002" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="0" y="457.2" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="457.2" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="230.40001" y="457.2" textLength="14.400001" style="fill: #7b7b8f;">59</text>
+<text x="230.40001" y="457.2" textLength="14.400001" style="fill: #7b7b8f;">60</text>
 <text x="280.80002" y="457.2" textLength="57.600002" style="fill: #7c9edd;">println!</text>
 <text x="338.40002" y="457.2" textLength="7.2000003" style="fill: #8e8e95;">(</text>
 <text x="345.6" y="457.2" textLength="28.800001" style="fill: #83ad6d;">"{}"</text>
@@ -467,77 +464,73 @@
 <text x="756" y="457.2" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="0" y="471.6" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="471.6" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="223.20001" y="471.6" textLength="525.60004" style="fill: #d6c8b5;">./src/main.rs &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;41,1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;87%</text>
+<text x="223.20001" y="471.6" textLength="525.60004" style="fill: #d6c8b5;">./src/main.rs &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;42,1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;90%</text>
 <text x="756" y="471.6" textLength="396.00003" style="fill: #999188;">./Cargo.toml &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1,1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All</text>
 <text x="0" y="486" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="486" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="486" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
-<text x="273.6" y="486" textLength="7.2000003" style="fill: #ada052; font-weight: 600;"></text>
-<text x="295.2" y="486" textLength="129.6" style="fill: #dccfbc;">default_highlights</text>
-<text x="432.00003" y="486" textLength="136.8" style="fill: #9d9ea5; font-style: italic;">default_highlights;</text>
-<text x="576" y="486" textLength="50.4" style="fill: #ca97e3;">[11, 9]</text>
+<text x="259.2" y="486" textLength="28.800001" style="fill: #d6c8b5;">│ ├╴</text>
+<text x="288" y="486" textLength="7.2000003" style="fill: #7c9edd;"></text>
+<text x="309.6" y="486" textLength="43.2" style="fill: #dccfbc;">Neovim</text>
+<text x="360" y="486" textLength="50.4" style="fill: #9d9ea5; font-style: italic;">Neovim,</text>
+<text x="417.6" y="486" textLength="50.4" style="fill: #ca97e3;">[20, 5]</text>
 <text x="0" y="500.40002" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="500.40002" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="500.40002" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
-<text x="273.6" y="500.40002" textLength="7.2000003" style="fill: #ada052; font-weight: 600;"></text>
-<text x="295.2" y="500.40002" textLength="36" style="fill: #dccfbc;">error</text>
-<text x="338.40002" y="500.40002" textLength="43.2" style="fill: #9d9ea5; font-style: italic;">error;</text>
-<text x="388.80002" y="500.40002" textLength="57.600002" style="fill: #ca97e3;">[12, 16]</text>
+<text x="259.2" y="500.40002" textLength="28.800001" style="fill: #d6c8b5;">│ └╴</text>
+<text x="288" y="500.40002" textLength="7.2000003" style="fill: #7c9edd;"></text>
+<text x="309.6" y="500.40002" textLength="21.6" style="fill: #dccfbc;">Vim</text>
+<text x="338.40002" y="500.40002" textLength="28.800001" style="fill: #9d9ea5; font-style: italic;">Vim,</text>
+<text x="374.40002" y="500.40002" textLength="50.4" style="fill: #ca97e3;">[21, 5]</text>
 <text x="0" y="514.80005" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="514.80005" textLength="7.2000003" style="fill: #13131d;">│</text>
 <text x="259.2" y="514.80005" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
-<text x="273.6" y="514.80005" textLength="7.2000003" style="fill: #ada052; font-weight: 600;"></text>
-<text x="295.2" y="514.80005" textLength="64.8" style="fill: #dccfbc;">modifiers</text>
-<text x="367.2" y="514.80005" textLength="72" style="fill: #9d9ea5; font-style: italic;">modifiers;</text>
-<text x="446.40002" y="514.80005" textLength="57.600002" style="fill: #ca97e3;">[13, 16]</text>
+<text x="273.6" y="514.80005" textLength="7.2000003" style="fill: #72ad96; font-weight: 600;">󰆼</text>
+<text x="295.2" y="514.80005" textLength="21.6" style="fill: #dccfbc;">Cli</text>
+<text x="324" y="514.80005" textLength="36" style="fill: #9d9ea5; font-style: italic;">Cli {</text>
+<text x="367.2" y="514.80005" textLength="50.4" style="fill: #ca97e3;">[29, 8]</text>
 <text x="0" y="529.2001" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="529.2001" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="529.2001" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
-<text x="273.6" y="529.2001" textLength="7.2000003" style="fill: #72ad96; font-weight: 600;"></text>
-<text x="295.2" y="529.2001" textLength="43.2" style="fill: #dccfbc;">Target</text>
-<text x="345.6" y="529.2001" textLength="57.600002" style="fill: #9d9ea5; font-style: italic;">Target {</text>
-<text x="410.40002" y="529.2001" textLength="50.4" style="fill: #ca97e3;">[18, 6]</text>
+<text x="259.2" y="529.2001" textLength="28.800001" style="fill: #d6c8b5;">│ ├╴</text>
+<text x="288" y="529.2001" textLength="64.8" style="fill: #dccfbc;"> &#160;target</text>
+<text x="360" y="529.2001" textLength="108.00001" style="fill: #9d9ea5; font-style: italic;">target: Target,</text>
+<text x="475.2" y="529.2001" textLength="50.4" style="fill: #ca97e3;">[34, 5]</text>
 <text x="0" y="543.60004" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="543.60004" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="543.60004" textLength="28.800001" style="fill: #d6c8b5;">│ ├╴</text>
-<text x="288" y="543.60004" textLength="7.2000003" style="fill: #7c9edd;"></text>
-<text x="309.6" y="543.60004" textLength="43.2" style="fill: #dccfbc;">Neovim</text>
-<text x="360" y="543.60004" textLength="50.4" style="fill: #9d9ea5; font-style: italic;">Neovim,</text>
-<text x="417.6" y="543.60004" textLength="50.4" style="fill: #ca97e3;">[19, 5]</text>
+<text x="259.2" y="543.60004" textLength="28.800001" style="fill: #d6c8b5;">│ └╴</text>
+<text x="288" y="543.60004" textLength="50.4" style="fill: #dccfbc;"> &#160;file</text>
+<text x="345.6" y="543.60004" textLength="158.40001" style="fill: #9d9ea5; font-style: italic;">file: Option&lt;PathBuf>,</text>
+<text x="511.2" y="543.60004" textLength="50.4" style="fill: #ca97e3;">[39, 5]</text>
 <text x="0" y="558.00006" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="558.00006" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="558.00006" textLength="28.800001" style="fill: #d6c8b5;">│ └╴</text>
-<text x="288" y="558.00006" textLength="7.2000003" style="fill: #7c9edd;"></text>
-<text x="309.6" y="558.00006" textLength="21.6" style="fill: #dccfbc;">Vim</text>
-<text x="338.40002" y="558.00006" textLength="28.800001" style="fill: #9d9ea5; font-style: italic;">Vim,</text>
-<text x="374.40002" y="558.00006" textLength="50.4" style="fill: #ca97e3;">[20, 5]</text>
+<text x="259.2" y="558.00006" textLength="14.400001" style="fill: #d6c8b5;">└╴</text>
+<text x="273.6" y="558.00006" textLength="7.2000003" style="fill: #879fcb;">󰊕</text>
+<text x="295.2" y="558.00006" textLength="28.800001" style="fill: #dccfbc;">main</text>
+<text x="331.2" y="558.00006" textLength="216.00002" style="fill: #9d9ea5; font-style: italic;">main() -> anyhow::Result&lt;()> {</text>
+<text x="554.4" y="558.00006" textLength="50.4" style="fill: #ca97e3;">[42, 4]</text>
 <text x="0" y="572.4" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="572.4" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="572.4" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
-<text x="273.6" y="572.4" textLength="7.2000003" style="fill: #72ad96; font-weight: 600;">󰆼</text>
-<text x="295.2" y="572.4" textLength="21.6" style="fill: #dccfbc;">Cli</text>
-<text x="324" y="572.4" textLength="36" style="fill: #9d9ea5; font-style: italic;">Cli {</text>
-<text x="367.2" y="572.4" textLength="50.4" style="fill: #ca97e3;">[28, 8]</text>
+<text x="273.6" y="572.4" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
+<text x="288" y="572.4" textLength="43.2" style="fill: #dccfbc;">󰀫 &#160;cli</text>
+<text x="338.40002" y="572.4" textLength="136.8" style="fill: #9d9ea5; font-style: italic;">cli = Cli::parse();</text>
+<text x="482.40002" y="572.4" textLength="50.4" style="fill: #ca97e3;">[43, 9]</text>
 <text x="0" y="586.80005" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="586.80005" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="586.80005" textLength="28.800001" style="fill: #d6c8b5;">│ ├╴</text>
-<text x="288" y="586.80005" textLength="64.8" style="fill: #dccfbc;"> &#160;target</text>
-<text x="360" y="586.80005" textLength="108.00001" style="fill: #9d9ea5; font-style: italic;">target: Target,</text>
-<text x="475.2" y="586.80005" textLength="50.4" style="fill: #ca97e3;">[33, 5]</text>
+<text x="273.6" y="586.80005" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
+<text x="288" y="586.80005" textLength="64.8" style="fill: #dccfbc;">󰀫 &#160;config</text>
+<text x="360" y="586.80005" textLength="280.80002" style="fill: #9d9ea5; font-style: italic;">config = if let Some(file) = cli.file {</text>
+<text x="648" y="586.80005" textLength="50.4" style="fill: #ca97e3;">[45, 9]</text>
 <text x="0" y="601.2001" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="601.2001" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="601.2001" textLength="28.800001" style="fill: #d6c8b5;">│ └╴</text>
-<text x="288" y="601.2001" textLength="50.4" style="fill: #dccfbc;"> &#160;file</text>
-<text x="345.6" y="601.2001" textLength="158.40001" style="fill: #9d9ea5; font-style: italic;">file: Option&lt;PathBuf>,</text>
-<text x="511.2" y="601.2001" textLength="50.4" style="fill: #ca97e3;">[38, 5]</text>
+<text x="273.6" y="601.2001" textLength="28.800001" style="fill: #d6c8b5;">│ └╴</text>
+<text x="302.40002" y="601.2001" textLength="93.600006" style="fill: #dccfbc;">󰀫 &#160;mut config</text>
+<text x="403.2" y="601.2001" textLength="403.2" style="fill: #9d9ea5; font-style: italic;">mut config = String::with_capacity(16_384 /* 16 KiB */);</text>
+<text x="813.60004" y="601.2001" textLength="57.600002" style="fill: #ca97e3;">[48, 13]</text>
 <text x="0" y="615.60004" textLength="7.2000003" style="fill: #7b7b8f;">~</text>
 <text x="216.00002" y="615.60004" textLength="7.2000003" style="fill: #13131d;">│</text>
-<text x="259.2" y="615.60004" textLength="14.400001" style="fill: #d6c8b5;">└╴</text>
-<text x="273.6" y="615.60004" textLength="7.2000003" style="fill: #879fcb;">󰊕</text>
-<text x="295.2" y="615.60004" textLength="28.800001" style="fill: #dccfbc;">main</text>
-<text x="331.2" y="615.60004" textLength="216.00002" style="fill: #9d9ea5; font-style: italic;">main() -> anyhow::Result&lt;()> {</text>
-<text x="554.4" y="615.60004" textLength="50.4" style="fill: #ca97e3;">[41, 4]</text>
-<text x="0" y="630.00006" textLength="1152" style="fill: #999188;">NvimTree_1 &#160;&#160;&#160;&#160;1,1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All [Scratch] &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;17,2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Bot</text>
+<text x="273.6" y="615.60004" textLength="14.400001" style="fill: #d6c8b5;">├╴</text>
+<text x="288" y="615.60004" textLength="100.8" style="fill: #dccfbc;">󰀫 &#160;colorscheme</text>
+<text x="396.00003" y="615.60004" textLength="309.6" style="fill: #9d9ea5; font-style: italic;">colorscheme = colorscheme::parse(&amp;config)?;</text>
+<text x="712.80005" y="615.60004" textLength="50.4" style="fill: #ca97e3;">[53, 9]</text>
+<text x="0" y="630.00006" textLength="1152" style="fill: #999188;">NvimTree_1 &#160;&#160;&#160;&#160;1,1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;All [Scratch] &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;18,2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;92%</text>
 <text x="0" y="644.4" textLength="21.6" style="fill: #c1b5a6;">/fn</text>
 <text x="28.800001" y="644.4" textLength="28.800001" style="fill: #c1b5a6;">main</text>
 <text x="1022.4" y="644.4" textLength="36" style="fill: #c1b5a6;">[1/1]</text>

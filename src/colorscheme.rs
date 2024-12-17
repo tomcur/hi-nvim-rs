@@ -1,7 +1,6 @@
 #![allow(unused)]
 
-use palette::Oklch;
-use palette_gamut_mapping::gamut_map;
+use color::{Oklch, OpaqueColor, Srgb};
 use std::{
     collections::{BTreeMap, HashMap},
     fmt::{self, Display, Formatter},
@@ -10,40 +9,40 @@ use std::{
 use crate::configuration::{Highlight, Kind, NamespacedThemeElement};
 use crate::error::Error;
 
-/// Non-linear sRGB.
+/// Non-linear 8-bit per channel sRGB.
 #[derive(Debug, Clone, Copy)]
-pub struct Srgb {
+pub struct Rgb8 {
     pub red: u8,
     pub green: u8,
     pub blue: u8,
 }
 
-impl From<Oklch<f32>> for Srgb {
-    fn from(value: Oklch<f32>) -> Self {
-        let rgb: palette::Srgb<f32> = gamut_map(value);
-        let rgb: palette::Srgb<u8> = rgb.into_format();
-        Srgb {
-            red: rgb.red,
-            green: rgb.green,
-            blue: rgb.blue,
+impl From<OpaqueColor<Oklch>> for Rgb8 {
+    fn from(value: OpaqueColor<Oklch>) -> Self {
+        let [r, g, b] =
+            crate::gamut_map::reduce_chroma::<Srgb>(value.convert::<Srgb>().components, 0.02);
+        Rgb8 {
+            red: (r * 255.).round() as u8,
+            green: (g * 255.).round() as u8,
+            blue: (b * 255.).round() as u8,
         }
     }
 }
 
-impl Display for Srgb {
+impl Display for Rgb8 {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
-        let Srgb { red, green, blue } = self;
+        let Rgb8 { red, green, blue } = self;
         write!(f, "#{red:02x}{green:02x}{blue:02x}")
     }
 }
 
 /// A handle to the colors of a theme.
 pub struct Theme<'a> {
-    pub(crate) colors: BTreeMap<&'a str, BTreeMap<&'a str, Srgb>>,
+    pub(crate) colors: BTreeMap<&'a str, BTreeMap<&'a str, Rgb8>>,
 }
 
 impl Theme<'_> {
-    pub fn get_color(&self, theme_element: NamespacedThemeElement) -> Option<Srgb> {
+    pub fn get_color(&self, theme_element: NamespacedThemeElement) -> Option<Rgb8> {
         self.colors
             .get(theme_element.theme_namespace)?
             .get(theme_element.element_name)
@@ -83,14 +82,14 @@ impl<'a> Colorscheme<'a> {
         &self.dark_theme
     }
 
-    pub fn get_color(&self, theme_element: NamespacedThemeElement<'_>) -> Option<Srgb> {
+    pub fn get_color(&self, theme_element: NamespacedThemeElement<'_>) -> Option<Rgb8> {
         match self.kind {
             Kind::Light => self.light_theme.get_color(theme_element),
             Kind::Dark => self.dark_theme.get_color(theme_element),
         }
     }
 
-    pub fn get_inverse_color(&self, theme_element: NamespacedThemeElement<'_>) -> Option<Srgb> {
+    pub fn get_inverse_color(&self, theme_element: NamespacedThemeElement<'_>) -> Option<Rgb8> {
         match self.kind {
             Kind::Light => self.dark_theme.get_color(theme_element),
             Kind::Dark => self.light_theme.get_color(theme_element),
@@ -178,7 +177,7 @@ pub fn parse<'a>(colorscheme_config: &'a str) -> Result<Colorscheme<'a>, Error> 
 
             let color = element.0.modifiers.apply(color, |c| config.get_color(c))?;
             let mut inverse_color = color;
-            inverse_color.l = 1. - inverse_color.l;
+            inverse_color.components[0] = 1. - inverse_color.components[0];
 
             inverse_color = config
                 .inverse
@@ -188,11 +187,11 @@ pub fn parse<'a>(colorscheme_config: &'a str) -> Result<Colorscheme<'a>, Error> 
             theme
                 .entry(theme_namespace)
                 .or_default()
-                .insert(element_name, Srgb::from(color));
+                .insert(element_name, Rgb8::from(color));
             inverse_theme
                 .entry(theme_namespace)
                 .or_default()
-                .insert(element_name, Srgb::from(inverse_color));
+                .insert(element_name, Rgb8::from(inverse_color));
         }
     }
 
