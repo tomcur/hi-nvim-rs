@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2024-12-17
+
+### Bug Fixes
+- remove accidental write
+([a838987](https://github.com/tomcur/hi-nvim-rs/commit/a83898785473bf1a5bfb2f376fe47c606b03659d))
+
+
+### Refactor
+- migrate to the Color crate
+([273f308](https://github.com/tomcur/hi-nvim-rs/commit/273f308c6e931755287ea7a50b96aa48fec0d964))
+
+
+### Other
+- Bump input flakes
+([267bd2a](https://github.com/tomcur/hi-nvim-rs/commit/267bd2a50bdf1f8708a34cd7c2d3a50cd2b29519))
+
+
 ## [0.2.0] - 2024-07-20
 
 ### Breaking
