@@ -41,7 +41,7 @@ for COLORSCHEME_AND_KIND in "highlow-light" "verf-dark" "twocolor-dark" "graysca
         # exit on a timer to perform some other commands in the meantime
         echo ":lua vim.defer_fn(function() vim.cmd('qa!') end, 3000)"
         echo ":set nowrap"
-        echo ":LspStart"
+        echo ":lsp enable rust_analyzer"
         sleep 0.3
         echo ":Trouble lsp_document_symbols"
         echo ":NvimTreeOpen"

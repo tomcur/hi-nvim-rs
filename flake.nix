@@ -116,8 +116,7 @@
           let
             nvim = (pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped {
               plugins = [
-                pkgs.vimPlugins.nvim-treesitter
-                pkgs.vimPlugins.nvim-treesitter-parsers.rust
+                (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [ p.rust ]))
                 pkgs.vimPlugins.nvim-lspconfig
                 pkgs.vimPlugins.nvim-tree-lua
                 pkgs.vimPlugins.trouble-nvim
