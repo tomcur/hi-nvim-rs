@@ -36,16 +36,68 @@
         };
         packages.default = packages.hi-nvim-rs;
 
-        # Compiles a colorscheme. Use like
+        # The color schemes in ./colorschemes bundled as a (Neo)vim plugin.
+        packages.vimPlugin = lib.buildColorschemePlugin {
+          pname = "hi-nvim-rs-colorschemes";
+          colorschemeFiles = pkgs.lib.mapAttrsToList (file: _: ./colorschemes + "/${file}")
+            (pkgs.lib.filterAttrs (file: type: type == "regular" && pkgs.lib.hasSuffix ".toml" file)
+              (builtins.readDir ./colorschemes));
+        };
+
+        # Compiles color schemes into a (Neo)vim plugin, with each color scheme
+        # at `colors/{name}.vim`. The file name is taken from the `name` in the
+        # configuration.
+        #
+        # Example:
         #
         # ```nix
-        # buildColorscheme {
+        # lib.buildColorschemePlugin {
+        #   pname = "my-colorschemes";
+        #   colorschemeFiles = [ ./highlow.toml ./verf.toml ];
+        # }
+        # ```
+        lib.buildColorschemePlugin =
+          { pname
+          , colorschemeFiles
+          , version ? packages.hi-nvim-rs.version
+          }:
+          let
+            names = map (file: (pkgs.lib.importTOML file).name) colorschemeFiles;
+            esc = pkgs.lib.escapeShellArg;
+          in
+          assert pkgs.lib.assertMsg (pkgs.lib.allUnique names)
+            "buildColorschemePlugin: color scheme names must be unique, got: ${toString names}";
+          pkgs.vimUtils.buildVimPlugin {
+            inherit pname version;
+            src = pkgs.runCommand "${pname}-src" { } (''
+              mkdir -p "$out/colors" "$out/hi-nvim-rs/neovim" "$out/hi-nvim-rs/vim"
+            '' + pkgs.lib.concatStrings (pkgs.lib.zipListsWith
+              (file: name: ''
+                for target in neovim vim; do
+                  ${packages.hi-nvim-rs}/bin/hi-nvim-rs --target "$target" ${esc "${file}"} \
+                    > "$out/hi-nvim-rs/$target/"${esc "${name}.vim"}
+                done
+                cat > "$out/colors/"${esc "${name}.vim"} <<'EOF'
+                " Load the colorscheme for vim/neovim.
+                execute 'source' fnameescape(fnamemodify(resolve(expand('<sfile>:p')), ':h:h') . '/hi-nvim-rs/' . (has('nvim') ? 'neovim' : 'vim') . '/' . ${builtins.toJSON "${name}.vim"})
+                EOF
+              '')
+              colorschemeFiles
+              names));
+          };
+
+        # Compiles a colorscheme to a single file.
+        #
+        # Example:
+        #
+        # ```nix
+        # lib.buildColorscheme {
         #   name = "highlow";
         #   colorschemeFile = ./highlow.toml;
         #   target = "neovim";
         # }
         # ```
-        buildColorscheme = { name, colorschemeFile, target }:
+        lib.buildColorscheme = { name, colorschemeFile, target }:
           assert target == "neovim" || target == "vim";
           pkgs.stdenv.mkDerivation {
             name = name;
