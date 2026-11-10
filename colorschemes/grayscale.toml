@@ -1,4 +1,4 @@
-name = "monochrome"
+name = "grayscale"
 kind = "dark"
 
 [hues]
