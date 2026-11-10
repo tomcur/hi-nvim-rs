@@ -11,7 +11,9 @@ mod de;
 pub mod default_highlights;
 mod error;
 mod gamut_map;
+mod inverse;
 mod modifiers;
+mod okhsl;
 
 use default_highlights::DEFAULT_HIGHLIGHTS;
 

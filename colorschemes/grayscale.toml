@@ -83,8 +83,4 @@ added = "bg.green"
 changed = "bg.yellow"
 text = "bg"
 
-[inverse]
-gamma = 1.1
-lighten_absolute = 0.02
-
 [highlights]

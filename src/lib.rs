@@ -8,7 +8,9 @@ mod de;
 mod default_highlights;
 mod error;
 mod gamut_map;
+mod inverse;
 mod modifiers;
+mod okhsl;
 
 pub use colorscheme::{parse, Colorscheme, Rgb8, Theme};
 pub use compiler_neovim::compile as compile_neovim;

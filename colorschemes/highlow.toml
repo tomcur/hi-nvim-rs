@@ -184,11 +184,17 @@ changed = "bg.yellow"
 text =    "bg"
 
 [inverse]
-# Color post-processing for the inverse color theme. This is performed after
-# inverting the lightness of all colors. The transformations are the same as
-# documented in the themes section.
-saturate = -0.03
-lighten_absolute = 0.08
+# Configuration of the generated inverse color theme. The inverse theme inverts
+# the perceived lightness of all colors. This section is optional.
+#
+# The lightness of the inverse theme's main background (the background of the
+# `Normal` highlight group). If not set, the inverse background is as far from
+# black (or white) as this theme's background is from white (or black).
+# background_lightness = 0.15
+#
+# Optionally, colors can be post-processed after inversion. The
+# transformations are the same as documented in the themes section.
+# saturate = 0.0
 
 [highlights]
 # Specify (Neo)vim highlight groups. The default groups are available at

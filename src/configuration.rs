@@ -115,6 +115,7 @@ struct HuesConfig {
 struct Configuration_<'a> {
     name: &'a str,
     kind: &'a str,
+    #[serde(default)]
     inverse: Inverse<'a>,
     colors: HashMap<&'a str, Lch>,
     hues: HashMap<&'a str, f32>,
@@ -123,9 +124,13 @@ struct Configuration_<'a> {
     highlights: BTreeMap<&'a str, Highlight<'a>>,
 }
 
-/// Specifier of inverse theme post-processing color modificiations.
-#[derive(Debug, Deserialize)]
+/// Configuration of the inverse theme.
+#[derive(Debug, Deserialize, Default)]
 pub struct Inverse<'a> {
+    /// The Oklab lightness of the inverse theme's main background (the background of the `Normal`
+    /// highlight group). See [`crate::inverse`].
+    pub background_lightness: Option<f32>,
+    /// Optional modifications applied to all colors after inversion.
     #[serde(borrow, flatten)]
     pub modifiers: ColorModifiers<'a>,
 }

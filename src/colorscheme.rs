@@ -8,6 +8,7 @@ use std::{
 
 use crate::configuration::{Highlight, Kind, NamespacedThemeElement};
 use crate::error::Error;
+use crate::inverse::Inversion;
 
 /// Non-linear 8-bit per channel sRGB.
 #[derive(Debug, Clone, Copy)]
@@ -165,21 +166,47 @@ pub fn parse<'a>(colorscheme_config: &'a str) -> Result<Colorscheme<'a>, Error> 
         config
     };
 
-    let mut theme: BTreeMap<_, BTreeMap<_, _>> = BTreeMap::new();
-    let mut inverse_theme: BTreeMap<_, BTreeMap<_, _>> = BTreeMap::new();
-
-    // calculate all theme element colors (for both the normal and inverse themes)
+    // calculate all theme element colors
+    let mut colors: BTreeMap<&str, BTreeMap<&str, OpaqueColor<Oklch>>> = BTreeMap::new();
     for (&theme_namespace, elements) in config.themes.0.iter() {
         for (&element_name, element) in elements.0.iter() {
             let color = config
                 .get_color(element.0.color)
                 .ok_or_else(|| Error::ColorMissing(format!("{}", element.0.color)))?;
-
             let color = element.0.modifiers.apply(color, |c| config.get_color(c))?;
-            let mut inverse_color = color;
-            inverse_color.components[0] = 1. - inverse_color.components[0];
 
-            inverse_color = config
+            colors
+                .entry(theme_namespace)
+                .or_default()
+                .insert(element_name, color);
+        }
+    }
+
+    // calculate the inverse theme colors, relative to the main background: the background of the
+    // `Normal` highlight group
+    let bg_lightness = config
+        .highlights
+        .get("Normal")
+        .and_then(|normal| match normal.link {
+            Some(link) => config.highlights.get(link),
+            None => Some(normal),
+        })
+        .and_then(|normal| normal.bg)
+        .and_then(|bg| colors.get(bg.theme_namespace)?.get(bg.element_name))
+        .map(|bg| bg.components[0])
+        .unwrap_or(match config.kind {
+            Kind::Light => 1.,
+            Kind::Dark => 0.,
+        });
+    let inversion = Inversion::new(bg_lightness, config.inverse.background_lightness);
+
+    let mut theme: BTreeMap<_, BTreeMap<_, _>> = BTreeMap::new();
+    let mut inverse_theme: BTreeMap<_, BTreeMap<_, _>> = BTreeMap::new();
+
+    for (&theme_namespace, elements) in colors.iter() {
+        for (&element_name, &color) in elements.iter() {
+            let inverse_color = inversion.invert(color);
+            let inverse_color = config
                 .inverse
                 .modifiers
                 .apply(inverse_color, |color| config.get_color(color))?;

@@ -32,9 +32,6 @@ chroma = 0.07
 lightness = 0.32
 chroma = 0.04
 
-[inverse]
-lighten_absolute = 0.17
-
 [themes.ui]
 fg =          "fg"
 fg_dim =      { color = "fg", mix = ["bg", 0.1] }
