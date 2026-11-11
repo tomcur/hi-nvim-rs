@@ -1,4 +1,5 @@
-use axum::{headers::ContentType, response::IntoResponse, TypedHeader};
+use axum::response::IntoResponse;
+use axum_extra::{headers::ContentType, TypedHeader};
 
 markup::define! {
     Github() {

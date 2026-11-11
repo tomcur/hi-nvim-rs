@@ -42,13 +42,15 @@ fn highlight_html_into_write(
     code: &[u8],
     mut w: impl std::io::Write,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let highlights = highlighter.highlight(config, code, None, |_| None).unwrap();
+    let highlights = highlighter
+        .highlight(config, code, None, None, |_| None)
+        .unwrap();
 
     for event in highlights {
         match event.unwrap() {
             HighlightEvent::Source { start, end } => {
                 for &char in code[start..end].iter() {
-                    match tree_sitter_highlight::util::html_escape(char) {
+                    match html_escape(char) {
                         Some(esc) => w.write_all(esc)?,
                         None => w.write_all(&[char])?,
                     };
@@ -66,6 +68,18 @@ fn highlight_html_into_write(
     }
 
     Ok(())
+}
+
+/// Escape a byte for use in HTML text, if necessary.
+fn html_escape(c: u8) -> Option<&'static [u8]> {
+    match c {
+        b'>' => Some(b"&gt;"),
+        b'<' => Some(b"&lt;"),
+        b'&' => Some(b"&amp;"),
+        b'\'' => Some(b"&#39;"),
+        b'"' => Some(b"&quot;"),
+        _ => None,
+    }
 }
 
 fn lines_into_write(
@@ -125,8 +139,9 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
             "rust",
             include_str!("./code-examples/rust.rs"),
             HighlightConfiguration::new(
-                tree_sitter_rust::language(),
-                tree_sitter_rust::HIGHLIGHT_QUERY,
+                tree_sitter_rust::LANGUAGE.into(),
+                "rust",
+                tree_sitter_rust::HIGHLIGHTS_QUERY,
                 "",
                 "",
             )
@@ -136,7 +151,8 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
             "c",
             include_str!("./code-examples/c.c"),
             HighlightConfiguration::new(
-                tree_sitter_c::language(),
+                tree_sitter_c::LANGUAGE.into(),
+                "c",
                 tree_sitter_c::HIGHLIGHT_QUERY,
                 "",
                 "",
@@ -149,7 +165,7 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
             {
                 let highlights: String = [
                     tree_sitter_javascript::HIGHLIGHT_QUERY,
-                    tree_sitter_typescript::HIGHLIGHT_QUERY,
+                    tree_sitter_typescript::HIGHLIGHTS_QUERY,
                 ]
                 .into_iter()
                 .collect();
@@ -161,7 +177,8 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .collect();
 
                 HighlightConfiguration::new(
-                    tree_sitter_typescript::language_typescript(),
+                    tree_sitter_typescript::LANGUAGE_TYPESCRIPT.into(),
+                    "typescript",
                     &highlights,
                     "",
                     &locals,
@@ -174,9 +191,9 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
             include_str!("./code-examples/typescript.tsx"),
             {
                 let highlights: String = [
-                    tree_sitter_javascript::JSX_HIGHLIGHT_QUERY,
                     tree_sitter_javascript::HIGHLIGHT_QUERY,
-                    tree_sitter_typescript::HIGHLIGHT_QUERY,
+                    tree_sitter_typescript::HIGHLIGHTS_QUERY,
+                    tree_sitter_javascript::JSX_HIGHLIGHT_QUERY,
                 ]
                 .into_iter()
                 .collect();
@@ -189,7 +206,8 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .collect();
 
                 HighlightConfiguration::new(
-                    tree_sitter_typescript::language_tsx(),
+                    tree_sitter_typescript::LANGUAGE_TSX.into(),
+                    "tsx",
                     &highlights,
                     "",
                     &locals,

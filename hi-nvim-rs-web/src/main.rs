@@ -5,12 +5,12 @@ use std::{
 
 use axum::{
     extract::Query,
-    headers,
-    http::{header, HeaderMap, HeaderName},
+    http::{header, HeaderMap, HeaderName, StatusCode},
     response::{Html, IntoResponse},
     routing::{get, post},
     Form, Router,
 };
+use axum_extra::headers;
 use clap::{arg, command, Parser};
 use serde::Deserialize;
 use tower_http::{compression::CompressionLayer, timeout::TimeoutLayer};
@@ -500,11 +500,14 @@ async fn main() {
         .merge(static_assets)
         .route("/", post(index_post))
         .route("/colorscheme", post(colorscheme))
-        .layer(TimeoutLayer::new(Duration::from_secs(30)))
+        .layer(TimeoutLayer::with_status_code(
+            StatusCode::REQUEST_TIMEOUT,
+            Duration::from_secs(30),
+        ))
         .layer(CompressionLayer::new());
 
-    axum::Server::bind(&std::net::SocketAddr::new(cli.address, cli.port))
-        .serve(app.into_make_service())
+    let listener = tokio::net::TcpListener::bind(std::net::SocketAddr::new(cli.address, cli.port))
         .await
         .unwrap();
+    axum::serve(listener, app).await.unwrap();
 }

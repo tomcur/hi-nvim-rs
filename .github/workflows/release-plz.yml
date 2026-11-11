@@ -19,13 +19,13 @@ jobs:
       # Generate a GitHub token, so that PRs and tags created by the
       # release-plz-action trigger workflow actions.
       - name: Generate GitHub token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v3
         id: generate-token
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Install Rust toolchain

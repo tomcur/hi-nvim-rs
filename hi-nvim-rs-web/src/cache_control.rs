@@ -1,7 +1,5 @@
-use axum::{
-    headers::{HeaderMapExt, IfModifiedSince, LastModified},
-    http::{header, Request, Response, StatusCode},
-};
+use axum::http::{header, Request, Response, StatusCode};
+use axum_extra::headers::{HeaderMapExt, IfModifiedSince, LastModified};
 use pin_project::pin_project;
 use std::{
     future::Future,
@@ -72,7 +70,7 @@ where
     }
 
     fn call(&mut self, req: Request<ReqBody>) -> Self::Future {
-        let if_modified_since: Option<IfModifiedSince> = axum::headers::Header::decode(
+        let if_modified_since: Option<IfModifiedSince> = axum_extra::headers::Header::decode(
             &mut req.headers().get(header::IF_MODIFIED_SINCE).iter().copied(),
         )
         .ok();

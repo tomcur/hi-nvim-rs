@@ -39,6 +39,8 @@ impl markup::Render for Language {
     }
 }
 
+impl markup::RenderAttributeValue for Language {}
+
 impl Language {
     pub const fn code_example(self) -> CodeExample {
         use Language::*;
