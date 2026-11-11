@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.4.0] - 2026-11-11
+
+### Breaking
+- [**breaking**] Add flake method to build a plugin, move existing build to be under `lib`
+([14526d8](https://github.com/tomcur/hi-nvim-rs/commit/14526d8433c03ea815ac0a80c082d3eb2e3604e1))
+
+
+### Features
+- Generate inverse lightness using Okhsl
+([1e8877e](https://github.com/tomcur/hi-nvim-rs/commit/1e8877e1eef36b43e7f24f26662e8ff0bc43eaed))
+
+
+### Build System and CI
+- clean up flake
+([ebd91ad](https://github.com/tomcur/hi-nvim-rs/commit/ebd91ad6647118a5bab556188a1ae51bc98ce9aa))
+
+
+### Other
+- Upgrade dependencies
+([a7dd312](https://github.com/tomcur/hi-nvim-rs/commit/a7dd31233c5897f89a802f09395c82e10b94b400))
+- Fix screenshot scripts, regen screenshots
+([fdb0a88](https://github.com/tomcur/hi-nvim-rs/commit/fdb0a8827d76157f109d72e76a1944fc927d751f))
+- Bump input flakes
+([c1f205f](https://github.com/tomcur/hi-nvim-rs/commit/c1f205fdb5cf073bd8da1ff4ab648973bcc27a23))
+- Fix `grayscale`'s name
+([fb72246](https://github.com/tomcur/hi-nvim-rs/commit/fb72246dedbdd63ff4470f81f975e1e7cf851df8))
+
+
+
 ## [0.3.0] - 2024-12-17
 
 ### Breaking
