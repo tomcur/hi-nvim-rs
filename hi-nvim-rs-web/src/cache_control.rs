@@ -1,4 +1,4 @@
-use axum::http::{header, Request, Response, StatusCode};
+use axum::http::{Method, Request, Response, StatusCode};
 use axum_extra::headers::{HeaderMapExt, IfModifiedSince, LastModified};
 use pin_project::pin_project;
 use std::{
@@ -37,8 +37,8 @@ enum ResponseKind {
 }
 
 /// Cache control service. Set `last-modified` response header to the given `last_modified` time.
-/// Requests with an `if-modified-since` no later than the `last_modified` time are responded to
-/// with NOT MODIFIED.
+/// GET and HEAD requests with an `if-modified-since` no earlier than the `last_modified` time are
+/// responded to with NOT MODIFIED.
 #[derive(Clone, Debug)]
 pub struct CacheControl<S> {
     inner: S,
@@ -70,21 +70,18 @@ where
     }
 
     fn call(&mut self, req: Request<ReqBody>) -> Self::Future {
-        let if_modified_since: Option<IfModifiedSince> = axum_extra::headers::Header::decode(
-            &mut req.headers().get(header::IF_MODIFIED_SINCE).iter().copied(),
-        )
-        .ok();
+        let not_modified = (req.method() == Method::GET || req.method() == Method::HEAD)
+            && req
+                .headers()
+                .typed_get::<IfModifiedSince>()
+                .is_some_and(|if_modified_since| {
+                    !if_modified_since.is_modified(self.last_modified)
+                });
 
-        let response_kind = match if_modified_since {
-            Some(if_modified_since) => {
-                let if_modified_since: SystemTime = if_modified_since.into();
-                if if_modified_since > self.last_modified {
-                    ResponseKind::Forward
-                } else {
-                    ResponseKind::NotModified
-                }
-            }
-            None => ResponseKind::Forward,
+        let response_kind = if not_modified {
+            ResponseKind::NotModified
+        } else {
+            ResponseKind::Forward
         };
 
         ResponseFuture {
